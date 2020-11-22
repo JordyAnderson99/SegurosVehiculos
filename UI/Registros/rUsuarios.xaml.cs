@@ -22,7 +22,7 @@ namespace SegurosVehiculos.UI.Registros
             InitializeComponent();
             this.DataContext = usuarios;
         }
-        //——————————————————————————————————————————————————————————————[ Cargar ]———————————————————————————————————————————————————————————————
+        //Funcion Cargar 
         private void Cargar()
         {
             this.DataContext = null;
@@ -30,7 +30,7 @@ namespace SegurosVehiculos.UI.Registros
             ContrasenaPasswordBox.Password = string.Empty;
             ConfirmarContrasenaPasswordBox.Password = string.Empty;
         }
-        //——————————————————————————————————————————————————————————————[ Limpiar ]——————————————————————————————————————————————————————————————
+        //Funcion Limpiar
         private void Limpiar()
         {
             this.usuarios = new Usuarios();
@@ -38,7 +38,7 @@ namespace SegurosVehiculos.UI.Registros
             ContrasenaPasswordBox.Password = string.Empty;
             ConfirmarContrasenaPasswordBox.Password = string.Empty;
         }
-        //——————————————————————————————————————————————————————————————[ Validar ]——————————————————————————————————————————————————————————————
+        //Funcion Validar
         private bool Validar()
         {
             bool Validado = true;
@@ -50,7 +50,7 @@ namespace SegurosVehiculos.UI.Registros
 
             return Validado;
         }
-        //——————————————————————————————————————————————————————————————[ Buscar ]———————————————————————————————————————————————————————————————
+        //Boton Buscar
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             Usuarios encontrado = UsuariosBLL.Buscar(Utilidades.ToInt(UsuarioIdTextBox.Text));
@@ -78,13 +78,13 @@ namespace SegurosVehiculos.UI.Registros
                 EliminarButton.IsEnabled = true;
             }
         }
-        //——————————————————————————————————————————————————————————————[ Nuevo ]———————————————————————————————————————————————————————————————
+        //Boton Nuevo
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
             EliminarButton.IsEnabled = true;
         }
-        //——————————————————————————————————————————————————————————————[ Guardar ]———————————————————————————————————————————————————————————————
+        //Boton Guardar
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             {
@@ -171,7 +171,7 @@ namespace SegurosVehiculos.UI.Registros
                     MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        //——————————————————————————————————————————————————————————————[ Eliminar ]———————————————————————————————————————————————————————————————
+        //Boton Eliminar 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
             //—————————————————————————————————[ Evitar que se borre el Usuario Admin Id #1 ]—————————————————————————————————
