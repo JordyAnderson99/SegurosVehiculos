@@ -142,7 +142,7 @@ namespace SegurosVehiculos.UI.Registros {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SegurosVehiculos;component/ui/registros/rusuarios.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SegurosVehiculos;V1.0.0.0;component/ui/registros/rusuarios.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\UI\Registros\rUsuarios.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

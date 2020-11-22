@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:SegurosVehiculos.Imagenes.PasswordHelper"
         mc:Ignorable="d"
-        Title="Registro de Usuarios" Height="365" Width="410">
+        Title="Registro de Usuarios" Height="400" Width="410">
     <Grid>
         <StackPanel Margin= "-23,-110,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left"  Width="450" Height="600">
 
