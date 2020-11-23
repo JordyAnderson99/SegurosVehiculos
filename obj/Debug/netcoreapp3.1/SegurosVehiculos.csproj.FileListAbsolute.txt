@@ -44,7 +44,6 @@ C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\runtimes\win-arm\na
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csprojAssemblyReference.cache
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos_MarkupCompile.cache
@@ -74,3 +73,4 @@ C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro2.
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cUsuarios.baml
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\Login.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\Login.baml
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csprojAssemblyReference.cache

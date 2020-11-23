@@ -63,9 +63,9 @@
                 <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Usuario Id" Binding="{Binding UsuarioId}"/>
-                        <DataGridTextColumn Header="Nombres" Binding="{Binding Nombres}"/>
-                        <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}"/>
-                        <DataGridTextColumn Header="Fecha Creación" Binding="{Binding FechaCreacion, StringFormat='dd/MM/yyyy'}"/>
+                        <DataGridTextColumn Header="Nombres" Binding="{Binding Nombre}"/>
+                        <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellido}"/>
+                        <DataGridTextColumn Header="Fecha Creacion " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
                         <DataGridTextColumn Header="Nombre Usuario" Binding="{Binding NombreUsuario}"/>
                     </DataGrid.Columns>
                 </DataGrid>

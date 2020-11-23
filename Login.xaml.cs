@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using SegurosVehiculos.BLL;
 using SegurosVehiculos.Entidades;
 
+
 namespace SegurosVehiculos.UI.Login
 {
     public partial class Login : Window
@@ -38,7 +39,7 @@ namespace SegurosVehiculos.UI.Login
         //———————————————————————————————————————————————————[ INGRESAR ]———————————————————————————————————————————————————
         private void IngresarButton_Click(object sender, RoutedEventArgs e)
         {
-            bool paso = UsuariosBLL.Autenticar(NombreUsuarioTextBox.Text, ContrasenaPasswordBox.Password);
+            bool paso = UsuariosBLL.Autenticar(NombreUsuarioTextBox.Text, ClavePasswordBox.Password);
 
             //—————————————————————————————————[ NombreUsuario Vacio]—————————————————————————————————
             if (NombreUsuarioTextBox.Text.Trim() == string.Empty)
@@ -53,12 +54,12 @@ namespace SegurosVehiculos.UI.Login
             {
                 this.Hide();
                 MenuPrincipal.Show();
-                //this.WindowState = WindowState.Minimized; //Minimiza el LogIn
+               
             }
             else
             {
                 MessageBox.Show("Nombre de Usuario o Contraseña incorrectos.", "Precaución", MessageBoxButton.OK, MessageBoxImage.Warning);
-                ContrasenaPasswordBox.Clear();
+                ClavePasswordBox.Clear();
                 NombreUsuarioTextBox.Focus();
             }
         }
@@ -67,15 +68,15 @@ namespace SegurosVehiculos.UI.Login
         {
             if (e.Key == Key.Return)
             {
-                ContrasenaPasswordBox.Focus();
+                ClavePasswordBox.Focus();
             }
         }
         //———————————————————————————————————————————————————[CONTRASEÑA - ENTER ]———————————————————————————————————————————————————
-        private void ContrasenaPasswordBox_KeyDown(object sender, KeyEventArgs e)
+        private void ClavePasswordBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
             {
-                bool paso = UsuariosBLL.Autenticar(NombreUsuarioTextBox.Text, ContrasenaPasswordBox.Password);
+                bool paso = UsuariosBLL.Autenticar(NombreUsuarioTextBox.Text, ClavePasswordBox.Password);
 
                 if (paso)
                 {
@@ -85,7 +86,7 @@ namespace SegurosVehiculos.UI.Login
                 else
                 {
                     MessageBox.Show("Nombre de Usuario o Contraseña incorrectos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ContrasenaPasswordBox.Clear();
+                    ClavePasswordBox.Clear();
                     NombreUsuarioTextBox.Focus();
                 }
             }

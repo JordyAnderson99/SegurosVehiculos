@@ -30,7 +30,7 @@
             <Label Content="Contraseña" Margin="25,10,0,0" />
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Resources/Candado.png" Height="30" />
-                <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="235" VerticalContentAlignment="Center" KeyDown="ContrasenaPasswordBox_KeyDown"/>
+                <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="235" VerticalContentAlignment="Center" KeyDown="ClavePasswordBox_KeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,25,0,0" HorizontalAlignment="Center" >
 

@@ -43,19 +43,19 @@
 
             <!--Nombre Usuario-->
             <Label Content = "Nombre Usuario" FontSize="15px" Margin="-225,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="155"/>
-            <TextBox x:Name = "NombreUsuarioTextBox" Text ="{Binding NombreUsuario}" Width="190" Height="27" Margin="150,-30,0,0" IsEnabled= "false"/>
+            <TextBox x:Name = "NombreUsuarioTextBox" Text ="{Binding NombreUsuario}" Width="190" Height="27" Margin="150,-30,0,0" />
 
 
 
-            <!--Contrasena-->
+            <!--Calve-->
             <Label Content = "Contrasena" FontSize="15px" Margin="-280,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="100"/>
-            <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" Height="30" Width="190" Margin="150,-30,1,1" />
+            <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="190" Margin="150,-30,1,1" />
 
 
 
             <!--Confirmar Contrasena-->
             <Label Content = "Confirmar Contrasena" FontSize="15px" Margin="35,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-            <PasswordBox x:Name="ConfirmarContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" Height="30" Width="190" Margin="150,-30,1,1"/>
+            <PasswordBox x:Name="ConfirmarClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" Height="30" Width="190" Margin="150,-30,1,1"/>
 
 
 

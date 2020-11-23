@@ -13,15 +13,28 @@ namespace SegurosVehiculos.BLL
 {
     public class UsuariosBLL
     {
-        
-        //Funcion Guardar
-        public static bool Guardar(Usuarios usuario)
+         //Funcion Existe 
+        public static bool Existe(int id)
         {
-            if (!Existe(usuario.UsuarioId))
-                return Insertar(usuario);
-            else
-                return Modificar(usuario);
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+
+            try
+            {
+                encontrado = contexto.Usuarios.Any(e => e.UsuarioId == id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return encontrado;
         }
+
         //Funcion Insertar
         private static bool Insertar(Usuarios usuario)
         {
@@ -44,7 +57,8 @@ namespace SegurosVehiculos.BLL
             }
             return guardado;
         }
-        //Funcion Modificar
+
+//Funcion Modificar
         private static bool Modificar(Usuarios usuario)
         {
             Contexto contexto = new Contexto();
@@ -67,6 +81,17 @@ namespace SegurosVehiculos.BLL
 
             return modificado;
         }
+        
+        //Funcion Guardar
+        public static bool Guardar(Usuarios usuario)
+        {
+            if (!Existe(usuario.UsuarioId))
+                return Insertar(usuario);
+            else
+                return Modificar(usuario);
+        }
+        
+        
         //Funcion Eliminar
         public static bool Eliminar(int id)
         {
@@ -118,28 +143,7 @@ namespace SegurosVehiculos.BLL
             return usuario;
         }
 
-        //Funcion Existe 
-        public static bool Existe(int id)
-        {
-            Contexto contexto = new Contexto();
-            bool encontrado = false;
-
-            try
-            {
-                encontrado = contexto.Usuarios.Any(e => e.UsuarioId == id);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return encontrado;
-        }
-        //Funcion List
+               //Funcion List
         public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> usuario)
         {
             Contexto contexto = new Contexto();
@@ -162,14 +166,14 @@ namespace SegurosVehiculos.BLL
             return Lista;
         }
         //Funcion Autenticar
-        public static bool Autenticar(string nombreusuario, string contrasena)
+        public static bool Autenticar(string nombreusuario, string clave)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
 
             try
             {
-                paso = contexto.Usuarios.Any(u => u.NombreUsuario.Equals(nombreusuario) && u.Clave.Equals(GetSHA256(contrasena)));
+                paso = contexto.Usuarios.Any(u => u.NombreUsuario.Equals(nombreusuario) && u.Clave.Equals(GetSHA256(clave)));
             }
             catch (Exception)
             {

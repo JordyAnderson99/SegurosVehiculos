@@ -27,16 +27,16 @@ namespace SegurosVehiculos.UI.Registros
         {
             this.DataContext = null;
             this.DataContext = usuarios;
-            ContrasenaPasswordBox.Password = string.Empty;
-            ConfirmarContrasenaPasswordBox.Password = string.Empty;
+            ClavePasswordBox.Password = string.Empty;
+            ConfirmarClavePasswordBox.Password = string.Empty;
         }
         //Funcion Limpiar
         private void Limpiar()
         {
             this.usuarios = new Usuarios();
             this.DataContext = usuarios;
-            ContrasenaPasswordBox.Password = string.Empty;
-            ConfirmarContrasenaPasswordBox.Password = string.Empty;
+            ClavePasswordBox.Password = string.Empty;
+            ConfirmarClavePasswordBox.Password = string.Empty;
         }
         //Funcion Validar
         private bool Validar()
@@ -72,10 +72,12 @@ namespace SegurosVehiculos.UI.Registros
             if (UsuarioIdTextBox.Text == "1")
             {
                 EliminarButton.IsEnabled = false;
+                GuardarButton.IsEnabled = false;
             }
             else
             {
                 EliminarButton.IsEnabled = true;
+                GuardarButton.IsEnabled = true;
             }
         }
         //Boton Nuevo
@@ -83,6 +85,7 @@ namespace SegurosVehiculos.UI.Registros
         {
             Limpiar();
             EliminarButton.IsEnabled = true;
+            GuardarButton.IsEnabled = true;
         }
         //Boton Guardar
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
@@ -136,31 +139,32 @@ namespace SegurosVehiculos.UI.Registros
                     return;
                 }
                 //—————————————————————————————————[ Contraseña ]—————————————————————————————————
-                if (ContrasenaPasswordBox.Password == string.Empty)
+                if (ClavePasswordBox.Password == string.Empty)
                 {
                     MessageBox.Show("El Campo (Contraseña) está vacío.\n\nAsigne una Contraseña al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ContrasenaPasswordBox.Focus();
-                    ContrasenaPasswordBox.SelectAll();
+                    ClavePasswordBox.Focus();
+                    ClavePasswordBox.SelectAll();
                     return;
                 }
                 //—————————————————————————————————[ Confirmar Contraseña ]—————————————————————————————————
-                if (ConfirmarContrasenaPasswordBox.Password == string.Empty)
+                if (ConfirmarClavePasswordBox.Password == string.Empty)
                 {
                     MessageBox.Show("El Campo (Confirmar Contraseña) está vacío.\n\nConfirme la Contraseña del Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ConfirmarContrasenaPasswordBox.Focus();
-                    ConfirmarContrasenaPasswordBox.SelectAll();
+                    ConfirmarClavePasswordBox.Focus();
+                    ConfirmarClavePasswordBox.SelectAll();
                     return;
                 }
                 //—————————————————————————————————[ Validar Contraseñas ]—————————————————————————————————
-                if (ConfirmarContrasenaPasswordBox.Password != ContrasenaPasswordBox.Password)
+                if (ConfirmarClavePasswordBox.Password != ClavePasswordBox.Password)
                 {
                     MessageBox.Show("Las Contraseñas escritas no coinciden", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ContrasenaPasswordBox.Clear();
-                    ConfirmarContrasenaPasswordBox.Clear();
-                    ContrasenaPasswordBox.Focus();
+                    ClavePasswordBox.Clear();
+                    ConfirmarClavePasswordBox.Clear();
+                    ClavePasswordBox.Focus();
                     return;
                 }
 
+                
                 var paso = UsuariosBLL.Guardar(usuarios);
                 if (paso)
                 {
