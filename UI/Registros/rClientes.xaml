@@ -1,0 +1,106 @@
+<Window x:Class="SegurosVehiculos.UI.Registros.rClientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Clientes" Height="500" Width="410">
+    <Grid>
+        <StackPanel Margin= "-23,-110,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left"  Width="450" Height="600">
+
+
+
+            <!--CLIENTE Id-->
+            <Label Content = "ClienteId" FontSize="15px" Margin="-300,150,0,50" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="80" Height="33" FontWeight="Bold"/>
+            <TextBox x:Name = "ClienteIdTextBox" Text ="{Binding ClienteId}" Width="50" Height="25" Margin="10,-150,0,0"/>
+
+
+
+
+            <!--Fecha-->
+            <Label Content = "Fecha" FontSize="13.5px" Margin="-295,-80,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="82" Height="25" FontWeight="Bold"/>
+            <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="190" Height="30" Margin="150,-80,0,0"/>
+
+
+
+
+            <!--Nombre-->
+            <Label Content = "Nombre" FontSize="15px" Margin="-310,-15,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="68" FontWeight="Bold"/>
+            <TextBox x:Name = "NombreTextBox" Text ="{Binding Nombre}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+
+
+            <!--Apellido-->
+            <Label Content = "Apellido" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
+            <TextBox x:Name = "ApellidoTextBox" Text ="{Binding Apellido}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+             <!--Direccion-->
+            <Label Content = "Direccion" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
+            <TextBox x:Name = "DireccionTextBox" Text ="{Binding Direccion}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+            <!--Telefono-->
+            <Label Content = "Telefono" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
+            <TextBox x:Name = "TelefonoTextBox" Text ="{Binding Telefono}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+
+            <!--Celular-->
+            <Label Content = "Celular" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
+            <TextBox x:Name = "CelularTextBox" Text ="{Binding Celular}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+
+            <!--Cedula-->
+            <Label Content = "Cedula" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
+            <TextBox x:Name = "CedulaTextBox" Text ="{Binding Cedula}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+
+            <!--CorreoElectronico-->
+            <Label Content = "CorreoElectronico" FontSize="15px" Margin="-240,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="138" FontWeight="Bold"/>
+            <TextBox x:Name = "CorreoElectronico" Text ="{Binding CorreoElectronico}" Width="190" Height="25" Margin="150,-30,0,0"/>
+
+
+
+
+
+            <!--Boton Buscar-->
+            <Button x:Name ="BuscarButton" Margin="240,-620,0,0" Width = "100" Height = "40" Content="     Buscar" Click="BuscarButton_Click" FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="180,-620,0,0"/>
+
+
+
+
+            <!-- Boton Nuevo-->
+            <Button x:Name ="NuevoButton" Margin="-270,20,0,0" Width = "100" Height = "40" Content="        Nuevo"  Click="NuevoButton_Click" FontWeight="Bold" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Source= "/Imagenes/Nuevo.png" Width="40" Height= "40" Margin="-330,-40,0,0"/>
+
+
+
+
+            <!-- Boton Guardar-->
+            <Button x:Name ="GuardarButton" Margin="-20,-40,0,0" Width = "100" Height = "40" Content="        Guardar"  Click="GuardarButton_Click" FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Guardar.jpg" Width="35" Height= "35" Margin="-80,-40,0,0"/>
+
+
+
+
+            <!--Boton Eliminar-->
+            <Button x:Name ="EliminarButton" Margin="240,-40,0,0" Width = "100" Height = "40" Content="          Eliminar"  Click="EliminarButton_Click" FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Eliminar.png" Width="40" Height= "40" Margin="180,-40,0,0"/>
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>

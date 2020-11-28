@@ -46,5 +46,18 @@ namespace SegurosVehiculos
         }
 
 
+        private void rClientesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rClientes rClientes = new rClientes();
+            rClientes.Show();
+        }
+
+        private void cClientesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cClientes cClientes = new cClientes();
+            cClientes.Show();
+        }
+
+
     }
 }

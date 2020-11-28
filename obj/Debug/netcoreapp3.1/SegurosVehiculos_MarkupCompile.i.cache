@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\pc\Desktop\SegurosVehiculos\App.xaml
-4497728767
+52060869002
 8-696830057
-16-79235539
+20426781547
 2122111740615
-Login.xaml;MainWindow.xaml;UI\Consultas\cUsuarios.xaml;UI\Registros\rUsuarios.xaml;
+Login.xaml;MainWindow.xaml;UI\Consultas\cUsuarios.xaml;UI\Registros\rClientes.xaml;UI\Registros\rUsuarios.xaml;
 
-False
+True
 
