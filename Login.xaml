@@ -6,10 +6,22 @@
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Login"
         xmlns:PasswordHelper="clr-namespace:SegurosVehiculos.Imagenes.PasswordHelper"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="550" Width="400">
 
-<Grid>
-        <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Center">
+    <Grid>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF091FA8"/>
+                <GradientStop Color="#FF2338BD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
+                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel Orientation="Vertical" Margin="10" Height="300"  HorizontalAlignment="Center" >
             <!--—————————————————————————————————————————[ IMAGEN Y TITULO ]—————————————————————————————————————————-->
             <Image Source="/Resources/Usuarios.png" Height="60" />
             <Label Content="LogIn" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" />
@@ -17,17 +29,17 @@
 
 
             <!--—————————————————————————————————————————[ USUARIO ]—————————————————————————————————————————-->
-            <Label Content="Nombre Usuario" Margin="25,5,0,0"/>
+            <Label Content="Nombre Usuario" Margin="0,5,0,0" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Resources/Usuario.png" Height="30" />
                 <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="235" VerticalContentAlignment="Center" KeyDown="NombreUsuarioTextBox_KeyDown" />
             </StackPanel>
 
 
-
+            
 
             <!--—————————————————————————————————————————[ CONTRASEÑA ]—————————————————————————————————————————-->
-            <Label Content="Contraseña" Margin="25,10,0,0" />
+            <Label Content="Contraseña" Margin="0,10,0,0" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Resources/Candado.png" Height="30" />
                 <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="235" VerticalContentAlignment="Center" KeyDown="ClavePasswordBox_KeyDown"/>
@@ -39,7 +51,7 @@
 
 
 
-                <!--—————————————————————————————————————————[ BOTON CANCELAR ]—————————————————————————————————————————-->
+                <!--—————————————————————————————————————————[ BOTON CANCELAR ]—————————————————————————————————————————-->           
                 <Button x:Name="CancelarButton" Click="CancelarButton_Click" Width="100" BorderBrush="#FFBEBEBE" Margin="0,0,35,0" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Cancelar.png" Height="25" />
@@ -63,7 +75,7 @@
 
 
 
-       
+
         <!--————————————————————————————————————————————————————————————————————————————————————————————————————————————-->
     </Grid>
 </Window>

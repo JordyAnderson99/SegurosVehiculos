@@ -10,6 +10,9 @@
     <Compile Update="UI\Consultas\cUsuarios.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\Consultas\cVehiculos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -19,6 +22,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Consultas\cUsuarios.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Consultas\cVehiculos.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

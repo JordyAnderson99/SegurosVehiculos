@@ -58,6 +58,11 @@ namespace SegurosVehiculos
             cClientes.Show();
         }
 
+        private void rVehiculosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rVehiculos vehiculos = new rVehiculos();
+            vehiculos.Show();
+        }
 
     }
 }

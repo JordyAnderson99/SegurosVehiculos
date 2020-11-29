@@ -8,18 +8,32 @@
         Title="Menu " Height="350" Width="450">
      <Grid>
 
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF091FA8"/>
+                <GradientStop Color="#FF2338BD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
+                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <StackPanel>
             <Menu Height = "20" VerticalAlignment="Top">
-        
-                <MenuItem Header= "Registros" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top">
+
+                <MenuItem Header= "          Registros         " HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top">
                  
                    <MenuItem x:Name="rUsuariosMenuItem" Header="Registrar Usuarios " Click="rUsuariosMenuItem_Click"/>                   
-                    <MenuItem x:Name="rClientesMenuItem" Header="Registrar Clientes " Click="rClientesMenuItem_Click"/>                   
+                   <MenuItem x:Name="rClientesMenuItem" Header="Registrar Clientes " Click="rClientesMenuItem_Click"/>                   
+                   <MenuItem x:Name="rvehiculosMenuItem" Header="Registrar Vehiculos " Click="rVehiculosMenuItem_Click"/>                   
                     
 
                     </MenuItem>
 
-                <MenuItem Header= "Consultas" HorizontalAlignment="Left" Margin="90,0,0,0" VerticalAlignment="Top">
+                <MenuItem Header= "         Consultas         " HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Top">
                 <MenuItem x:Name="ConsultarUsuarios" Header="Consultar Usuarios " Click="cUsuariosMenuItem_Click"/>
                 <MenuItem x:Name="ConsultarClientes" Header="Consultar Clientes " Click="cClientesMenuItem_Click"/>
                   

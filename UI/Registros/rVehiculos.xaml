@@ -1,0 +1,128 @@
+<Window x:Class="SegurosVehiculos.UI.Registros.rVehiculos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Vehiculos" Height="530" Width="980" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF091FA8"/>
+                <GradientStop Color="#FF2338BD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
+                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <StackPanel Margin= "-150,-100,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left"  Width="1110" Height="620">
+
+            <!--VehiculoId-->
+            <Label Content = "VehiculoId" FontSize="15px" Margin="-670,150,0,50" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90" Height="33" FontWeight="Bold"/>
+            <TextBox x:Name = "VehiculoIdTextBox" Text ="{Binding VehiculoId}" Width="50" Height="25" Margin="-320,-150,0,0"/>
+
+            <!--Fecha-->
+            <Label Content = "Fecha Creacion" FontSize="13.5px" Margin="-650,-70,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="110" Height="25" FontWeight="Bold"/>
+            <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="190" Height="30" Margin="-180,-80,0,0"/>
+
+            <!--Cantidad Pasajeros-->
+            <Label Content = "Cantidad de Pasajeros" FontSize="15px" Margin="-585,-15,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="175" FontWeight="Bold"/>
+            <TextBox x:Name = "CantidadPasajerosTextBox" Text ="{Binding CantidadPasajeros}" Width="190" Height="25" Margin="-180,-30,0,0"/>
+
+            <!--Cilindros-->
+            <Label Content = "Cilindros" FontSize="15px" Margin="-680,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
+            <TextBox x:Name = "CilindrosTextBox" Text ="{Binding Cilindros}" Width="190" Height="25" Margin="-180,-30,0,0"/>
+
+            <!--Uso del Vehiculo-->
+            <Label Content = "Uso del Vehiculo" FontSize="15px" Margin="-610,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="155" FontWeight="Bold"/>
+            <TextBox x:Name = "UsoTextBox" Text ="{Binding Uso}" Width="190" Height="27" Margin="-180,-30,0,0" />
+
+            <!--Chasis-->
+            <Label Content = "Chasis" FontSize="15px" Margin="-665,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="100" FontWeight="Bold"/>
+            <TextBox x:Name = "ChasisTextBox" Text ="{Binding Chasis}" Height="30" Width="190" Margin="-180,-30,1,1" />
+
+            <!--Matricula-->
+            <Label Content = "Matricula" FontSize="15px" Margin="-670,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="100" FontWeight="Bold"/>
+            <TextBox x:Name = "MatriculaTextBox" Text ="{Binding Matricula}" Height="30" Width="190" Margin="-180,-30,1,1" />
+
+            <!--ValorVehiculo-->
+            <Label Content = "Valor del Vehiculo" FontSize="15px" Margin="250,-460,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="150" Height="25" FontWeight="Bold"/>
+            <TextBox x:Name = "ValorVehiculoTextBox" Text ="{Binding ValorVehiculo}" Height="30" Width="190" Margin="670,-480,1,1" />
+
+            <!--Fecha Expedicion Matricula-->
+            <Label Content = "Fecha de Expedicion" FontSize="15px" Margin="260,-400,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="160" FontWeight="Bold"/>
+            <DatePicker x:Name = "FechaExpedicionDatePicker" SelectedDate ="{Binding FechaExpedicion}" Height="30" Width="190" Margin="670,-400,1,1" />
+
+            <!--AnoFabricacion-->
+            <Label Content = "Año de Fabricacion" FontSize="15px" Margin="250,-320,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"  Height="25" Width="150" FontWeight="Bold"/>
+            <TextBox x:Name = "AñoFabricacionTextBox" Text ="{Binding AñoFabricacion}" Height="30" Width="190" Margin="670,-320,1,1" />
+
+            <!--Motor-->
+            <Label Content = "Motor" FontSize="15px" Margin="150,-250,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="30" Width="50" FontWeight="Bold"/>
+            <TextBox x:Name = "MotorTextBox" Text ="{Binding Motor}" Height="30" Width="190" Margin="670,-250,1,1" />
+
+            <!--FuerzaMotriz-->
+            <Label Content = "Fuerza Motriz" FontSize="15px" Margin="210,-170,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="110" FontWeight="Bold"/>
+            <TextBox x:Name = "FuerzaMotrizTextBox" Text ="{Binding FuerzaMotriz}" Height="30" Width="190" Margin="670,-170,1,1" />
+
+            <!--CapacidadCarga-->
+            <Label Content = "Capacidad de Carga" FontSize="15px" Margin="250,-100,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="150" FontWeight="Bold"/>
+            <TextBox x:Name = "CapacidadCargaTextBox" Text ="{Binding CapacidadCarga}" Height="30" Width="190" Margin="670,-100,1,1" />
+
+            <!--TotalPuertas-->
+            <Label Content = "Total de Puertas" FontSize="15px" Margin="240,-30,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="140" FontWeight="Bold"/>
+            <TextBox x:Name = "TotalPuertasTextBox" Text ="{Binding TotalPuertas}" Height="30" Width="190" Margin="670,-30,1,1" />
+
+            <!--Color del vehiculo-->
+            <Label Content = "Color" FontSize="15px" Margin="-720,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="50" FontWeight="Bold"/>
+            <ComboBox x:Name = "ColorIdComboBox" SelectedValue ="{Binding ColorId}" Height="30" Width="190" Margin="-180,-28,1,1" />
+
+            <!--Marca del vehiculo-->
+            <Label Content = "Marca" FontSize="15px" Margin="-720,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="50" FontWeight="Bold"/>
+            <ComboBox x:Name = "MarcaIdComboBox" SelectedValue ="{Binding MarcaId}" Height="30" Width="190" Margin="-180,-28,1,1" />
+
+            <!--Modelo del vehiculo-->
+            <Label Content = "Modelo" FontSize="15px" Margin="-710,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="60" FontWeight="Bold"/>
+            <ComboBox x:Name = "ModeloIdComboBox" SelectedValue ="{Binding ModeloId}" Height="30" Width="190" Margin="-180,-28,1,1" />
+
+            <!--Status del vehiculo-->
+            <Label Content = "Status de Vehiculos" FontSize="15px" Margin="260,-190,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="160" FontWeight="Bold"/>
+            <ComboBox x:Name = "StatusVehiculoIdComboBox" SelectedValue ="{Binding StatusVehiculoId}" Height="30" Width="190" Margin="670,-190,1,1" />
+
+            <!--Tipo de emision del vehiculo-->
+            <Label Content = "Tipo de Emision" FontSize="15px" Margin="230,-100,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="130" FontWeight="Bold"/>
+            <ComboBox x:Name = "TipoEmisionIdComboBox" SelectedValue ="{Binding TipoEmisionId}" Height="30" Width="190" Margin="670,-110,1,1" />
+
+            <!--Tipo de vehiculo-->
+            <Label Content = "Tipo de Vehiculo" FontSize="15px" Margin="240,-30,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="140" FontWeight="Bold"/>
+            <ComboBox x:Name = "TipoVehiculoIdComboBox" SelectedValue ="{Binding TipoVehiculoId}" Height="30" Width="190" Margin="670,-30,1,1"  />
+
+
+            <!--Boton Buscar-->
+            <Button x:Name ="Buscar" Margin="1000,-730,0,0" Width = "100" Height = "40" Content="     Buscar" Click="BuscarButton_Click" FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="940,-730,0,0" RenderTransformOrigin="0.433,0.635"/>
+
+
+            <!-- Boton Nuevo-->
+            <Button x:Name ="NuevoButton" Margin="-170,40,0,0" Width = "100" Height = "40" Content="        Nuevo"  Click="NuevoButton_Click" FontWeight="Bold" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Source= "/Imagenes/Nuevo.png" Width="40" Height= "40" Margin="-230,-40,0,0"/>
+
+
+            <!-- Boton Guardar-->
+            <Button x:Name ="GuardarButton" Margin="220,-40,0,0" Width = "100" Height = "40" Content="        Guardar"  Click="GuardarButton_Click" FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Guardar.jpg" Width="35" Height= "35" Margin="160,-40,0,0"/>
+
+
+            <!--Boton Eliminar-->
+            <Button x:Name ="EliminarButton" Margin="680,-40,0,0" Width = "100" Height = "40" Content="          Eliminar"  Click="EliminarButton_Click" FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Eliminar.png" Width="40" Height= "40" Margin="620,-40,0,0"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

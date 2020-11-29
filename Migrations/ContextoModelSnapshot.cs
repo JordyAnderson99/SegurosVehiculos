@@ -51,6 +51,195 @@ namespace SegurosVehiculos.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Colores", b =>
+                {
+                    b.Property<int>("ColorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Color")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ColorId");
+
+                    b.ToTable("Colores");
+
+                    b.HasData(
+                        new
+                        {
+                            ColorId = 1,
+                            Color = "Verde"
+                        },
+                        new
+                        {
+                            ColorId = 2,
+                            Color = "Rojo"
+                        },
+                        new
+                        {
+                            ColorId = 3,
+                            Color = "Azul"
+                        },
+                        new
+                        {
+                            ColorId = 4,
+                            Color = "Blanco"
+                        },
+                        new
+                        {
+                            ColorId = 5,
+                            Color = "Negro"
+                        });
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.MarcaVehiculos", b =>
+                {
+                    b.Property<int>("MarcaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Marca")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MarcaId");
+
+                    b.ToTable("MarcaVehiculos");
+
+                    b.HasData(
+                        new
+                        {
+                            MarcaId = 1,
+                            Marca = "Tauro Turbo"
+                        },
+                        new
+                        {
+                            MarcaId = 2,
+                            Marca = "Toyota"
+                        },
+                        new
+                        {
+                            MarcaId = 3,
+                            Marca = "Mercedes Benz"
+                        },
+                        new
+                        {
+                            MarcaId = 4,
+                            Marca = "Lamborghini"
+                        },
+                        new
+                        {
+                            MarcaId = 5,
+                            Marca = "BMW"
+                        });
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Modelos", b =>
+                {
+                    b.Property<int>("ModeloId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ModeloVehiculo")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ModeloId");
+
+                    b.ToTable("Modelos");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.StatusVehiculo", b =>
+                {
+                    b.Property<int>("StatusVehiculoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("StatusVehiculoId");
+
+                    b.ToTable("StatusVehiculo");
+
+                    b.HasData(
+                        new
+                        {
+                            StatusVehiculoId = 1,
+                            Status = "Vehiculo Tiene Opsicion"
+                        },
+                        new
+                        {
+                            StatusVehiculoId = 2,
+                            Status = "?"
+                        },
+                        new
+                        {
+                            StatusVehiculoId = 3,
+                            Status = "?"
+                        },
+                        new
+                        {
+                            StatusVehiculoId = 4,
+                            Status = "?"
+                        },
+                        new
+                        {
+                            StatusVehiculoId = 5,
+                            Status = "?"
+                        });
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.TipoEmision", b =>
+                {
+                    b.Property<int>("TipoEmisionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Emision")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("TipoEmisionId");
+
+                    b.ToTable("TipoEmision");
+
+                    b.HasData(
+                        new
+                        {
+                            TipoEmisionId = 1,
+                            Emision = "Exoneracion Ley 168"
+                        },
+                        new
+                        {
+                            TipoEmisionId = 2,
+                            Emision = "?"
+                        });
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.TipoVehiculo", b =>
+                {
+                    b.Property<int>("TipoVehiculoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Tipo")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("TipoVehiculoId");
+
+                    b.ToTable("TipoVehiculo");
+
+                    b.HasData(
+                        new
+                        {
+                            TipoVehiculoId = 1,
+                            Tipo = "Privado"
+                        },
+                        new
+                        {
+                            TipoVehiculoId = 2,
+                            Tipo = "Publico"
+                        });
+                });
+
             modelBuilder.Entity("SegurosVehiculos.Entidades.Usuarios", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -86,6 +275,56 @@ namespace SegurosVehiculos.Migrations
                             Nombre = "Raldy",
                             NombreUsuario = "Admin"
                         });
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Vehiculos", b =>
+                {
+                    b.Property<int>("VehiculoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AñoFabricacion")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CantidadPasajeros")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("CapacidadCarga")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Chasis")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Cilindros")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FechaExpedicionMatricula")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("FuerzaMotriz")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Matricula")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Motor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TotalPuertas")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Uso")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("ValorVehiculo")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("VehiculoId");
+
+                    b.ToTable("Vehiculos");
                 });
 #pragma warning restore 612, 618
         }

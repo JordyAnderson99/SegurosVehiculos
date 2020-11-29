@@ -1,20 +1,20 @@
 ﻿SegurosVehiculos
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\
 SegurosVehiculos
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\pc\Desktop\SegurosVehiculos\App.xaml
-52060869002
+C:\Users\DELL\Desktop\SegurosVehiculos\App.xaml
+8-511260226
 8-696830057
-20426781547
-2122111740615
-Login.xaml;MainWindow.xaml;UI\Consultas\cUsuarios.xaml;UI\Registros\rClientes.xaml;UI\Registros\rUsuarios.xaml;
+3543245070
+212190520916
+Login.xaml;MainWindow.xaml;UI\Consultas\cClientes.xaml;UI\Consultas\cUsuarios.xaml;UI\Consultas\cVehiculos.xaml;UI\Registros\rClientes.xaml;UI\Registros\rUsuarios.xaml;UI\Registros\rVehiculos.xaml;
 
-True
+False
 

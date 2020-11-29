@@ -6,28 +6,40 @@
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:SegurosVehiculos.Imagenes.PasswordHelper"
         mc:Ignorable="d"
-        Title="Registro de Usuarios" Height="400" Width="410">
+        Title="Registro de Usuarios" Height="400" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF091FA8"/>
+                <GradientStop Color="#FF2338BD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
+                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <StackPanel Margin= "-23,-110,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left"  Width="450" Height="600">
 
 
 
             <!--UsuarioId-->
-            <Label Content = "UsuarioId" FontSize="15px" Margin="-300,150,0,50" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="80" Height="33"/>
+            <Label Content = "UsuarioId" FontSize="15px" Margin="-300,150,0,50" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="80" Height="33" FontWeight="Bold"/>
             <TextBox x:Name = "UsuarioIdTextBox" Text ="{Binding UsuarioId}" Width="50" Height="25" Margin="10,-150,0,0"/>
 
 
 
 
             <!--Fecha-->
-            <Label Content = "Fecha" FontSize="13.5px" Margin="-295,-80,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="82" Height="25"/>
+            <Label Content = "Fecha" FontSize="13.5px" Margin="-295,-80,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="82" Height="25" FontWeight="Bold"/>
             <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="190" Height="30" Margin="150,-80,0,0"/>
 
 
 
 
             <!--Nombre-->
-            <Label Content = "Nombre" FontSize="15px" Margin="-310,-15,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="68"/>
+            <Label Content = "Nombre" FontSize="15px" Margin="-310,-15,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="68" FontWeight="Bold"/>
             <TextBox x:Name = "NombreTextBox" Text ="{Binding Nombre}" Width="190" Height="25" Margin="150,-30,0,0"/>
 
 
@@ -35,26 +47,26 @@
 
 
             <!--Apellido-->
-            <Label Content = "Apellido" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83"/>
+            <Label Content = "Apellido" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
             <TextBox x:Name = "ApellidoTextBox" Text ="{Binding Apellido}" Width="190" Height="25" Margin="150,-30,0,0"/>
 
 
 
 
             <!--Nombre Usuario-->
-            <Label Content = "Nombre Usuario" FontSize="15px" Margin="-225,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="155"/>
+            <Label Content = "Nombre Usuario" FontSize="15px" Margin="-225,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="155" FontWeight="Bold"/>
             <TextBox x:Name = "NombreUsuarioTextBox" Text ="{Binding NombreUsuario}" Width="190" Height="27" Margin="150,-30,0,0" />
 
 
 
             <!--Calve-->
-            <Label Content = "Contrasena" FontSize="15px" Margin="-280,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="100"/>
+            <Label Content = "Contrasena" FontSize="15px" Margin="-280,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="100" FontWeight="Bold"/>
             <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="190" Margin="150,-30,1,1" />
 
 
 
             <!--Confirmar Contrasena-->
-            <Label Content = "Confirmar Contrasena" FontSize="15px" Margin="35,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <Label Content = "Confirmar Contrasena" FontSize="15px" Margin="35,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" FontWeight="Bold"/>
             <PasswordBox x:Name="ConfirmarClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" Height="30" Width="190" Margin="150,-30,1,1"/>
 
 

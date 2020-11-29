@@ -6,13 +6,27 @@
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Consultas"
         xmlns:PasswordHelper="clr-namespace:SegurosVehiculos.Imagenes.PasswordHelper"
         mc:Ignorable="d"
-        Title="Consultas de Usuarios" Height="450" Width="800">
+        Title="Consultas de Usuarios" Height="450" Width="800"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
+
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF091FA8"/>
+                <GradientStop Color="#FF2338BD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
+                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <StackPanel Orientation="Vertical" Margin="0,5,0,0" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" Height="60">
                 <!--——————————————————————————————————————————————[ DESDE ]——————————————————————————————————————————————-->
                 <StackPanel>
-                    <Label Content="Desde:"/>
+                    <Label Content="Desde:" FontWeight="Bold"/>
                     <DatePicker x:Name="DesdeDatePicker" Margin="0,0,15,0" />
                 </StackPanel>
 
@@ -20,7 +34,7 @@
 
                 <!--——————————————————————————————————————————————[ HASTA ]——————————————————————————————————————————————-->
                 <StackPanel Orientation="Vertical" Margin="0,0,20,0" >
-                    <Label Content="Hasta:" />
+                    <Label Content="Hasta:" FontWeight="Bold" />
                     <DatePicker x:Name="HastaDatePicker"/>
                 </StackPanel>
 
@@ -28,7 +42,7 @@
 
                 <!--——————————————————————————————————————————————[ FILTRO ]——————————————————————————————————————————————-->
                 <StackPanel  Margin="0,0,10,0" >
-                    <Label Content="Filtro:" />
+                    <Label Content="Filtro:" FontWeight="Bold" />
                     <ComboBox x:Name="FiltroComboBox" Width="95" Height="24" >
                         <ComboBoxItem Content="Usuario Id"/>
                         <ComboBoxItem Content="Nombres"/>
@@ -41,7 +55,7 @@
 
                 <!--——————————————————————————————————————————————[ CRITERIO ]——————————————————————————————————————————————-->
                 <StackPanel Margin="5,0">
-                    <Label Content="Critero:"/>
+                    <Label Content="Critero:" FontWeight="Bold"/>
                     <TextBox x:Name="CriterioTextBox" Width="95" Height="24" Margin="0,0,10,0" VerticalContentAlignment="Center" />
                 </StackPanel>
 
@@ -61,6 +75,14 @@
             </StackPanel>
             <StackPanel HorizontalAlignment="Left" Width="635" >
                 <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center">
+
+                    <DataGrid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFBCC8C9" Offset="0.544"/>
+                            <GradientStop Color="#FFB2C2C5" Offset="0.946"/>
+                        </LinearGradientBrush>
+                    </DataGrid.Background>
+
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Usuario Id" Binding="{Binding UsuarioId}"/>
                         <DataGridTextColumn Header="Nombres" Binding="{Binding Nombre}"/>
