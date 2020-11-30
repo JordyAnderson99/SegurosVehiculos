@@ -36,7 +36,8 @@
                 <MenuItem Header= "         Consultas         " HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Top">
                 <MenuItem x:Name="ConsultarUsuarios" Header="Consultar Usuarios " Click="cUsuariosMenuItem_Click"/>
                 <MenuItem x:Name="ConsultarClientes" Header="Consultar Clientes " Click="cClientesMenuItem_Click"/>
-                  
+                <MenuItem x:Name="ConsultarVehiculos" Header="Consultar Vehiculos " Click="cVehiculosMenuItem_Click"/>  
+
                 </MenuItem>
             </Menu>
 

@@ -162,3 +162,7 @@ C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVeh
 C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVehiculos.baml
 C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.genruntimeconfig.cache
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVehiculos.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVehiculos.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVehiculos.baml
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVehiculos.baml

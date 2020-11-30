@@ -62,8 +62,8 @@
 
 
                 <!--——————————————————————————————————————————————[ CONSULTAR ]——————————————————————————————————————————————-->
-                <Button x:Name="ConsultarButton" Height="30" Width="90"  >   
-                <!-- Click="ConsultarButton_Click" -->
+                <Button x:Name="ConsultarButton" Height="30" Width="90" Click ="ConsultarButton_Click" >   
+                 
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/Imagenes/Buscar.png"/>
                         <Label Content="Consultar"/>

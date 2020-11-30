@@ -18,7 +18,7 @@ namespace SegurosVehiculos.BLL
 
             try
             {
-                //obtener la lista y filtrarla segun el criterio recibido por parametro
+
                 lista = contexto.MarcaVehiculos.Where(criterio).ToList();
 
             }
