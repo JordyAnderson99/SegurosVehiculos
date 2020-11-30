@@ -85,19 +85,19 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header=" VehiculoId " Binding="{Binding VehiculoId}"/>
                         <DataGridTextColumn Header=" Cantidad de Pasajeros " Binding="{Binding CantidadPasajeros}"/>
-                        <DataGridTextColumn Header=" Cilindros " Binding="{Binding Apellido}"/>
+                        <DataGridTextColumn Header=" Cilindros " Binding="{Binding Cilindros}"/>
                         <DataGridTextColumn Header=" Fecha " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
                         <DataGridTextColumn Header=" Uso del Vehiculo " Binding="{Binding Uso}"/>
                         <DataGridTextColumn Header=" Chasis " Binding="{Binding Chasis}"/>
                         <DataGridTextColumn Header=" Matricula " Binding="{Binding Matricula}"/>
-                        <DataGridTextColumn Header=" Valor " Binding="{Binding Valor}"/>
+                        <DataGridTextColumn Header=" Valor " Binding="{Binding ValorVehiculo}"/>
                         <DataGridTextColumn Header=" Fecha Expedicion " Binding="{Binding FechaExpedicionMatricula, StringFormat='dd/MM/yyyy'}"/>
-                        <DataGridTextColumn Header=" Ano de Fabricacion " Binding="{Binding CorreoElectronico}"/>
+                        <DataGridTextColumn Header=" Año de Fabricacion " Binding="{Binding AñoFabricacion}"/>
                         <DataGridTextColumn Header=" Motor " Binding="{Binding Motor}"/>
                         <DataGridTextColumn Header=" Capacidad de Carga " Binding="{Binding CapacidadCarga}"/>
                         <DataGridTextColumn Header=" Total de Puertas " Binding="{Binding TotalPuertas}"/>
-                        <DataGridTextColumn Header=" Color " Binding="{Binding Colores.Color}"/>
-                        <DataGridTextColumn Header=" Marca " Binding="{Binding marca.Marca}"/>
+                        <DataGridTextColumn Header=" Color " Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header=" Marca " Binding="{Binding Marca}"/>
                         <DataGridTextColumn Header=" Modelo " Binding="{Binding Modelo}"/>
                         <DataGridTextColumn Header=" Status del Vehiculo " Binding="{Binding Status}"/>
                         <DataGridTextColumn Header=" Tipo de Emision " Binding="{Binding TipoEmision}"/>

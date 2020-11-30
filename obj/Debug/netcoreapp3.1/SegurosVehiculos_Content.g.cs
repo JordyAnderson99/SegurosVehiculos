@@ -10,10 +10,13 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/buscar.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/eliminar.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/guardar.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/home.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/llave.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/mas.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/menos.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/nuevo.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/registro.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/registro2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/usuario.png")]
 
 

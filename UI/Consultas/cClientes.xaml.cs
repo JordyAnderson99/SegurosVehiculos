@@ -125,6 +125,9 @@ namespace SegurosVehiculos.UI.Consultas
             DatosDataGrid.ItemsSource = listado;
         }
 
+        private void DatosDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
 
+        }
     }
 }

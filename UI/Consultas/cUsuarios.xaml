@@ -84,11 +84,11 @@
                     </DataGrid.Background>
 
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Usuario Id" Binding="{Binding UsuarioId}"/>
-                        <DataGridTextColumn Header="Nombres" Binding="{Binding Nombre}"/>
-                        <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellido}"/>
-                        <DataGridTextColumn Header="Fecha Creacion " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
-                        <DataGridTextColumn Header="Nombre Usuario" Binding="{Binding NombreUsuario}"/>
+                        <DataGridTextColumn Header="      Usuario Id    " Binding="{Binding UsuarioId}"/>
+                        <DataGridTextColumn Header="       Nombres      " Binding="{Binding Nombre}"/>
+                        <DataGridTextColumn Header="     Apellidos      " Binding="{Binding Apellido}"/>
+                        <DataGridTextColumn Header="     Fecha Creacion      " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
+                        <DataGridTextColumn Header="             Nombre Usuario" Binding="{Binding NombreUsuario}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

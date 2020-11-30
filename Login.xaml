@@ -31,7 +31,7 @@
             <!--—————————————————————————————————————————[ USUARIO ]—————————————————————————————————————————-->
             <Label Content="Nombre Usuario" Margin="0,5,0,0" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal">
-                <Image Source="/Resources/Usuario.png" Height="30" />
+                <Image Source="/Imagenes/Usuario.png" Height="30"   />
                 <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="235" VerticalContentAlignment="Center" KeyDown="NombreUsuarioTextBox_KeyDown" />
             </StackPanel>
 
@@ -41,7 +41,7 @@
             <!--—————————————————————————————————————————[ CONTRASEÑA ]—————————————————————————————————————————-->
             <Label Content="Contraseña" Margin="0,10,0,0" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal">
-                <Image Source="/Resources/Candado.png" Height="30" />
+                <Image Source="/Imagenes/Llave.png" Height="30" />
                 <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="235" VerticalContentAlignment="Center" KeyDown="ClavePasswordBox_KeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,25,0,0" HorizontalAlignment="Center" >

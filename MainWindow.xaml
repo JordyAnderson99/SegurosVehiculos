@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos"
         mc:Ignorable="d"
-        Title="Menu " Height="350" Width="450">
+        Title="Menu " Height="350" Width="450" >
      <Grid>
 
         <Grid.OpacityMask>
@@ -43,7 +43,7 @@
 
              <StackPanel Orientation= "Vertical" Margin="30,0,0,0">
             <StackPanel Orientation= "Horizontal" Margin="10,0">
-                <Image Source= "/Imagenes/logo.png" Width="300" Height= "300" />  
+                <Image Source= "/Imagenes/Hom.png" Width="300" Height= "300" />  
             </StackPanel>
              </StackPanel> 
         </StackPanel>  

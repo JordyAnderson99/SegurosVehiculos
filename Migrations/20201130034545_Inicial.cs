@@ -175,7 +175,12 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "MarcaVehiculos",
                 columns: new[] { "MarcaId", "Marca" },
-                values: new object[] { 4, "Lamborghini" });
+                values: new object[] { 1, "Tauro Turbo" });
+
+            migrationBuilder.InsertData(
+                table: "MarcaVehiculos",
+                columns: new[] { "MarcaId", "Marca" },
+                values: new object[] { 2, "Toyota" });
 
             migrationBuilder.InsertData(
                 table: "MarcaVehiculos",
@@ -185,17 +190,37 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "MarcaVehiculos",
                 columns: new[] { "MarcaId", "Marca" },
+                values: new object[] { 4, "Lamborghini" });
+
+            migrationBuilder.InsertData(
+                table: "MarcaVehiculos",
+                columns: new[] { "MarcaId", "Marca" },
                 values: new object[] { 5, "BMW" });
 
             migrationBuilder.InsertData(
-                table: "MarcaVehiculos",
-                columns: new[] { "MarcaId", "Marca" },
-                values: new object[] { 1, "Tauro Turbo" });
+                table: "Modelos",
+                columns: new[] { "ModeloId", "ModeloVehiculo" },
+                values: new object[] { 5, "GLE 63" });
 
             migrationBuilder.InsertData(
-                table: "MarcaVehiculos",
-                columns: new[] { "MarcaId", "Marca" },
-                values: new object[] { 2, "Toyota" });
+                table: "Modelos",
+                columns: new[] { "ModeloId", "ModeloVehiculo" },
+                values: new object[] { 4, "R5" });
+
+            migrationBuilder.InsertData(
+                table: "Modelos",
+                columns: new[] { "ModeloId", "ModeloVehiculo" },
+                values: new object[] { 3, "I8" });
+
+            migrationBuilder.InsertData(
+                table: "Modelos",
+                columns: new[] { "ModeloId", "ModeloVehiculo" },
+                values: new object[] { 2, "Urus" });
+
+            migrationBuilder.InsertData(
+                table: "Modelos",
+                columns: new[] { "ModeloId", "ModeloVehiculo" },
+                values: new object[] { 1, "Camry" });
 
             migrationBuilder.InsertData(
                 table: "StatusVehiculo",
@@ -235,12 +260,12 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "TipoVehiculo",
                 columns: new[] { "TipoVehiculoId", "Tipo" },
-                values: new object[] { 2, "Publico" });
+                values: new object[] { 1, "Privado" });
 
             migrationBuilder.InsertData(
                 table: "TipoVehiculo",
                 columns: new[] { "TipoVehiculoId", "Tipo" },
-                values: new object[] { 1, "Privado" });
+                values: new object[] { 2, "Publico" });
 
             migrationBuilder.InsertData(
                 table: "Usuarios",

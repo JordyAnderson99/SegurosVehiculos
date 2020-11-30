@@ -145,6 +145,33 @@ namespace SegurosVehiculos.Migrations
                     b.HasKey("ModeloId");
 
                     b.ToTable("Modelos");
+
+                    b.HasData(
+                        new
+                        {
+                            ModeloId = 1,
+                            ModeloVehiculo = "Camry"
+                        },
+                        new
+                        {
+                            ModeloId = 2,
+                            ModeloVehiculo = "Urus"
+                        },
+                        new
+                        {
+                            ModeloId = 3,
+                            ModeloVehiculo = "I8"
+                        },
+                        new
+                        {
+                            ModeloId = 4,
+                            ModeloVehiculo = "R5"
+                        },
+                        new
+                        {
+                            ModeloId = 5,
+                            ModeloVehiculo = "GLE 63"
+                        });
                 });
 
             modelBuilder.Entity("SegurosVehiculos.Entidades.StatusVehiculo", b =>
