@@ -37,6 +37,8 @@
                 <MenuItem x:Name="ConsultarUsuarios" Header="Consultar Usuarios " Click="cUsuariosMenuItem_Click"/>
                 <MenuItem x:Name="ConsultarClientes" Header="Consultar Clientes " Click="cClientesMenuItem_Click"/>
                 <MenuItem x:Name="ConsultarVehiculos" Header="Consultar Vehiculos " Click="cVehiculosMenuItem_Click"/>  
+                <MenuItem x:Name="ConsultarCotizaciones" Header="Consultar Cotizaciones " Click="cCotizacionesMenuItem_Click"/>  
+
 
                 </MenuItem>
             </Menu>

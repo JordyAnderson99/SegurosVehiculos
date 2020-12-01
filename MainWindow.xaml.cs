@@ -73,5 +73,13 @@ namespace SegurosVehiculos
 
         }
 
+        private void cCotizacionesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            
+            cCotizaciones cCotizaciones = new cCotizaciones();
+            cCotizaciones.Show();
+
+        }
+
     }
 }

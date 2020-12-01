@@ -169,3 +169,5 @@ C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVehic
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Llave.png
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Usuario.png
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.png
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones.baml

@@ -15,8 +15,8 @@ namespace SegurosVehiculos.Dal{
         public DbSet<StatusVehiculo> StatusVehiculo { get; set; }
         public DbSet<TipoEmision> TipoEmision { get; set; }
         public DbSet<TipoVehiculo> TipoVehiculo {get; set;}
+        public DbSet<Cotizaciones> Cotizaciones {get; set;}       
         
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
 
             optionsBuilder.UseSqlite(@"Data Source = Data/Seguros.db");
