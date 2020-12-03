@@ -81,5 +81,12 @@ namespace SegurosVehiculos
 
         }
 
+        private void rVentasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rVentas ventas = new rVentas();
+            ventas.Show();
+        }
+
+
     }
 }

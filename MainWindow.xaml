@@ -28,10 +28,11 @@
                  
                    <MenuItem x:Name="rUsuariosMenuItem" Header="Registrar Usuarios " Click="rUsuariosMenuItem_Click"/>                   
                    <MenuItem x:Name="rClientesMenuItem" Header="Registrar Clientes " Click="rClientesMenuItem_Click"/>                   
-                   <MenuItem x:Name="rvehiculosMenuItem" Header="Registrar Vehiculos " Click="rVehiculosMenuItem_Click"/>                   
-                    
+                   <MenuItem x:Name="rvehiculosMenuItem" Header="Registrar Vehiculos " Click="rVehiculosMenuItem_Click"/>
+                    <MenuItem x:Name="rventasMenuItem" Header="Registrar Ventas " Click="rVentasMenuItem_Click"/>
 
-                    </MenuItem>
+
+                </MenuItem>
 
                 <MenuItem Header= "         Consultas         " HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Top">
                 <MenuItem x:Name="ConsultarUsuarios" Header="Consultar Usuarios " Click="cUsuariosMenuItem_Click"/>

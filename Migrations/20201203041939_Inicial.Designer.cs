@@ -9,7 +9,7 @@ using SegurosVehiculos.Dal;
 namespace SegurosVehiculos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20201130034545_Inicial")]
+    [Migration("20201203041939_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -94,6 +94,38 @@ namespace SegurosVehiculos.Migrations
                         });
                 });
 
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Cotizaciones", b =>
+                {
+                    b.Property<int>("CotizacionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CantidadCuotas")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Monto")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Observaciones")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TipoSeguroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VehiculoId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CotizacionId");
+
+                    b.ToTable("Cotizaciones");
+                });
+
             modelBuilder.Entity("SegurosVehiculos.Entidades.MarcaVehiculos", b =>
                 {
                     b.Property<int>("MarcaId")
@@ -176,6 +208,35 @@ namespace SegurosVehiculos.Migrations
                         });
                 });
 
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Pagos", b =>
+                {
+                    b.Property<int>("PagoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("MyProperty")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("NumeroCuotaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("VentaId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("PagoId");
+
+                    b.ToTable("Pagos");
+                });
+
             modelBuilder.Entity("SegurosVehiculos.Entidades.StatusVehiculo", b =>
                 {
                     b.Property<int>("StatusVehiculoId")
@@ -240,6 +301,32 @@ namespace SegurosVehiculos.Migrations
                         {
                             TipoEmisionId = 2,
                             Emision = "?"
+                        });
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.TipoSeguros", b =>
+                {
+                    b.Property<int>("TipoSeguroId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Seguros")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("TipoSeguroId");
+
+                    b.ToTable("TipoSeguros");
+
+                    b.HasData(
+                        new
+                        {
+                            TipoSeguroId = 1,
+                            Seguros = "FULL"
+                        },
+                        new
+                        {
+                            TipoSeguroId = 2,
+                            Seguros = "De Ley"
                         });
                 });
 
@@ -327,6 +414,9 @@ namespace SegurosVehiculos.Migrations
                     b.Property<int>("Cilindros")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("ColorId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
@@ -336,11 +426,26 @@ namespace SegurosVehiculos.Migrations
                     b.Property<double>("FuerzaMotriz")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("MarcaId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Matricula")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("ModeloId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Motor")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("StatusVehiculoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TipoEmisionId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TipoVehiculoId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("TotalPuertas")
                         .HasColumnType("INTEGER");
@@ -354,6 +459,107 @@ namespace SegurosVehiculos.Migrations
                     b.HasKey("VehiculoId");
 
                     b.ToTable("Vehiculos");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Ventas", b =>
+                {
+                    b.Property<int>("VentaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CantidadCuotas")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Monto")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Observacion")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TipoSeguroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VehiculoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Vence")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("VentaId");
+
+                    b.ToTable("Ventas");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.VentasDetalle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Balance")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Monto")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroCuotasId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VentaId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("VentaId");
+
+                    b.ToTable("VentasDetalle");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Cotizaciones", b =>
+                {
+                    b.HasOne("SegurosVehiculos.Entidades.Cotizaciones", null)
+                        .WithMany("Detalle")
+                        .HasForeignKey("CotizacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.VentasDetalle", b =>
+                {
+                    b.HasOne("SegurosVehiculos.Entidades.Clientes", "clientes")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SegurosVehiculos.Entidades.Ventas", null)
+                        .WithMany("Detalle")
+                        .HasForeignKey("VentaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("clientes");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Cotizaciones", b =>
+                {
+                    b.Navigation("Detalle");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.Ventas", b =>
+                {
+                    b.Navigation("Detalle");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,7 +16,11 @@ namespace SegurosVehiculos.Entidades{
         public int NumeroCuota { get; set; }
 
         public double Money { get; set; }
+        public int ClienteId { get; set; }
 
-        
+
+        [ForeignKey("ClienteId")]
+
+        public Clientes clientes { get; set; } = new Clientes();
     }
 }

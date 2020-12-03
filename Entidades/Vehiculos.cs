@@ -21,7 +21,12 @@ namespace SegurosVehiculos.Entidades
         public double FuerzaMotriz { get; set; }
         public double CapacidadCarga { get; set; }
         public int TotalPuertas { get; set; }
-        
+        public int ColorId { get; set; }
+        public int MarcaId { get; set; }
+        public int ModeloId { get; set; }
+        public int StatusVehiculoId { get; set; }
+        public int TipoEmisionId { get; set; }
+        public int TipoVehiculoId { get; set; }
 
     }
 }
