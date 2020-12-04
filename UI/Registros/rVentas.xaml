@@ -6,21 +6,22 @@
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
         Title="Registro de Ventas" Height="550" Width="730">
-    <Window.Foreground>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Foreground>
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF0A4B51"/>
-            <GradientStop Color="#FF0091FF" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
-
-
+    
     <Grid >
+
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0A4B51"/>
+                <GradientStop Color="#FF0091FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <StackPanel Margin= "10,-30,0,0"  VerticalAlignment="Center" HorizontalAlignment="Left"  Width="695" Height="700">
 
             <!--VentaId-->

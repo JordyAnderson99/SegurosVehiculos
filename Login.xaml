@@ -11,14 +11,14 @@
     <Grid>
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF091FA8"/>
-                <GradientStop Color="#FF2338BD" Offset="1"/>
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
-                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+                <GradientStop Color="#FF0A4B51"/>
+                <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <StackPanel Orientation="Vertical" Margin="10" Height="300"  HorizontalAlignment="Center" >
@@ -32,7 +32,7 @@
             <Label Content="Nombre Usuario" Margin="0,5,0,0" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Imagenes/Usuario.png" Height="30"   />
-                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="235" VerticalContentAlignment="Center" KeyDown="NombreUsuarioTextBox_KeyDown" />
+                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="230" VerticalContentAlignment="Center" KeyDown="NombreUsuarioTextBox_KeyDown" />
             </StackPanel>
 
 
@@ -42,7 +42,7 @@
             <Label Content="Contraseña" Margin="0,10,0,0" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Imagenes/Llave.png" Height="30" />
-                <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="235" VerticalContentAlignment="Center" KeyDown="ClavePasswordBox_KeyDown"/>
+                <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="251" VerticalContentAlignment="Center" KeyDown="ClavePasswordBox_KeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,25,0,0" HorizontalAlignment="Center" >
 
@@ -54,7 +54,7 @@
                 <!--—————————————————————————————————————————[ BOTON CANCELAR ]—————————————————————————————————————————-->           
                 <Button x:Name="CancelarButton" Click="CancelarButton_Click" Width="100" BorderBrush="#FFBEBEBE" Margin="0,0,35,0" >
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Resources/Cancelar.png" Height="25" />
+                        <!--<Image Source="/Resources/Cancelar.png" Height="25" />-->
                         <Label Content="Cancelar" FontWeight="Bold" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -65,7 +65,7 @@
                 <!--—————————————————————————————————————————[ BOTON INGRESAR ]—————————————————————————————————————————-->
                 <Button x:Name="IngresarButton" Click="IngresarButton_Click" Width="100" BorderBrush="#FFBEBEBE">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Resources/Entrar.png" Height="25"/>
+                        <!--<Image Source="/Resources/Entrar.png" Height="25"/>-->
                         <Label Content="Ingresar" FontWeight="Bold" FontSize="14"/>
                     </StackPanel>
                 </Button>

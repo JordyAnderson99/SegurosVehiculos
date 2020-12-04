@@ -9,10 +9,9 @@ namespace SegurosVehiculos.Entidades
     {
         [Key]
         public int PagoId { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; set; } = DateTime.Now;
         public int ClienteId { get; set; }
         public int VentaId { get; set; }
-        public int MyProperty { get; set; }
         public int NumeroCuotaId { get; set; }
         public double Total { get; set; }
 

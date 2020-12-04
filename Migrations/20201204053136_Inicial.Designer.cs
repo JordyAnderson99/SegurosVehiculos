@@ -9,7 +9,7 @@ using SegurosVehiculos.Dal;
 namespace SegurosVehiculos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20201203221233_Inicial")]
+    [Migration("20201204053136_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -219,9 +219,6 @@ namespace SegurosVehiculos.Migrations
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("INTEGER");
 
                     b.Property<int>("NumeroCuotaId")
                         .HasColumnType("INTEGER");

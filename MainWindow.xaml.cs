@@ -32,13 +32,7 @@ namespace SegurosVehiculos
         {
             InitializeComponent();
         }
-
-
-
-
-
-        
-
+        //Registro de Usuarios y su consulta
        private void rUsuariosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rUsuarios rUsuarios = new rUsuarios();
@@ -51,12 +45,7 @@ namespace SegurosVehiculos
             cUsuarios.Show();
         }
 
-
-
-
-
-
-
+        //Registro de Clientes y su consulta
         private void rClientesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rClientes rClientes = new rClientes();
@@ -69,11 +58,7 @@ namespace SegurosVehiculos
             cClientes.Show();
         }
 
-
-
-
-
-
+        //Registro de Vehiculos y su consulta
         private void rVehiculosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rVehiculos vehiculos = new rVehiculos();
@@ -82,26 +67,12 @@ namespace SegurosVehiculos
 
 
         private void cVehiculosMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            
+        { 
             cVehiculos vehiculos = new cVehiculos();
             vehiculos.Show();
-
         }
 
-
-
-
-
-
-
-        private void cCotizacionesMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            
-            cCotizaciones cCotizaciones = new cCotizaciones();
-            cCotizaciones.Show();
-
-        }
+        //Registro de Cotizaciones y su consulta*******************************************************
 
         private void rCotizacionesMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -109,18 +80,18 @@ namespace SegurosVehiculos
             rCotizaciones.Show();
         }
 
+        private void cCotizacionesMenuItem_Click(object sender, RoutedEventArgs e)
+        {            
+            cCotizaciones cCotizaciones = new cCotizaciones();
+            cCotizaciones.Show();
+        }
 
-
-
-
-
-
+        //Registro de Ventas y su consulta*******************************************************
         private void rVentasMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rVentas ventas = new rVentas();
             ventas.Show();
         }
-
 
         private void cVentasMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -130,7 +101,17 @@ namespace SegurosVehiculos
 
         }
 
-        
+        //Registro de Pagos y su consulta*******************************************************
+        private void rPagosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rPagos pagos = new rPagos();
+            pagos.Show();
+        }
 
+        private void cPagosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cPagos cpagos = new cPagos();
+            cpagos.Show();
+        }
     }
 }

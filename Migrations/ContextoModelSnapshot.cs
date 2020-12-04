@@ -218,9 +218,6 @@ namespace SegurosVehiculos.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("NumeroCuotaId")
                         .HasColumnType("INTEGER");
 

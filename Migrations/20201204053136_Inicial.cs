@@ -94,7 +94,6 @@ namespace SegurosVehiculos.Migrations
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     VentaId = table.Column<int>(type: "INTEGER", nullable: false),
-                    MyProperty = table.Column<int>(type: "INTEGER", nullable: false),
                     NumeroCuotaId = table.Column<int>(type: "INTEGER", nullable: false),
                     Total = table.Column<double>(type: "REAL", nullable: false)
                 },

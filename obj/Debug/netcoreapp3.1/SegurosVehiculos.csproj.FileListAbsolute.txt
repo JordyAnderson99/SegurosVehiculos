@@ -269,3 +269,19 @@ C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotiz
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.baml
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.jpeg
+C:\Users\DELL\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.jpeg
+C:\Users\DELL\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.png
+C:\Users\DELL\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Llave.png
+C:\Users\DELL\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Usuario.png
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones copy.g.cs
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.g.cs
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.g.cs
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rPagos.g.cs
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVentas.g.cs
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones copy.baml
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.baml
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.baml
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rPagos.baml
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVentas.baml
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cPagos.g.cs
+C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cPagos.baml
