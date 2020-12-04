@@ -33,6 +33,12 @@ namespace SegurosVehiculos
             InitializeComponent();
         }
 
+
+
+
+
+        
+
        private void rUsuariosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rUsuarios rUsuarios = new rUsuarios();
@@ -46,6 +52,11 @@ namespace SegurosVehiculos
         }
 
 
+
+
+
+
+
         private void rClientesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rClientes rClientes = new rClientes();
@@ -57,6 +68,11 @@ namespace SegurosVehiculos
             cClientes cClientes = new cClientes();
             cClientes.Show();
         }
+
+
+
+
+
 
         private void rVehiculosMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -73,6 +89,12 @@ namespace SegurosVehiculos
 
         }
 
+
+
+
+
+
+
         private void cCotizacionesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             
@@ -81,12 +103,34 @@ namespace SegurosVehiculos
 
         }
 
+        private void rCotizacionesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rCotizaciones rCotizaciones = new rCotizaciones();
+            rCotizaciones.Show();
+        }
+
+
+
+
+
+
+
         private void rVentasMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rVentas ventas = new rVentas();
             ventas.Show();
         }
 
+
+        private void cVentasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            
+            cVentas cVentas = new cVentas();
+            cVentas.Show();
+
+        }
+
+        
 
     }
 }

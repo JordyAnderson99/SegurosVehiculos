@@ -169,8 +169,6 @@ C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVehic
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Llave.png
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Usuario.png
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.png
-C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones.g.cs
-C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones.baml
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csprojAssemblyReference.cache
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\Login.g.cs
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\MainWindow.g.cs
@@ -262,3 +260,12 @@ C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehic
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csproj.CopyComplete
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.genruntimeconfig.cache
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVentas.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVentas.baml
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.baml
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones copy.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotizaciones copy.baml
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.g.cs
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.baml
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.jpeg

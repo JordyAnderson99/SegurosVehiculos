@@ -14,8 +14,7 @@ namespace SegurosVehiculos.Entidades{
         public int CotizacionId { get; set; }
 
         public int NumeroCuota { get; set; }
-
-        public double Money { get; set; }
+        
         public int ClienteId { get; set; }
 
 

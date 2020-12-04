@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos"
         mc:Ignorable="d"
-        Title="Menu " Height="350" Width="450" >
+        Title="Menu " Height="373" Width="450" >
      <Grid>
 
         <Grid.OpacityMask>
@@ -29,7 +29,8 @@
                    <MenuItem x:Name="rUsuariosMenuItem" Header="Registrar Usuarios " Click="rUsuariosMenuItem_Click"/>                   
                    <MenuItem x:Name="rClientesMenuItem" Header="Registrar Clientes " Click="rClientesMenuItem_Click"/>                   
                    <MenuItem x:Name="rvehiculosMenuItem" Header="Registrar Vehiculos " Click="rVehiculosMenuItem_Click"/>
-                    <MenuItem x:Name="rventasMenuItem" Header="Registrar Ventas " Click="rVentasMenuItem_Click"/>
+                   <MenuItem x:Name="rventasMenuItem" Header="Registrar Ventas " Click="rVentasMenuItem_Click"/>
+                   <MenuItem x:Name="rCotizacionesMenuItem" Header="Registrar Cotizaciones " Click="rCotizacionesMenuItem_Click"/>
 
 
                 </MenuItem>
@@ -39,14 +40,14 @@
                 <MenuItem x:Name="ConsultarClientes" Header="Consultar Clientes " Click="cClientesMenuItem_Click"/>
                 <MenuItem x:Name="ConsultarVehiculos" Header="Consultar Vehiculos " Click="cVehiculosMenuItem_Click"/>  
                 <MenuItem x:Name="ConsultarCotizaciones" Header="Consultar Cotizaciones " Click="cCotizacionesMenuItem_Click"/>  
-
+                <MenuItem x:Name="ConsultarVentas" Header="Consultar Ventas " Click="cVentasMenuItem_Click"/>  
 
                 </MenuItem>
             </Menu>
 
-             <StackPanel Orientation= "Vertical" Margin="30,0,0,0">
+             <StackPanel Orientation= "Vertical" Margin="55,0,0,0">
             <StackPanel Orientation= "Horizontal" Margin="10,0">
-                <Image Source= "/Imagenes/Hom.png" Width="300" Height= "300" />  
+                <Image Source= "/Imagenes/Home.jpeg" Width="310" Height= "311" />  
             </StackPanel>
              </StackPanel> 
         </StackPanel>  

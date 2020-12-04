@@ -11,6 +11,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/buscar.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/eliminar.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/guardar.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/home.jpeg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/home.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/llave.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/mas.png")]

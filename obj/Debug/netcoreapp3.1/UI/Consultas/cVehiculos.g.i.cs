@@ -101,7 +101,7 @@ namespace SegurosVehiculos.UI.Consultas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SegurosVehiculos;component/ui/consultas/cvehiculos.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SegurosVehiculos;V1.0.0.0;component/ui/consultas/cvehiculos.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\UI\Consultas\cVehiculos.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
