@@ -213,6 +213,7 @@ namespace SegurosVehiculos.Migrations
                     Vence = table.Column<DateTime>(type: "TEXT", nullable: false),
                     VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
                     TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
+                    NumeroCuotaId = table.Column<int>(type: "INTEGER", nullable: false),
                     Monto = table.Column<double>(type: "REAL", nullable: false),
                     Observacion = table.Column<string>(type: "TEXT", nullable: true),
                     CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false)
@@ -231,7 +232,6 @@ namespace SegurosVehiculos.Migrations
                     VentaId = table.Column<int>(type: "INTEGER", nullable: false),
                     ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    NumeroCuotasId = table.Column<int>(type: "INTEGER", nullable: false),
                     Monto = table.Column<double>(type: "REAL", nullable: false),
                     Balance = table.Column<double>(type: "REAL", nullable: false)
                 },

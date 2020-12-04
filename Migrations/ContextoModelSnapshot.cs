@@ -474,6 +474,9 @@ namespace SegurosVehiculos.Migrations
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("NumeroCuotaId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Observacion")
                         .HasColumnType("TEXT");
 
@@ -508,9 +511,6 @@ namespace SegurosVehiculos.Migrations
 
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
-
-                    b.Property<int>("NumeroCuotasId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<int>("VentaId")
                         .HasColumnType("INTEGER");

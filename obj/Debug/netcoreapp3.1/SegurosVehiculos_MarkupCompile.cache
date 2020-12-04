@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\
+c:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\
 SegurosVehiculos
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\DELL\source\repos\SegurosVehiculos\App.xaml
-10-111601359
-111004384473
-46569871468
-212-1148375369
+c:\Users\DELL\source\repos\SegurosVehiculos\App.xaml
+10473176490
+11245252684
+47-768446030
+212823178383
 Login.xaml;MainWindow.xaml;UI\Consultas\cClientes.xaml;UI\Consultas\cCotizaciones.xaml;UI\Consultas\cUsuarios.xaml;UI\Consultas\cVehiculos.xaml;UI\Registros\rClientes.xaml;UI\Registros\rUsuarios.xaml;UI\Registros\rVehiculos.xaml;UI\Registros\rVentas.xaml;
 
-False
+True
 

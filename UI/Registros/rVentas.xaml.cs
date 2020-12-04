@@ -27,18 +27,23 @@ namespace SegurosVehiculos.UI.Registros
 
             //ComboBox del ClienteId
             ClienteIdComboBox.ItemsSource = ClientesBLL.GetList(s => true);
-            ClienteIdComboBox.SelectedValuePath = "SuplidorId";
-            ClienteIdComboBox.DisplayMemberPath = "Nombres";
+            ClienteIdComboBox.SelectedValuePath = "ClienteId";
+            ClienteIdComboBox.DisplayMemberPath = "Nombre";
 
             // ComboBox del VehiculoId
             VehiculoIdComboBox.ItemsSource = VehiculosBLL.GetList(p => true);
-            VehiculoIdComboBox.SelectedValuePath = "ProductoId";
-            VehiculoIdComboBox.DisplayMemberPath = "Descripcion";
+            VehiculoIdComboBox.SelectedValuePath = "VehiculoId";
+            VehiculoIdComboBox.DisplayMemberPath = "Marca";
 
             // ComboBox del SeguroId
             TipoSeguroIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
-            TipoSeguroIdComboBox.SelectedValuePath = "ProductoId";
-            TipoSeguroIdComboBox.DisplayMemberPath = "Descripcion";
+            TipoSeguroIdComboBox.SelectedValuePath = "TipoSeguroId";
+            TipoSeguroIdComboBox.DisplayMemberPath = "Seguros";
+
+            // ComboBox del NumeroCuotaId
+            NumeroCuotaIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
+            NumeroCuotaIdComboBox.SelectedValuePath = "NumeroCuotaId";
+            NumeroCuotaIdComboBox.DisplayMemberPath = "NumeroCuota";
         }
         // Funcion Cagar
         private void Cargar()

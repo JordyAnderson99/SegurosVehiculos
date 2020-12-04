@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Ventas" Height="550" Width="720">
+        Title="Registro de Ventas" Height="550" Width="730">
     <Window.Foreground>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black"/>
@@ -20,86 +20,86 @@
     </Window.Background>
 
 
-    <Grid Height="449">
-        <StackPanel Margin= "10,-30,0,0"  VerticalAlignment="Center" HorizontalAlignment="Left"  Width="700" Height="700">
+    <Grid >
+        <StackPanel Margin= "10,-30,0,0"  VerticalAlignment="Center" HorizontalAlignment="Left"  Width="695" Height="700">
 
             <!--VentaId-->
-            <Label Content = "VentaId" FontSize="15px" Margin="-390,125,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90"/>
-            <TextBox x:Name = "VentaIdTextBox" Text ="{Binding VentaId}" Width="50" Height="25" Margin="-220,-25,0,0"/>
+            <Label Content = "VentaId" FontSize="15px" Margin="-590,125,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90" FontWeight="Bold"/>
+            <TextBox x:Name = "VentaIdTextBox" Text ="{Binding VentaId}" Width="50" Height="25" Margin="-450,-25,0,0"/>
 
             <!--Boton Buscar-->
-            <Button x:Name ="BuscarButton" Margin="210,-40,0,0" Width = "120" Height = "40" Content="     Buscar" FontWeight="Bold"/>
-            <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="140,-40,0,0"/>
+            <Button x:Name ="BuscarButton" Margin="240,-40,0,0" Width = "120" Height = "40" Content="     Buscar" FontWeight="Bold" Click ="BuscarButton_Click" />
+            <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="170,-40,0,0"/>
 
             <!--Fecha-->
-            <Label Content = "Fecha" FontSize="13.5px" Margin="-430,10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="48" Height="24"/>
-            <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="160" Height="25" Margin="-110,-20,0,0"/>
+            <Label Content = "Fecha" FontSize="13.5px" Margin="-630,10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="48" Height="24" FontWeight="Bold" />
+            <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="160" Height="25" Margin="-340,-20,0,0"/>
 
             <!--Vence-->
-            <Label Content = "Vence" FontSize="13.5px" Margin="-430,10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="48" Height="24"/>
-            <DatePicker x:Name = "VenceDatePicker" SelectedDate ="{Binding Vence}" Width="160" Height="25" Margin="-110,-20,0,0"/>
+            <Label Content = "Vence" FontSize="13.5px" Margin="-630,10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="48" Height="24" FontWeight="Bold" />
+            <DatePicker x:Name = "VenceDatePicker" SelectedDate ="{Binding Vence}" Width="160" Height="25" Margin="-340,-20,0,0"/>
 
             <!--Observaciones-->
-            <Label Content = "Observaciones"  FontSize="15px" Margin="250,-25,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-            <TextBox x:Name = "ObservacionesTextBox" Text ="{Binding Observaciones}" Width="80" Height="25" Margin="250,-25,0,0"/>
+            <Label Content = "Observaciones"  FontSize="15px" Margin="-20,-100,1,1" Width="110" Height="25" FontFamily="SimSun-ExtB" FontStyle="Normal" FontWeight="Bold" />
+            <TextBox x:Name = "ObservacionesTextBox" Text ="{Binding Observaciones}" Width="200" Height="60" Margin="320,-65,0,0"/>
 
 
             <StackPanel Orientation="Vertical" >
-                <GroupBox Header="Detalle de Ventas"  Margin="0,5,0,0" >
+                <GroupBox Header="Detalle de Ventas"  Margin="0,5,0,0"  >
                     <StackPanel>
 
                         <!--ClienteId-->
-                        <Label Content = "ClienteId" FontSize="15px" Margin="-390,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="93"/>
-                        <ComboBox x:Name = "ClienteIdComboBox" SelectedValue ="{Binding ClienteId}" Width="100" Height="25" Margin="-170,-25,0,0"/>
+                        <Label Content = "ClienteId" FontSize="15px" Margin="-590,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="93" FontWeight="Bold" />
+                        <ComboBox x:Name = "ClienteIdComboBox" SelectedValue ="{Binding ClienteId}" Width="120" Height="25" Margin="-400,-25,0,0"/>
 
                         <!--VehiculoId-->
-                        <Label Content = "VehiculoId" FontSize="15px" Margin="0,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-                        <ComboBox x:Name = "VehiculoIdComboBox" SelectedValue ="{Binding VehiculoId}" Width="120" Height="25" Margin="-150,-25,0,0"/>
+                        <Label Content = "VehiculoId" FontSize="15px" Margin="-160,-25,1,1" FontFamily="SimSun-ExtB" Width="90" Height="25" FontStyle="Normal" FontWeight="Bold" />
+                        <ComboBox x:Name = "VehiculoIdComboBox" SelectedValue ="{Binding VehiculoId}" Width="120" Height="25" Margin="180,-25,0,0"/>
 
                         <!--TipoSeguroId-->
-                        <Label Content = "SeguroId" FontSize="15px" Margin="0,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
-                        <ComboBox x:Name = "TipoSeguroIdComboBox" SelectedValue ="{Binding TipoSeguroId}" Width="120" Height="25" Margin="-150,-25,0,0"/>
+                        <Label Content = "SeguroId" FontSize="15px" Margin="380,-25,1,1" FontFamily="SimSun-ExtB" Width="70" Height="25" FontStyle="Normal" FontWeight="Bold" />
+                        <ComboBox x:Name = "TipoSeguroIdComboBox" SelectedValue ="{Binding TipoSeguroId}" Width="110" Height="25" Margin="570,-25,0,0"/>
 
                         <!--NumeroCuotaId-->
-                        <Label Content = "CuotasId" FontSize="15px" Margin="100,-170,1,1" FontFamily="SimSun-ExtB" Width="70" Height="25" FontStyle="Normal"/>
-                        <ComboBox x:Name = "NumeroCuotaIdComboBox" SelectedValue ="{Binding NumeroCuotaId}" Width="120" Height="25" Margin="310,-170,0,0"/>
+                        <Label Content = "CuotaId" FontSize="15px" Margin="-610,10,1,1" FontFamily="SimSun-ExtB" Width="70" Height="25" FontStyle="Normal" FontWeight="Bold" />
+                        <ComboBox x:Name = "NumeroCuotaIdComboBox" SelectedValue ="{Binding NumeroCuotaId}" Width="120" Height="25" Margin="-400,-30,0,0"/>
 
 
                         <!--CantidadCuota-->
-                        <Label Content = "CantidadCuotas"  FontSize="15px" Margin="100,-100,1,1" FontFamily="SimSun-ExtB" Width="120" Height="25" FontStyle="Normal"/>
-                        <TextBox x:Name = "CantidadCuotaTextBox" Text ="{Binding CantidadCuota}" Width="80" Height="25" Margin="310,-100,0,0"/>
+                        <Label Content = "Cantidad de cuotas"  FontSize="15px" Margin="-100,-30,1,1" FontFamily="simsun-extb" Width="150" Height="25" FontStyle="normal" FontWeight="Bold" />
+                        <TextBox x:Name = "CantidadCuotatextbox" Text ="{Binding CantidadCuota}" Width="120" Height="25" Margin="180,-30,0,0"/>
 
                         
                         <!--Monto-->
-                        <Label Content="Monto" Margin="30,-20,0,0" FontSize="15px"  Height="25" Width="50" FontFamily="SimSun-ExtB"/>
-                        <TextBox x:Name="MontoTextBox" Text= "{Binding Monto}" Height="25" Width="60" IsReadOnly="True" Margin="280,-35,0,0"/>
+                        <Label Content="Monto" Margin="360,-30,0,0" FontSize="15px"  Height="25" Width="50" FontFamily="SimSun-ExtB" FontWeight="Bold" />
+                        <TextBox x:Name="MontoTextBox" Text= "{Binding Monto}" Height="25" Width="110" IsReadOnly="True" Margin="570,-35,0,0"/>
 
-                        <StackPanel Orientation="Horizontal">
+                        
                             <!--Agregar Fila-->
-                            <Button x:Name="AgregarFilaButton" Margin="5,10,0,0" >
+                        <Button x:Name="AgregarFilaButton" Height="35" Width="200" Margin="-480,10,0,0"  Click ="AgregarFilaButton_Click" >
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Imagenes/Mas.png" Height="25"/>
                                     <Label Content="Agregar fila" FontWeight="Bold"/>
                                 </StackPanel>
                             </Button>
                             <!--Eliminar Fila-->
-                            <Button x:Name="EliminarFilaButton" Margin="205,10,0,0" >
+                        <Button x:Name="EliminarFilaButton" Height="35" Width="190" Margin="490,-40,0,0" Click ="EliminarFilaButton_Click" >
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Imagenes/Menos.png" Height="25"/>
                                     <Label Content="Eliminar fila" FontWeight="Bold"/>
                                 </StackPanel>
                             </Button>
 
-                        </StackPanel>
+                        
 
-                        <DataGrid x:Name="DetalleDataGrid"  IsReadOnly="true" Height="100" Width="690" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Margin="0,10,0,0">
+                        <DataGrid x:Name="DetalleDataGrid"  IsReadOnly="true" Height="100" Width="680" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Margin="0,10,0,0">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="      ClienteId     " Binding="{Binding ClienteId}"/>
                                 <DataGridTextColumn Header="      VehiculoId     " Binding="{Binding VehiculoId}"/>
                                 <DataGridTextColumn Header="      SeguroId     " Binding="{Binding SeguroId}"/>
-                                <DataGridTextColumn Header="      NumeroCuotaId     " Binding="{Binding NumeroCuotaId}"/>
-                                <DataGridTextColumn Header="      CantidadCuota     " Binding="{Binding CantidadCuota}"/>                                
-                                <DataGridTextColumn Header="      Monto      " Binding="{Binding Monto}"/>
+                                <DataGridTextColumn Header="           CuotaId         " Binding="{Binding NumeroCuotaId}"/>
+                                <DataGridTextColumn Header="        Cantidad de Cuota       " Binding="{Binding CantidadCuota}"/>                                
+                                <DataGridTextColumn Header="          Monto           " Binding="{Binding Monto}"/>
      
                             </DataGrid.Columns>
                         </DataGrid>
@@ -109,24 +109,24 @@
 
                 <StackPanel Orientation="Horizontal">
                     <!--Balance-->
-                    <Label Content="Balance" Margin="340,15,0,0" FontSize="15px" FontFamily="SimSun-ExtB"/>
-                    <TextBox x:Name="BalanceTextBox" Text= "{Binding Balance}" Height="25" Width="60" IsReadOnly="True" Margin="8,15,0,0"/>
+                    <Label Content="Balance" Margin="500,15,0,0" FontSize="15px" FontFamily="SimSun-ExtB" FontWeight="Bold"/>
+                    <TextBox x:Name="BalanceTextBox" Text= "{Binding Balance}" Height="30" Width="120" IsReadOnly="True" Margin="10,15,0,0"/>
                 </StackPanel>
             </StackPanel>
 
 
 
             <!-- Boton Nuevo-->
-            <Button x:Name ="NuevoButton" Margin="-320,20,0,0" Width = "100" Height = "40" Content="        Nuevo"   FontWeight="Bold"/>
-            <Image Source= "/Imagenes/Nuevo.png" Width="40" Height= "40" Margin="-380,-40,0,0"/>
+            <Button x:Name ="NuevoButton" Margin="-420,20,0,0" Width = "120" Height = "40" Content="        Nuevo" Click ="NuevoButton_Click"  FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Nuevo.png" Width="40" Height= "40" Margin="-490,-40,0,0"/>
 
             <!-- Boton Guardar-->
-            <Button x:Name ="GuardarButton" Margin="-15,-40,0,0" Width = "100" Height = "40" Content="        Guardar"   FontWeight="Bold"/>
-            <Image Source= "/Imagenes/Guardar.jpg" Width="35" Height= "35" Margin="-75,-40,0,0"/>
+            <Button x:Name ="GuardarButton" Margin="75,-40,0,0" Width = "120" Height = "40" Content="        Guardar" Click ="GuardarButton_Click"  FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Guardar.jpg" Width="35" Height= "35" Margin="10,-40,0,0"/>
 
             <!--Boton Eliminar-->
-            <Button x:Name ="EliminarButton" Margin="300,-40,0,0" Width = "100" Height = "40" Content="          Eliminar"   FontWeight="Bold"/>
-            <Image Source= "/Imagenes/Eliminar.png" Width="40" Height= "40" Margin="240,-40,0,0"/>
+            <Button x:Name ="EliminarButton" Margin="570,-40,0,0" Width = "120" Height = "40" Content="          Eliminar" Click ="EliminarButton_Click"  FontWeight="Bold"/>
+            <Image Source= "/Imagenes/Eliminar.png" Width="40" Height= "40" Margin="500,-40,0,0"/>
         </StackPanel>
     </Grid>
 </Window>

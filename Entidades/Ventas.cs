@@ -14,6 +14,7 @@ namespace SegurosVehiculos.Entidades
         public DateTime Vence { get; set; } = DateTime.Now;
         public int VehiculoId { get; set; }
         public int TipoSeguroId { get; set; }
+        public int NumeroCuotaId { get; set; }
         public Double Monto { get; set; }
         public String Observacion { get; set; }
         public int CantidadCuotas { get; set; }
