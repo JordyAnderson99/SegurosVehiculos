@@ -34,17 +34,16 @@ namespace SegurosVehiculos.UI.Registros
         private bool Validar()
         {
             bool esValido = true;
-            if (NombreTextBox.Text.Length == 0)
+            
+
+            if (ClienteIdTextBox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
 
-            if(clientes.Nombre == null)
-            {
-                MessageBox.Show("\nNo puede Guardar con el campo nombre vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+
             return esValido;
         }
         //BOTON BUSCAR *************************************************************************
@@ -66,19 +65,124 @@ namespace SegurosVehiculos.UI.Registros
         //BOTO GUARDAR **************************************************************************
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+
             {
                 if (!Validar())
                     return;
 
+                //———————————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+               
+               
+               
+                //—————————————————————————————————[ Cliente Id ]—————————————————————————————————
+                if (ClienteIdTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Cliente Id) está vacío.\n\nAsigne un Cliente al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    ClienteIdTextBox.Text = "0";
+                    ClienteIdTextBox.Focus();
+                    ClienteIdTextBox.SelectAll();
+                    return;
+                }
+                //—————————————————————————————————[ Nombre ]—————————————————————————————————
+                if (NombreTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Nombre) está vacío.\n\nAsigne un Nombre al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    NombreTextBox.Focus();
+                    NombreTextBox.SelectAll();
+                    return;
+                }
+
+                 //—————————————————————————————————[ Apellido ]—————————————————————————————————
+                if (ApellidoTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Apellido) está vacío.\n\nAsigne un Apellido al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    ApellidoTextBox.Focus();
+                    ApellidoTextBox.SelectAll();
+                    return;
+                }
+               
+
+                //—————————————————————————————————[ Direccion ]—————————————————————————————————
+                if (DireccionTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Direccion) está vacío.\n\nAsigne una Dirrecion al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                    DireccionTextBox.Focus();
+                    DireccionTextBox.SelectAll();
+                    return;
+                }
+
+
+
+                //—————————————————————————————————[ Telefono ]—————————————————————————————————
+                if (TelefonoTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Telefono) está vacío.\n\nAsigne un Telefono al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    TelefonoTextBox.Text = "0";
+                    TelefonoTextBox.Focus();
+                    TelefonoTextBox.SelectAll();
+                    return;
+                }
+
+                
+
+                
+                //—————————————————————————————————[ Celular ]—————————————————————————————————
+                if (CelularTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Celular) está vacío.\n\nAsigne un Celular al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    CelularTextBox.Text = "0";
+                    CelularTextBox.Focus();
+                    CelularTextBox.SelectAll();
+                    return;
+                }
+
+
+
+                //—————————————————————————————————[ Cedula ]—————————————————————————————————
+                if (CedulaTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Cedula) está vacío.\n\nAsigne una Cedula al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    CedulaTextBox.Text = "0";
+                    CedulaTextBox.Focus();
+                    CedulaTextBox.SelectAll();
+                    return;
+                }
+
+
+
+                //—————————————————————————————————[ Cedula ]—————————————————————————————————
+                if (CedulaTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Cedula) está vacío.\n\nAsigne una Cedula al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    CedulaTextBox.Text = "0";
+                    CedulaTextBox.Focus();
+                    CedulaTextBox.SelectAll();
+                    return;
+                }
+
+                //—————————————————————————————————[ Correo Electronico ]—————————————————————————————————
+                if (CorreoElectronicoTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Cedula) está vacío.\n\nAsigne una Cedula al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                    CorreoElectronicoTextBox.Focus();
+                    CorreoElectronicoTextBox.SelectAll();
+                    return;
+                }
+
+                
                 var paso = ClientesBLL.Guardar(clientes);
                 if (paso)
                 {
                     Limpiar();
-                    MessageBox.Show("Transaccion Exitosa!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Transacción Exitosa", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
-                    MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+
         }
         //BOTON ELIMINAR *************************************************************************
         private void EliminarButton_Click(object sender, RoutedEventArgs e)

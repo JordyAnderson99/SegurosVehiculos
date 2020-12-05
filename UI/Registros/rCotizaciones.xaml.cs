@@ -85,7 +85,7 @@ namespace SegurosVehiculos.UI.Registros
                 //—————————————————————————————————[ Cotizacion Id ]—————————————————————————————————
                 if (CotizacionIdTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Cotizacion Id) está vacío.\n\nAsigne un Id al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Cotizacion Id) está vacío.\n\nAsigne una cotizacion al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     CotizacionIdTextBox.Text = "0";
                     CotizacionIdTextBox.Focus();
                     CotizacionIdTextBox.SelectAll();
@@ -94,16 +94,16 @@ namespace SegurosVehiculos.UI.Registros
                 //—————————————————————————————————[ Fecha ]—————————————————————————————————
                 if (FechaDatePicker.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Fecha) está vacío.\n\nEscriba sus Nombres.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Fecha) está vacío.\n\nAsigne una Fecha al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                   //  FechaDatePicker.Clear();
                     FechaDatePicker.Focus();
                     return;
                 }
                 //—————————————————————————————————[ Cliente Id ]—————————————————————————————————
-               /*if (ClienteIdComboBox.Text.Trim() == string.Empty)
+               if (ClienteIdComboBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (ClienteId) está vacío.\n\nEscriba sus Apellidos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ClienteIdComboBox.Clear();
+                    MessageBox.Show("El Campo (ClienteId) está vacío.\n\nAsigne un Cliente al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    ClienteIdComboBox.IsDropDownOpen = true;
                     ClienteIdComboBox.Focus();
                     return;
                 }
@@ -112,35 +112,42 @@ namespace SegurosVehiculos.UI.Registros
                 //—————————————————————————————————[ Vehiculo Id ]—————————————————————————————————
                 if (VehiculoIdComboBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsigne un Nombre al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsigne un Vehiculo al camoi.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     VehiculoIdComboBox.Focus();
-                    VehiculoIdComboBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[ Tipo Seguro Id ]—————————————————————————————————
-                if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nAsigne un Nombre al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    TipoSeguroIdComboBox.Focus();
-                    TipoSeguroIdComboBox.SelectAll();
+                    ClienteIdComboBox.IsDropDownOpen = true;
                     return;
                 }
 
-                */
+
+
+
+                //—————————————————————————————————[ Tipo Seguro Id ]—————————————————————————————————
+                if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nAsigne un Tipo de seguro al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    TipoSeguroIdComboBox.Focus();
+                    TipoSeguroIdComboBox.IsDropDownOpen = true;
+                    return;
+                }
+
+                
 
                 
                 //—————————————————————————————————[ Monto ]—————————————————————————————————
                 if (MontoTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Monto) está vacío.\n\nAsigne una Contraseña al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Monto) está vacío.\n\nAsigne un Monto .", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     MontoTextBox.Focus();
                     MontoTextBox.SelectAll();
                     return;
                 }
+
+
+
                 //—————————————————————————————————[ Observaciones ]—————————————————————————————————
                 if (ObservacionesTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Observaciones) está vacío.\n\nConfirme la Contraseña del Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Observaciones) está vacío.\n\n.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     ObservacionesTextBox.Focus();
                     ObservacionesTextBox.SelectAll();
                     return;
@@ -148,7 +155,7 @@ namespace SegurosVehiculos.UI.Registros
                 //—————————————————————————————————[CantidadCuotas ]—————————————————————————————————
                 if (CantidadCuotasTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nConfirme la Contraseña del Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nAsigne una Cantidad de cuotas al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     CantidadCuotasTextBox.Focus();
                     CantidadCuotasTextBox.SelectAll();
                     return;

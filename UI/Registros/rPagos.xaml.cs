@@ -54,12 +54,8 @@ namespace SegurosVehiculos.UI.Registros
                 esValido = false;
                 MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            
 
-            /*if(pagos.Nombre == null)
-            {
-                MessageBox.Show("\nNo puede Guardar con el campo nombre vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }*/
+
             return esValido;
         }
         //BOTON BUSCAR---------------------------------------------------------------- 
@@ -85,6 +81,80 @@ namespace SegurosVehiculos.UI.Registros
                 if (!Validar())
                     return;
 
+
+                 //—————————————————————————————————[ Pago Id ]—————————————————————————————————
+                if (PagoIdTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Pago Id) está vacío.\n\nAsigne un Pago al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    PagoIdTextBox.Text = "0";
+                    PagoIdTextBox.Focus();
+                    PagoIdTextBox.SelectAll();
+                    return;
+                }
+
+
+                //—————————————————————————————————[ Fecha ]—————————————————————————————————
+              /*  if (FechaTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Fecha) está vacío.\n\nAsigne una Fecha al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    FechaTextBox.Focus();
+                    FechaTextBox.SelectAll();
+                    return;
+                } */
+
+
+                 //—————————————————————————————————[ ClienteId ]—————————————————————————————————
+                if (ClienteIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (ClienteId) está vacío.\n\nAsigne un Cliente al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    ClienteIdComboBox.Focus();
+                    ClienteIdComboBox.IsDropDownOpen = true;
+                    return;
+                }
+               
+
+                //—————————————————————————————————[ VentaId ]—————————————————————————————————
+                if (VentaIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (VentaId) está vacío.\n\nAsigne una Venta al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                    VentaIdComboBox.Focus();
+                    VentaIdComboBox.IsDropDownOpen = true;
+                    return;
+                }
+
+
+
+                //—————————————————————————————————[ NumeroCuotaIdComboBox ]—————————————————————————————————
+                if (NumeroCuotaIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (NumeroCuota) está vacío.\n\nAsigne un NumeroCuota al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    NumeroCuotaIdComboBox.Text = "0";
+                    NumeroCuotaIdComboBox.Focus();
+                    NumeroCuotaIdComboBox.IsDropDownOpen = true;
+                    return;
+                }
+
+                
+
+                
+                //—————————————————————————————————[ TotalTextBox ]—————————————————————————————————
+                if (TotalTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Total) está vacío.\n\nAsigne un Total al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    TotalTextBox.Text = "0";
+                    TotalTextBox.Focus();
+                    TotalTextBox.SelectAll();
+                    return;
+                }
+
+
+
+
+
+
+
+
                 var paso = PagosBLL.Guardar(pagos);
                 if (paso)
                 {
@@ -94,6 +164,9 @@ namespace SegurosVehiculos.UI.Registros
                 else
                     MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+
+
         }
         //BOTON ELIMINAR ----------------------------------------------------------
         private void EliminarButton_Click(object sender, RoutedEventArgs e)

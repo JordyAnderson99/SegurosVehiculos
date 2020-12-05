@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consultas de Ventas" Height="450" Width="800"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Consultas de Ventas" Height="450" Width="800"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Lista.png">
     <Grid>
 
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF091FA8"/>
-                <GradientStop Color="#FF2338BD" Offset="1"/>
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
-                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+                <GradientStop Color="#FF0AA0AE"/>
+                <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
 

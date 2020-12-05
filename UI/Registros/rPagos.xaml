@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Pagos" Height="380" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Pagos" Height="380" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Agendar.png">
 
     <Grid>
 
@@ -17,7 +17,7 @@
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0A4B51"/>
+                <GradientStop Color="#FF0AA0AE"/>
                 <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>

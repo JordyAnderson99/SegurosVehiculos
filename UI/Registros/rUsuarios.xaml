@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:SegurosVehiculos.Imagenes.PasswordHelper"
         mc:Ignorable="d"
-        Title="Registro de Usuarios" Height="400" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Usuarios" Height="400" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Agendar.png">
     <Grid>
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF091FA8"/>
-                <GradientStop Color="#FF2338BD" Offset="1"/>
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
-                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+                <GradientStop Color="#FF0AA0AE"/>
+                <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <StackPanel Margin= "-23,-110,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left"  Width="450" Height="600">

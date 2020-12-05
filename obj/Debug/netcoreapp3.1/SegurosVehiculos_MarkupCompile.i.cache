@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\pc\Desktop\SegurosVehiculos\App.xaml
-12169635880
+14-2121711753
 12971892027
-501500609611
+521585093371
 2122111740615
-Login.xaml;MainWindow.xaml;UI\Consultas\cClientes.xaml;UI\Consultas\cCotizaciones copy.xaml;UI\Consultas\cUsuarios.xaml;UI\Consultas\cVehiculos.xaml;UI\Consultas\cVentas.xaml;UI\Registros\rClientes.xaml;UI\Registros\rCotizaciones.xaml;UI\Registros\rUsuarios.xaml;UI\Registros\rVehiculos.xaml;UI\Registros\rVentas.xaml;
+Login.xaml;MainWindow.xaml;UI\Consultas\cClientes.xaml;UI\Consultas\cCotizaciones.xaml;UI\Consultas\cPagos.xaml;UI\Consultas\cUsuarios.xaml;UI\Consultas\cVehiculos.xaml;UI\Consultas\cVentas.xaml;UI\Registros\rClientes.xaml;UI\Registros\rCotizaciones.xaml;UI\Registros\rPagos.xaml;UI\Registros\rUsuarios.xaml;UI\Registros\rVehiculos.xaml;UI\Registros\rVentas.xaml;
 
 True
 

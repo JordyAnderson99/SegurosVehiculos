@@ -5,9 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Cotizaciones" Height="772" Width="730"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Cotizaciones" Height="772" Width="730"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Agendar.png">
 
     <Grid  >
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0AA0AE"/>
+                <GradientStop Color="#FF0091FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <StackPanel Margin= "10,-40,0,0"  VerticalAlignment="Center" HorizontalAlignment="Left"  Width="695" Height="758">
 
             <!--CotizacionId-->

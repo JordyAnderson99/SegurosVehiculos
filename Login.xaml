@@ -17,7 +17,7 @@
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0A4B51"/>
+                <GradientStop Color="#FF0AA0AE"/>
                 <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
@@ -31,8 +31,8 @@
             <!--—————————————————————————————————————————[ USUARIO ]—————————————————————————————————————————-->
             <Label Content="Nombre Usuario" Margin="0,5,0,0" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal">
-                <Image Source="/Imagenes/Usuario.png" Height="30"   />
-                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="230" VerticalContentAlignment="Center" KeyDown="NombreUsuarioTextBox_KeyDown" />
+                <Image Source="/Imagenes/Usuario.png" Height="40 " Width="30"  />
+                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="239" VerticalContentAlignment="Center" KeyDown="NombreUsuarioTextBox_KeyDown" Height="27" />
             </StackPanel>
 
 

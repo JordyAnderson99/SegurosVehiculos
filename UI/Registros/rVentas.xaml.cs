@@ -100,6 +100,70 @@ namespace SegurosVehiculos.UI.Registros
                 if (!Validar())
                     return;
 
+
+                 //—————————————————————————————————[ VentaId  ]—————————————————————————————————
+                if (VentaIdTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (VentaId) está vacío.\n\nAsigne una VentaId al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    VentaIdTextBox.Text = "0";
+                    VentaIdTextBox.Focus();
+                    VentaIdTextBox.SelectAll();
+                    return;
+                }
+                //—————————————————————————————————[ VehiculoId ]—————————————————————————————————
+                if (VehiculoIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nEscriba el VehiculoId en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    VehiculoIdComboBox.IsDropDownOpen = true;
+                    VehiculoIdComboBox.Focus();
+                    return;
+                }
+                //—————————————————————————————————[ TipoSeguroId ]—————————————————————————————————
+                if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nEscriba el Tipo de Seguro en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    TipoSeguroIdComboBox.IsDropDownOpen = true;
+                    TipoSeguroIdComboBox.Focus();
+                    return;
+                }
+               
+
+                //—————————————————————————————————[ NumeroCuotas ]—————————————————————————————————
+                if (NumeroCuotaIdComboBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (NumeroCuotas) está vacío.\n\nAsigne un Numero de Cuotas al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    NumeroCuotaIdComboBox.Focus();
+                    NumeroCuotaIdComboBox.IsDropDownOpen = true;
+                    return;
+                }
+               
+
+
+
+               //—————————————————————————————————[ Monto ]—————————————————————————————————
+                if (MontoTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (Monto) está vacío.\n\nAsigne un Monto al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MontoTextBox.Focus();
+                    MontoTextBox.SelectAll();
+                    return;
+                }
+
+
+             
+
+               //—————————————————————————————————[ CantidadCuotas ]—————————————————————————————————
+                if (CantidadCuotatextbox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nAsigne una Cantidad de Cuotas al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    CantidadCuotatextbox.Focus();
+                    CantidadCuotatextbox.SelectAll();
+                    return;
+                }
+
+
+                
+
                 var paso = VentasBLL.Guardar(this.ventas);
                 if (paso)
                 {

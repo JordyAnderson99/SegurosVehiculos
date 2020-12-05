@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\DELL\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\
 SegurosVehiculos
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\DELL\Desktop\SegurosVehiculos\App.xaml
-14-355481110
-121371269709
-50-1449542880
-2122035196232
-Login.xaml;MainWindow.xaml;UI\Consultas\cClientes.xaml;UI\Consultas\cCotizaciones copy.xaml;UI\Consultas\cPagos.xaml;UI\Consultas\cUsuarios.xaml;UI\Consultas\cVehiculos.xaml;UI\Consultas\cVentas.xaml;UI\Registros\rClientes.xaml;UI\Registros\rCotizaciones.xaml;UI\Registros\rPagos.xaml;UI\Registros\rUsuarios.xaml;UI\Registros\rVehiculos.xaml;UI\Registros\rVentas.xaml;
+C:\Users\pc\Desktop\SegurosVehiculos\App.xaml
+141299409327
+14952190372
+501725091977
+212-13569258
+Login.xaml;MainWindow.xaml;UI\Consultas\cClientes.xaml;UI\Consultas\cCotizaciones.xaml;UI\Consultas\cPagos.xaml;UI\Consultas\cUsuarios.xaml;UI\Consultas\cVehiculos.xaml;UI\Consultas\cVentas.xaml;UI\Registros\rClientes.xaml;UI\Registros\rCotizaciones.xaml;UI\Registros\rPagos.xaml;UI\Registros\rUsuarios.xaml;UI\Registros\rVehiculos.xaml;UI\Registros\rVentas.xaml;
 
 False
 

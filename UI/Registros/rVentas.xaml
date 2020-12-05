@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Ventas" Height="550" Width="730">
+        Title="Registro de Ventas" Height="550" Width="730" Icon="/Imagenes/Agendar.png">
     
     <Grid >
 
@@ -17,7 +17,7 @@
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0A4B51"/>
+                <GradientStop Color="#FF0AA0AE"/>
                 <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
@@ -58,7 +58,7 @@
                         <ComboBox x:Name = "VehiculoIdComboBox" SelectedValue ="{Binding VehiculoId}" Width="120" Height="25" Margin="180,-25,0,0"/>
 
                         <!--TipoSeguroId-->
-                        <Label Content = "SeguroId" FontSize="15px" Margin="380,-25,1,1" FontFamily="SimSun-ExtB" Width="70" Height="25" FontStyle="Normal" FontWeight="Bold" />
+                        <Label Content = "SeguroId" FontSize="15px" Margin="380,-25,1,1" FontFamily="SimSun-ExtB" Width="76" Height="25" FontStyle="Normal" FontWeight="Bold" />
                         <ComboBox x:Name = "TipoSeguroIdComboBox" SelectedValue ="{Binding TipoSeguroId}" Width="110" Height="25" Margin="570,-25,0,0"/>
 
                         <!--NumeroCuotaId-->
@@ -73,7 +73,7 @@
                         
                         <!--Monto-->
                         <Label Content="Monto" Margin="360,-30,0,0" FontSize="15px"  Height="25" Width="50" FontFamily="SimSun-ExtB" FontWeight="Bold" />
-                        <TextBox x:Name="MontoTextBox" Text= "{Binding Monto}" Height="25" Width="110" IsReadOnly="True" Margin="570,-35,0,0"/>
+                        <TextBox x:Name="MontoTextBox" Text= "{Binding Monto}" Height="25" Width="110"  Margin="570,-35,0,0"/>
 
                         
                             <!--Agregar Fila-->

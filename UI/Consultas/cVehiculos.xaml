@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consultas de Vehiculos" Height="450" Width="800"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Consultas de Vehiculos" Height="450" Width="800"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Lista.png">
     <Grid>
 
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF091FA8"/>
-                <GradientStop Color="#FF2338BD" Offset="1"/>
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF0C0D1D" Offset="0.981"/>
-                <GradientStop Color="#FF0D1AB6" Offset="0.583"/>
+                <GradientStop Color="#FF0AA0AE"/>
+                <GradientStop Color="#FF0091FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -62,7 +62,7 @@
 
 
                 <!--——————————————————————————————————————————————[ CONSULTAR ]——————————————————————————————————————————————-->
-                <Button x:Name="ConsultarButton" Height="30" Width="90" Click ="ConsultarButton_Click" >   
+                <Button x:Name="ConsultarButton" Height="37" Width="100" Click ="ConsultarButton_Click" >   
                  
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/Imagenes/Buscar.png"/>
@@ -74,7 +74,7 @@
 
                 <!--——————————————————————————————————————————————[ DATA GRID ]——————————————————————————————————————————————-->
             </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Width="635" >
+            <StackPanel HorizontalAlignment="Left" Width="644" >
                 <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center" BorderBrush="#FF6686A6" Foreground="#FF151212">
                     <DataGrid.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

@@ -94,11 +94,14 @@ namespace SegurosVehiculos.UI.Registros
                 if (!Validar())
                     return;
 
-                //———————————————————————————————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+                //—————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+               
+               
+               
                 //—————————————————————————————————[ Usuario Id ]—————————————————————————————————
                 if (UsuarioIdTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Usuario Id) está vacío.\n\nAsigne un Id al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Usuario Id) está vacío.\n\nAsigne un Usuario al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     UsuarioIdTextBox.Text = "0";
                     UsuarioIdTextBox.Focus();
                     UsuarioIdTextBox.SelectAll();
@@ -130,14 +133,10 @@ namespace SegurosVehiculos.UI.Registros
                     NombreUsuarioTextBox.SelectAll();
                     return;
                 }
-                //—————————————————————————————————[ Nombre Usuario ]—————————————————————————————————
-                if (NombreUsuarioTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Nombre Usuario) está vacío.\n\nAsigne un Nombre al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    NombreUsuarioTextBox.Focus();
-                    NombreUsuarioTextBox.SelectAll();
-                    return;
-                }
+               
+
+
+
                 //—————————————————————————————————[ Contraseña ]—————————————————————————————————
                 if (ClavePasswordBox.Password == string.Empty)
                 {
@@ -173,7 +172,7 @@ namespace SegurosVehiculos.UI.Registros
                 }
                 else
                     MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+                }
         }
         //Boton Eliminar 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)

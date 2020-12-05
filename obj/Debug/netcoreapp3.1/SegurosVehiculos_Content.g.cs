@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/agendar.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/buscar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/casita.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/eliminar.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/guardar.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/home.jpeg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/home.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/lista.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/llave.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/mas.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/menos.png")]
