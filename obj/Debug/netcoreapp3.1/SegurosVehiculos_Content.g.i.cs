@@ -28,6 +28,8 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/menos.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/menu.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/nuevo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/proyecto1.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/proyecto2.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/registro%20de%20clientes.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/registro%20de%20cotizaciones.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/registro%20de%20pagos.png")]
