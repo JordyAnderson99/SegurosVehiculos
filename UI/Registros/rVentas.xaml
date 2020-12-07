@@ -68,7 +68,7 @@
 
                         <!--CantidadCuota-->
                         <Label Content = "Cantidad de cuotas"  FontSize="15px" Margin="-100,-30,1,1" FontFamily="simsun-extb" Width="150" Height="25" FontStyle="normal" FontWeight="Bold" />
-                        <TextBox x:Name = "CantidadCuotatextbox" Text ="{Binding CantidadCuota}" Width="120" Height="25" Margin="180,-30,0,0"/>
+                        <TextBox x:Name = "CantidadCuotasTextBox" Text ="{Binding CantidadCuotas}" Width="120" Height="25" Margin="180,-30,0,0"/>
 
                         
                         <!--Monto-->
@@ -97,9 +97,9 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="      ClienteId     " Binding="{Binding ClienteId}"/>
                                 <DataGridTextColumn Header="      VehiculoId     " Binding="{Binding VehiculoId}"/>
-                                <DataGridTextColumn Header="      SeguroId     " Binding="{Binding SeguroId}"/>
+                                <DataGridTextColumn Header="      SeguroId     " Binding="{Binding TipoSeguroId}"/>
                                 <DataGridTextColumn Header="           CuotaId         " Binding="{Binding NumeroCuotaId}"/>
-                                <DataGridTextColumn Header="        Cantidad de Cuota       " Binding="{Binding CantidadCuota}"/>                                
+                                <DataGridTextColumn Header="        Cantidad de Cuotas       " Binding="{Binding CantidadCuotas}"/>                                
                                 <DataGridTextColumn Header="          Monto           " Binding="{Binding Monto}"/>
      
                             </DataGrid.Columns>

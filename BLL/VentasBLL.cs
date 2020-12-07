@@ -31,10 +31,7 @@ namespace SegurosVehiculos.BLL
             try
             {
                 //Agregar a la entidad que se desea ingresar al contexto
-                foreach (var item in ventas.Detalle)
-                {
-                    contexto.Entry(item.ClienteId).State = EntityState.Modified;
-                }
+                
                 contexto.Ventas.Add(ventas);
                 paso = contexto.SaveChanges() > 0;
             }
@@ -119,8 +116,7 @@ namespace SegurosVehiculos.BLL
             {
                 ventas = contexto.Ventas
                   .Where(d => d.VentaId == id)
-                  .Include(d => d.Detalle)
-                  .ThenInclude(p => p.clientes)
+                  .Include(d => d.Detalle)                  
                   .SingleOrDefault();
 
             }

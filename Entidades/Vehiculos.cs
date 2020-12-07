@@ -19,7 +19,7 @@ namespace SegurosVehiculos.Entidades
         public int AñoFabricacion { get; set; }
         public string Motor { get; set; }
         public double FuerzaMotriz { get; set; }
-        public double CapacidadCarga { get; set; }
+        public string CapacidadCarga { get; set; }
         public int TotalPuertas { get; set; }
         public int ColorId { get; set; }
         public int MarcaId { get; set; }

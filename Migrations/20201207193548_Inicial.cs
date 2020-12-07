@@ -188,7 +188,7 @@ namespace SegurosVehiculos.Migrations
                     AñoFabricacion = table.Column<int>(type: "INTEGER", nullable: false),
                     Motor = table.Column<string>(type: "TEXT", nullable: true),
                     FuerzaMotriz = table.Column<double>(type: "REAL", nullable: false),
-                    CapacidadCarga = table.Column<double>(type: "REAL", nullable: false),
+                    CapacidadCarga = table.Column<int>(type: "INTEGER", nullable: false),
                     TotalPuertas = table.Column<int>(type: "INTEGER", nullable: false),
                     ColorId = table.Column<int>(type: "INTEGER", nullable: false),
                     MarcaId = table.Column<int>(type: "INTEGER", nullable: false),
@@ -257,17 +257,14 @@ namespace SegurosVehiculos.Migrations
                     ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Monto = table.Column<double>(type: "REAL", nullable: false),
-                    Balance = table.Column<double>(type: "REAL", nullable: false)
+                    Balance = table.Column<double>(type: "REAL", nullable: false),
+                    VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_VentasDetalle", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_VentasDetalle_Clientes_ClienteId",
-                        column: x => x.ClienteId,
-                        principalTable: "Clientes",
-                        principalColumn: "ClienteId",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_VentasDetalle_Ventas_VentaId",
                         column: x => x.VentaId,
@@ -334,12 +331,12 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "Modelos",
                 columns: new[] { "ModeloId", "ModeloVehiculo" },
-                values: new object[] { 3, "I8" });
+                values: new object[] { 4, "R5" });
 
             migrationBuilder.InsertData(
                 table: "Modelos",
                 columns: new[] { "ModeloId", "ModeloVehiculo" },
-                values: new object[] { 4, "R5" });
+                values: new object[] { 2, "Urus" });
 
             migrationBuilder.InsertData(
                 table: "Modelos",
@@ -349,7 +346,7 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "Modelos",
                 columns: new[] { "ModeloId", "ModeloVehiculo" },
-                values: new object[] { 2, "Urus" });
+                values: new object[] { 3, "I8" });
 
             migrationBuilder.InsertData(
                 table: "StatusVehiculo",
@@ -359,22 +356,7 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "StatusVehiculo",
                 columns: new[] { "StatusVehiculoId", "Status" },
-                values: new object[] { 2, "?" });
-
-            migrationBuilder.InsertData(
-                table: "StatusVehiculo",
-                columns: new[] { "StatusVehiculoId", "Status" },
-                values: new object[] { 3, "?" });
-
-            migrationBuilder.InsertData(
-                table: "StatusVehiculo",
-                columns: new[] { "StatusVehiculoId", "Status" },
-                values: new object[] { 4, "?" });
-
-            migrationBuilder.InsertData(
-                table: "StatusVehiculo",
-                columns: new[] { "StatusVehiculoId", "Status" },
-                values: new object[] { 5, "?" });
+                values: new object[] { 2, "No tiene oposicon" });
 
             migrationBuilder.InsertData(
                 table: "TipoEmision",
@@ -384,7 +366,7 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "TipoEmision",
                 columns: new[] { "TipoEmisionId", "Emision" },
-                values: new object[] { 2, "?" });
+                values: new object[] { 2, "No es Exonerado" });
 
             migrationBuilder.InsertData(
                 table: "TipoSeguros",
@@ -417,11 +399,6 @@ namespace SegurosVehiculos.Migrations
                 column: "CotizacionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_VentasDetalle_ClienteId",
-                table: "VentasDetalle",
-                column: "ClienteId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_VentasDetalle_VentaId",
                 table: "VentasDetalle",
                 column: "VentaId");
@@ -429,6 +406,9 @@ namespace SegurosVehiculos.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Clientes");
+
             migrationBuilder.DropTable(
                 name: "Colores");
 
@@ -467,9 +447,6 @@ namespace SegurosVehiculos.Migrations
 
             migrationBuilder.DropTable(
                 name: "Cotizaciones");
-
-            migrationBuilder.DropTable(
-                name: "Clientes");
 
             migrationBuilder.DropTable(
                 name: "Ventas");

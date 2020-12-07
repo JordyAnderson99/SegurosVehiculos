@@ -47,6 +47,87 @@ namespace SegurosVehiculos.UI.Registros
                 Validado = false;
                 MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            if (!int.TryParse(UsuarioIdTextBox.Text, out int UsuarioId))
+            {
+                Validado = false;
+                MessageBox.Show("Este Id no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            /*if (UsuarioIdTextBox.Text.Length <= 0)
+            {
+                GuardarButton.IsEnabled = false;
+                Validado = false;
+                MessageBox.Show("Solamente pueden ser numeros positivos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                GuardarButton.IsEnabled = true;
+            }
+            */
+            //—————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+
+
+
+            //—————————————————————————————————[ Usuario Id ]—————————————————————————————————
+            if (UsuarioIdTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Usuario Id) está vacío.\n\nAsigne un Usuario al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                UsuarioIdTextBox.Text = "0";
+                UsuarioIdTextBox.Focus();
+                UsuarioIdTextBox.SelectAll();
+                Validado = false;
+            }
+            //—————————————————————————————————[ Nombres ]—————————————————————————————————
+            if (NombreTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Nombre) está vacío.\n\nEscriba sus Nombres.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreTextBox.Clear();
+                NombreTextBox.Focus();
+                Validado = false;
+            }
+            //—————————————————————————————————[ Apellidos ]—————————————————————————————————
+            if (ApellidoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Apellido) está vacío.\n\nEscriba sus Apellidos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ApellidoTextBox.Clear();
+                ApellidoTextBox.Focus();
+                Validado = false;
+            }
+
+
+            //—————————————————————————————————[ Nombre Usuario ]—————————————————————————————————
+            if (NombreUsuarioTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Nombre Usuario) está vacío.\n\nAsigne un Nombre al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreUsuarioTextBox.Focus();
+                NombreUsuarioTextBox.SelectAll();
+                Validado = false;
+            }
+
+
+
+
+            //—————————————————————————————————[ Contraseña ]—————————————————————————————————
+            if (ClavePasswordBox.Password == string.Empty)
+            {
+                MessageBox.Show("El Campo (Contraseña) está vacío.\n\nAsigne una Contraseña al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ClavePasswordBox.Focus();
+                ClavePasswordBox.SelectAll();
+                Validado = false;
+            }
+            //—————————————————————————————————[ Confirmar Contraseña ]—————————————————————————————————
+            if (ConfirmarClavePasswordBox.Password == string.Empty)
+            {
+                MessageBox.Show("El Campo (Confirmar Contraseña) está vacío.\n\nConfirme la Contraseña del Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ConfirmarClavePasswordBox.Focus();
+                ConfirmarClavePasswordBox.SelectAll();
+                Validado = false;
+            }
+            //—————————————————————————————————[ Validar Contraseñas ]—————————————————————————————————
+            if (ConfirmarClavePasswordBox.Password != ClavePasswordBox.Password)
+            {
+                MessageBox.Show("Las Contraseñas escritas no coinciden", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ClavePasswordBox.Clear();
+                ConfirmarClavePasswordBox.Clear();
+                ClavePasswordBox.Focus();
+                Validado = false;
+            }
 
             return Validado;
         }
@@ -94,76 +175,7 @@ namespace SegurosVehiculos.UI.Registros
                 if (!Validar())
                     return;
 
-                //—————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
-               
-               
-               
-                //—————————————————————————————————[ Usuario Id ]—————————————————————————————————
-                if (UsuarioIdTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Usuario Id) está vacío.\n\nAsigne un Usuario al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    UsuarioIdTextBox.Text = "0";
-                    UsuarioIdTextBox.Focus();
-                    UsuarioIdTextBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[ Nombres ]—————————————————————————————————
-                if (NombreTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Nombre) está vacío.\n\nEscriba sus Nombres.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    NombreTextBox.Clear();
-                    NombreTextBox.Focus();
-                    return;
-                }
-                //—————————————————————————————————[ Apellidos ]—————————————————————————————————
-                if (ApellidoTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Apellido) está vacío.\n\nEscriba sus Apellidos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ApellidoTextBox.Clear();
-                    ApellidoTextBox.Focus();
-                    return;
-                }
-               
-
-                //—————————————————————————————————[ Nombre Usuario ]—————————————————————————————————
-                if (NombreUsuarioTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Nombre Usuario) está vacío.\n\nAsigne un Nombre al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    NombreUsuarioTextBox.Focus();
-                    NombreUsuarioTextBox.SelectAll();
-                    return;
-                }
-               
-
-
-
-                //—————————————————————————————————[ Contraseña ]—————————————————————————————————
-                if (ClavePasswordBox.Password == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Contraseña) está vacío.\n\nAsigne una Contraseña al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ClavePasswordBox.Focus();
-                    ClavePasswordBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[ Confirmar Contraseña ]—————————————————————————————————
-                if (ConfirmarClavePasswordBox.Password == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Confirmar Contraseña) está vacío.\n\nConfirme la Contraseña del Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ConfirmarClavePasswordBox.Focus();
-                    ConfirmarClavePasswordBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[ Validar Contraseñas ]—————————————————————————————————
-                if (ConfirmarClavePasswordBox.Password != ClavePasswordBox.Password)
-                {
-                    MessageBox.Show("Las Contraseñas escritas no coinciden", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ClavePasswordBox.Clear();
-                    ConfirmarClavePasswordBox.Clear();
-                    ClavePasswordBox.Focus();
-                    return;
-                }
-
-                
+                               
                 var paso = UsuariosBLL.Guardar(usuarios);
                 if (paso)
                 {

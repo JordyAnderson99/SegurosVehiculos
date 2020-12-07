@@ -75,8 +75,240 @@ namespace SegurosVehiculos.UI.Registros
                 MessageBox.Show("Transaccion Fallida" , "Fallo", 
                 MessageBoxButton.OK, MessageBoxImage.Warning);
                                 
-            }            
+            }
+            if (!int.TryParse(VehiculoIdTextBox.Text, out int VehiculoId))
+            {
+                esValido = false;
+                MessageBox.Show("Este Id no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
+            if (!int.TryParse(CantidadPasajerosTextBox.Text, out int CantidadPasajeros))
+            {
+                esValido = false;
+                MessageBox.Show("Esta Cantidad de Pasajeros no es valida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            if (!int.TryParse(CilindrosTextBox.Text, out int Cilindros))
+            {
+                esValido = false;
+                MessageBox.Show("Este Cilindro no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            if (!Double.TryParse(ValorVehiculoTextBox.Text, out Double ValorVehiculo))
+            {
+                esValido = false;
+                MessageBox.Show("Este Valor del Vehiculo no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            if (!int.TryParse(AñoFabricacionTextBox.Text, out int AñoFabricacion))
+            {
+                esValido = false;
+                MessageBox.Show("Este Año de Fabricacion no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            if (!double.TryParse(FuerzaMotrizTextBox.Text, out double FuerzaMotriz))
+            {
+                esValido = false;
+                MessageBox.Show("Esta Fuerza Motriz no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            
+
+            if (!int.TryParse(TotalPuertasTextBox.Text, out int TotalPuertas))
+            {
+                esValido = false;
+                MessageBox.Show("Este Total de Puertas no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            //—————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+
+
+
+            //—————————————————————————————————[ VehiculoId  ]—————————————————————————————————
+            if (VehiculoIdTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsigne un VehiculoId al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                VehiculoIdTextBox.Text = "0";
+                VehiculoIdTextBox.Focus();
+                VehiculoIdTextBox.SelectAll();
+                esValido = false;
+            }
+            //—————————————————————————————————[ CantidadPasajeros ]—————————————————————————————————
+            if (CantidadPasajerosTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (CantidadPasajeros) está vacío.\n\nEscriba la Cantidad de Pasajeros en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                CantidadPasajerosTextBox.Clear();
+                CantidadPasajerosTextBox.Focus();
+                esValido = false;
+            }
+            //—————————————————————————————————[ Cilindros ]—————————————————————————————————
+            if (CilindrosTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Cilindros) está vacío.\n\nEscriba los Cilindros en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                CilindrosTextBox.Clear();
+                CilindrosTextBox.Focus();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ Uso ]—————————————————————————————————
+            if (UsoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Uso) está vacío.\n\nAsigne un Uso al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                UsoTextBox.Focus();
+                UsoTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+
+
+            //—————————————————————————————————[ Chasis ]—————————————————————————————————
+            if (ChasisTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Chasis) está vacío.\n\nAsigne un Chasis al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ChasisTextBox.Focus();
+                ChasisTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ Matricula ]—————————————————————————————————
+            if (MatriculaTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Matricula) está vacío.\n\nAsigne una Matricula al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MatriculaTextBox.Focus();
+                MatriculaTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ ValorVehiculo ]—————————————————————————————————
+            if (ValorVehiculoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (ValorVehiculo) está vacío.\n\nAsigne un Valor al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ValorVehiculoTextBox.Focus();
+                ValorVehiculoTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+
+
+
+
+            //—————————————————————————————————[ AñoFabricacion ]—————————————————————————————————
+            if (AñoFabricacionTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (AñoFabricacion) está vacío.\n\nAsigne un Año al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                AñoFabricacionTextBox.Focus();
+                AñoFabricacionTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ Motor ]—————————————————————————————————
+            if (MotorTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Motor) está vacío.\n\nAsigne un Motor al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MotorTextBox.Focus();
+                MotorTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ FuerzaMotriz ]—————————————————————————————————
+            if (FuerzaMotrizTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (FuerzaMotriz) está vacío.\n\nAsigne una FuerzaMotriz al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                FuerzaMotrizTextBox.Focus();
+                FuerzaMotrizTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ CapacidadCarga ]—————————————————————————————————
+            if (CapacidadCargaTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (CapacidadCarga) está vacío.\n\nAsigne una Capacidad al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                CapacidadCargaTextBox.Focus();
+                CapacidadCargaTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ TotalPuertas ]—————————————————————————————————
+            if (TotalPuertasTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (TotalPuertas) está vacío.\n\nAsigne un Total al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                TotalPuertasTextBox.Focus();
+                TotalPuertasTextBox.SelectAll();
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ ColorId ]—————————————————————————————————
+            if (ColorIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (ColorId) está vacío.\n\nAsigne un Color al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ColorIdComboBox.Focus();
+                ColorIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+
+
+
+            //—————————————————————————————————[ MarcaId ]—————————————————————————————————
+            if (MarcaIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (MarcaId) está vacío.\n\nAsigne una Marca al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MarcaIdComboBox.Focus();
+                MarcaIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+
+
+
+
+            //—————————————————————————————————[ ModeloId ]—————————————————————————————————
+            if (ModeloIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (ModeloId) está vacío.\n\nAsigne un Modelo al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ModeloIdComboBox.Focus();
+                ModeloIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+
+
+
+            //—————————————————————————————————[ StatusVehiculoId ]—————————————————————————————————
+            if (StatusVehiculoIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (StatusVehiculoId) está vacío.\n\nAsigne un Status al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                StatusVehiculoIdComboBox.Focus();
+                StatusVehiculoIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ TipoEmisionId ]—————————————————————————————————
+            if (TipoEmisionIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (TipoEmisionId) está vacío.\n\nAsigne un Tipo de Emision al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                TipoEmisionIdComboBox.Focus();
+                TipoEmisionIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ TipoVehiculoId ]—————————————————————————————————
+            if (TipoVehiculoIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (TipoVehiculoId) está vacío.\n\nAsigne un Tipo de Vehiculo al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                TipoVehiculoIdComboBox.Focus();
+                TipoVehiculoIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
             return esValido;
         }
 
@@ -118,196 +350,7 @@ namespace SegurosVehiculos.UI.Registros
                 if (!Validar())
                     return;
 
-                //—————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
-               
-               
-               
-                //—————————————————————————————————[ VehiculoId  ]—————————————————————————————————
-                if (VehiculoIdTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsigne un VehiculoId al Usuario.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    VehiculoIdTextBox.Text = "0";
-                    VehiculoIdTextBox.Focus();
-                    VehiculoIdTextBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[ CantidadPasajeros ]—————————————————————————————————
-                if (CantidadPasajerosTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (CantidadPasajeros) está vacío.\n\nEscriba la Cantidad de Pasajeros en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    CantidadPasajerosTextBox.Clear();
-                    CantidadPasajerosTextBox.Focus();
-                    return;
-                }
-                //—————————————————————————————————[ Cilindros ]—————————————————————————————————
-                if (CilindrosTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Cilindros) está vacío.\n\nEscriba los Cilindros en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    CilindrosTextBox.Clear();
-                    CilindrosTextBox.Focus();
-                    return;
-                }
-               
-
-                //—————————————————————————————————[ Uso ]—————————————————————————————————
-                if (UsoTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Uso) está vacío.\n\nAsigne un Uso al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    UsoTextBox.Focus();
-                    UsoTextBox.SelectAll();
-                    return;
-                }
-               
-
-
-
-               //—————————————————————————————————[ Chasis ]—————————————————————————————————
-                if (ChasisTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Chasis) está vacío.\n\nAsigne un Chasis al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ChasisTextBox.Focus();
-                    ChasisTextBox.SelectAll();
-                    return;
-                }
-
-
-               //—————————————————————————————————[ Matricula ]—————————————————————————————————
-                if (MatriculaTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Matricula) está vacío.\n\nAsigne una Matricula al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    MatriculaTextBox.Focus();
-                    MatriculaTextBox.SelectAll();
-                    return;
-                }
-
-
-               //—————————————————————————————————[ ValorVehiculo ]—————————————————————————————————
-                if (ValorVehiculoTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (ValorVehiculo) está vacío.\n\nAsigne un Valor al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ValorVehiculoTextBox.Focus();
-                    ValorVehiculoTextBox.SelectAll();
-                    return;
-                }
-
-
-
-               
-
-
-                //—————————————————————————————————[ AñoFabricacion ]—————————————————————————————————
-                if (AñoFabricacionTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (AñoFabricacion) está vacío.\n\nAsigne un Año al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    AñoFabricacionTextBox.Focus();
-                    AñoFabricacionTextBox.SelectAll();
-                    return;
-                }
-
-
-                //—————————————————————————————————[ Motor ]—————————————————————————————————
-                if (MotorTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Motor) está vacío.\n\nAsigne un Motor al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    MotorTextBox.Focus();
-                    MotorTextBox.SelectAll();
-                    return;
-                }
-
-
-                //—————————————————————————————————[ FuerzaMotriz ]—————————————————————————————————
-                if (FuerzaMotrizTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (FuerzaMotriz) está vacío.\n\nAsigne una FuerzaMotriz al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    FuerzaMotrizTextBox.Focus();
-                    FuerzaMotrizTextBox.SelectAll();
-                    return;
-                }
-
-
-                //—————————————————————————————————[ CapacidadCarga ]—————————————————————————————————
-                if (CapacidadCargaTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (CapacidadCarga) está vacío.\n\nAsigne una Capacidad al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    CapacidadCargaTextBox.Focus();
-                    CapacidadCargaTextBox.SelectAll();
-                    return;
-                }
-
-
-                //—————————————————————————————————[ TotalPuertas ]—————————————————————————————————
-                if (TotalPuertasTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (TotalPuertas) está vacío.\n\nAsigne un Total al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    TotalPuertasTextBox.Focus();
-                    TotalPuertasTextBox.SelectAll();
-                    return;
-                }
-
-
-                //—————————————————————————————————[ ColorId ]—————————————————————————————————
-                if (ColorIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (ColorId) está vacío.\n\nAsigne un Color al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ColorIdComboBox.Focus();
-                    ColorIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-
-
-                //—————————————————————————————————[ MarcaId ]—————————————————————————————————
-                if (MarcaIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (MarcaId) está vacío.\n\nAsigne una Marca al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    MarcaIdComboBox.Focus();
-                    MarcaIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-
-
-
-                //—————————————————————————————————[ ModeloId ]—————————————————————————————————
-                if (ModeloIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (ModeloId) está vacío.\n\nAsigne un Modelo al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ModeloIdComboBox.Focus();
-                    ModeloIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-
-
-                //—————————————————————————————————[ StatusVehiculoId ]—————————————————————————————————
-                if (StatusVehiculoIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (StatusVehiculoId) está vacío.\n\nAsigne un Status al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    StatusVehiculoIdComboBox.Focus();
-                    StatusVehiculoIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-
-                //—————————————————————————————————[ TipoEmisionId ]—————————————————————————————————
-                if (TipoEmisionIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (TipoEmisionId) está vacío.\n\nAsigne un Tipo de Emision al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    TipoEmisionIdComboBox.Focus();
-                    TipoEmisionIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-
-                //—————————————————————————————————[ TipoVehiculoId ]—————————————————————————————————
-                if (TipoVehiculoIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (TipoVehiculoId) está vacío.\n\nAsigne un Tipo de Vehiculo al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    TipoVehiculoIdComboBox.Focus();
-                    TipoVehiculoIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-                
+                                
                 var paso = VehiculosBLL.Guardar(vehiculos);
                 if (paso)
                 {

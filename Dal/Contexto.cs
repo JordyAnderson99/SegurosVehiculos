@@ -66,14 +66,12 @@ namespace SegurosVehiculos.Dal
 
             //------------------Status de los Vehiculos--------------------
             modelBuilder.Entity<StatusVehiculo>().HasData(new StatusVehiculo { StatusVehiculoId = 1, Status = "Vehiculo Tiene Opsicion" });
-            modelBuilder.Entity<StatusVehiculo>().HasData(new StatusVehiculo { StatusVehiculoId = 2, Status = "?" });
-            modelBuilder.Entity<StatusVehiculo>().HasData(new StatusVehiculo { StatusVehiculoId = 3, Status = "?" });
-            modelBuilder.Entity<StatusVehiculo>().HasData(new StatusVehiculo { StatusVehiculoId = 4, Status = "?" });
-            modelBuilder.Entity<StatusVehiculo>().HasData(new StatusVehiculo { StatusVehiculoId = 5, Status = "?" });
+            modelBuilder.Entity<StatusVehiculo>().HasData(new StatusVehiculo { StatusVehiculoId = 2, Status = "No tiene oposicon" });
+       
 
             //------------------Status de los Vehiculos--------------------
             modelBuilder.Entity<TipoEmision>().HasData(new TipoEmision { TipoEmisionId = 1, Emision = "Exoneracion Ley 168" });
-            modelBuilder.Entity<TipoEmision>().HasData(new TipoEmision { TipoEmisionId = 2, Emision = "?" });
+            modelBuilder.Entity<TipoEmision>().HasData(new TipoEmision { TipoEmisionId = 2, Emision = "No es Exonerado" });
 
             //------------------Tipo de Vehiculos--------------------
             modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 1, Tipo = "Privado" });

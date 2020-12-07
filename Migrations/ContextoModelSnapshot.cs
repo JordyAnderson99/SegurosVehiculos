@@ -288,22 +288,7 @@ namespace SegurosVehiculos.Migrations
                         new
                         {
                             StatusVehiculoId = 2,
-                            Status = "?"
-                        },
-                        new
-                        {
-                            StatusVehiculoId = 3,
-                            Status = "?"
-                        },
-                        new
-                        {
-                            StatusVehiculoId = 4,
-                            Status = "?"
-                        },
-                        new
-                        {
-                            StatusVehiculoId = 5,
-                            Status = "?"
+                            Status = "No tiene oposicon"
                         });
                 });
 
@@ -329,7 +314,7 @@ namespace SegurosVehiculos.Migrations
                         new
                         {
                             TipoEmisionId = 2,
-                            Emision = "?"
+                            Emision = "No es Exonerado"
                         });
                 });
 
@@ -434,8 +419,8 @@ namespace SegurosVehiculos.Migrations
                     b.Property<int>("CantidadPasajeros")
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("CapacidadCarga")
-                        .HasColumnType("REAL");
+                    b.Property<int>("CapacidadCarga")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Chasis")
                         .HasColumnType("TEXT");
@@ -534,6 +519,9 @@ namespace SegurosVehiculos.Migrations
                     b.Property<double>("Balance")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("CantidadCuotas")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
@@ -543,12 +531,16 @@ namespace SegurosVehiculos.Migrations
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("TipoSeguroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VehiculoId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("VentaId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClienteId");
 
                     b.HasIndex("VentaId");
 
@@ -566,19 +558,11 @@ namespace SegurosVehiculos.Migrations
 
             modelBuilder.Entity("SegurosVehiculos.Entidades.VentasDetalle", b =>
                 {
-                    b.HasOne("SegurosVehiculos.Entidades.Clientes", "clientes")
-                        .WithMany()
-                        .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("SegurosVehiculos.Entidades.Ventas", null)
                         .WithMany("Detalle")
                         .HasForeignKey("VentaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("clientes");
                 });
 
             modelBuilder.Entity("SegurosVehiculos.Entidades.Cotizaciones", b =>

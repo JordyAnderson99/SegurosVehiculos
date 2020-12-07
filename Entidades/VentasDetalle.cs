@@ -15,10 +15,9 @@ namespace SegurosVehiculos.Entidades
         public DateTime Fecha { get; set; } = DateTime.Now;        
         public double Monto { get; set; }
         public double Balance { get; set; }
-
-        [ForeignKey("ClienteId")]
-
-        public Clientes clientes { get; set; } = new Clientes();
+        public int VehiculoId { get; set; }
+        public int TipoSeguroId { get; set; }
+        public int CantidadCuotas { get; set; }
 
     }
 }

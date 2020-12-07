@@ -57,10 +57,25 @@ namespace SegurosVehiculos.UI.Registros
                 esValido = false;
                 MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (!int.TryParse(CotizacionIdTextBox.Text, out int CotizacionId))
+            {
+                esValido = false;
+                MessageBox.Show("Este Id no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            if (!int.TryParse(CantidadCuotasTextBox.Text, out int CantidadCuotas))
+            {
+                esValido = false;
+                MessageBox.Show("Esta Cantidad Cuota no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            if (!int.TryParse(MontoTextBox.Text, out int Monto))
+            {
+                esValido = false;
+                MessageBox.Show("Este Monto no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
             //———————————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
 
-            
+
 
             //—————————————————————————————————[ Cotizacion Id ]—————————————————————————————————
             if (CotizacionIdTextBox.Text.Trim() == string.Empty)
