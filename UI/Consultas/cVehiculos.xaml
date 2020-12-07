@@ -75,7 +75,7 @@
                 <!--——————————————————————————————————————————————[ DATA GRID ]——————————————————————————————————————————————-->
             </StackPanel>
             <StackPanel HorizontalAlignment="Left" Width="644" >
-                <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center" BorderBrush="#FF6686A6" Foreground="#FF151212">
+                <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center" BorderBrush="#FF6686A6" Foreground="#FF151212" SelectionChanged="DatosDataGrid_SelectionChanged">
                     <DataGrid.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFBCC8C9" Offset="0.544"/>
@@ -96,12 +96,12 @@
                         <DataGridTextColumn Header=" Motor " Binding="{Binding Motor}"/>
                         <DataGridTextColumn Header=" Capacidad de Carga " Binding="{Binding CapacidadCarga}"/>
                         <DataGridTextColumn Header=" Total de Puertas " Binding="{Binding TotalPuertas}"/>
-                        <DataGridTextColumn Header=" Color " Binding="{Binding Color}"/>
-                        <DataGridTextColumn Header=" Marca " Binding="{Binding Marca}"/>
-                        <DataGridTextColumn Header=" Modelo " Binding="{Binding Modelo}"/>
-                        <DataGridTextColumn Header=" Status del Vehiculo " Binding="{Binding Status}"/>
-                        <DataGridTextColumn Header=" Tipo de Emision " Binding="{Binding TipoEmision}"/>
-                        <DataGridTextColumn Header=" Tipo del Vehiculo " Binding="{Binding TipoVehiculo}"/>
+                        <DataGridTextColumn Header=" Color " Binding="{Binding ColorId}"/>
+                        <DataGridTextColumn Header=" Marca " Binding="{Binding MarcaId}"/>
+                        <DataGridTextColumn Header=" Modelo " Binding="{Binding ModeloId}"/>
+                        <DataGridTextColumn Header=" Status del Vehiculo " Binding="{Binding StatusVehiculoId}"/>
+                        <DataGridTextColumn Header=" Tipo de Emision " Binding="{Binding TipoEmisionId}"/>
+                        <DataGridTextColumn Header=" Tipo del Vehiculo " Binding="{Binding TipoVehiculoId}"/>
 
                     </DataGrid.Columns>
                 </DataGrid>

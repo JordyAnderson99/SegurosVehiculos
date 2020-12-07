@@ -110,7 +110,7 @@ namespace SegurosVehiculos.UI.Registros
                 //—————————————————————————————————[ Nombres ]—————————————————————————————————
                 if (NombreTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Nombres) está vacío.\n\nEscriba sus Nombres.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Nombre) está vacío.\n\nEscriba sus Nombres.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     NombreTextBox.Clear();
                     NombreTextBox.Focus();
                     return;
@@ -118,7 +118,7 @@ namespace SegurosVehiculos.UI.Registros
                 //—————————————————————————————————[ Apellidos ]—————————————————————————————————
                 if (ApellidoTextBox.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Apellidos) está vacío.\n\nEscriba sus Apellidos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Apellido) está vacío.\n\nEscriba sus Apellidos.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     ApellidoTextBox.Clear();
                     ApellidoTextBox.Focus();
                     return;

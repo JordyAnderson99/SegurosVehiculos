@@ -22,13 +22,32 @@ namespace SegurosVehiculos.UI.Registros
         {
             InitializeComponent();
             this.DataContext = cotizaciones;
+            //--------------------ClienteId ComboBox--------------------------
+            ClienteIdComboBox.ItemsSource = ClientesBLL.GetList(p => true);
+            ClienteIdComboBox.SelectedValuePath = "ClienteId";
+            ClienteIdComboBox.DisplayMemberPath = "Nombre";
+
+            //--------------------VehiculoId ComboBox--------------------------
+            VehiculoIdComboBox.ItemsSource = VehiculosBLL.GetList(p => true);
+            VehiculoIdComboBox.SelectedValuePath = "VehiculoId";
+            VehiculoIdComboBox.DisplayMemberPath = "VehiculoId";
+
+            //--------------------TipoSeguroId ComboBox--------------------------
+            TipoSeguroIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
+            TipoSeguroIdComboBox.SelectedValuePath = "TipoSeguroId";
+            TipoSeguroIdComboBox.DisplayMemberPath = "Seguros";
+
         }
+
+
         //LIMPIAR *************************************************************************
         private void Limpiar()
         {
             this.cotizaciones = new Cotizaciones();
             this.DataContext = cotizaciones;
         }
+
+
         //VALIDAR *************************************************************************
         private bool Validar()
         {
@@ -39,195 +58,195 @@ namespace SegurosVehiculos.UI.Registros
                 MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
-            return esValido;
+            //———————————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+
             
-        
-        }
+
+            //—————————————————————————————————[ Cotizacion Id ]—————————————————————————————————
+            if (CotizacionIdTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Cotizacion Id) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                CotizacionIdTextBox.Text = "0";
+                CotizacionIdTextBox.Focus();
+                CotizacionIdTextBox.SelectAll();
+                esValido = false;
+            }
+
+            //—————————————————————————————————[ Cliente Id ]—————————————————————————————————
+            if (ClienteIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (ClienteId) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ClienteIdComboBox.Focus();
+                ClienteIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
 
 
-         // Funcion Cagar
-        private void Cargar()
+            //—————————————————————————————————[ Vehiculo Id ]—————————————————————————————————
+            if (VehiculoIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                VehiculoIdComboBox.Focus();
+                VehiculoIdComboBox.IsDropDownOpen = true;
+                esValido = false; 
+            }
+            //—————————————————————————————————[ Tipo Seguro Id ]—————————————————————————————————
+            if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                TipoSeguroIdComboBox.Focus();
+                TipoSeguroIdComboBox.IsDropDownOpen = true;
+                esValido = false; 
+            }
+
+
+            //—————————————————————————————————[ Monto ]—————————————————————————————————
+            if (MontoTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Monto) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MontoTextBox.Focus();
+                MontoTextBox.SelectAll();
+                esValido = false;
+            }
+            //—————————————————————————————————[ Observaciones ]—————————————————————————————————
+            if (ObservacionesTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (Observaciones) está vacío.\n\nAsegurese de que este lleno", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ObservacionesTextBox.Focus();
+                ObservacionesTextBox.SelectAll();
+                esValido = false;
+            }
+            //—————————————————————————————————[CantidadCuotas ]—————————————————————————————————
+            if (CantidadCuotasTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                CantidadCuotasTextBox.Focus();
+                CantidadCuotasTextBox.SelectAll();
+                esValido = false;
+            }
+
+        return esValido;
+
+
+    }
+
+
+    // Funcion Cagar
+    private void Cargar()
+    {
+        this.DataContext = null;
+        this.DataContext = cotizaciones;
+    }
+
+
+
+    //BOTON BUSCAR *************************************************************************
+    private void BuscarButton_Click(object sender, RoutedEventArgs e)
+    {
+        Cotizaciones encontrado = CotizacionesBLL.Buscar(cotizaciones.CotizacionId);
+
+        if (encontrado != null)
         {
-            this.DataContext = null;
-            this.DataContext = cotizaciones;
+            cotizaciones = encontrado;
+            Cargar();
         }
-
-
-
-        //BOTON BUSCAR *************************************************************************
-        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        else
         {
-            var cotizaciones = CotizacionesBLL.Buscar(Utilidades.ToInt(CotizacionIdTextBox.Text));
-            if (cotizaciones != null)
-                this.cotizaciones = cotizaciones;
-            else
-                this.cotizaciones = new Cotizaciones();
-
-            this.DataContext = this.cotizaciones;
-        }
-        //BOTON NUEVO *************************************************************************
-        private void NuevoButton_Click(object sender, RoutedEventArgs e)
-        {
+            MessageBox.Show($"Esta Cotizacion no fue encontrada.\n\nAsegurese que exista o cree uno nuevo.", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
             Limpiar();
+            CotizacionIdTextBox.Clear();
+            CotizacionIdTextBox.Focus();
         }
-        //BOTO GUARDAR **************************************************************************
-       
-        private void GuardarButton_Click(object sender, RoutedEventArgs e)
+    }
+
+    //BOTON NUEVO *************************************************************************
+    private void NuevoButton_Click(object sender, RoutedEventArgs e)
+    {
+        Limpiar();
+    }
+
+    //BOTO GUARDAR **************************************************************************
+
+    private void GuardarButton_Click(object sender, RoutedEventArgs e)
+    {
         {
+            if (!Validar())
+                return;
+
+
+
+
+
+            var paso = CotizacionesBLL.Guardar(this.cotizaciones);
+            if (paso)
             {
-                if (!Validar())
-                    return;
-
-                //———————————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
-               
-               
-               
-                //—————————————————————————————————[ Cotizacion Id ]—————————————————————————————————
-                if (CotizacionIdTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Cotizacion Id) está vacío.\n\nAsigne una cotizacion al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    CotizacionIdTextBox.Text = "0";
-                    CotizacionIdTextBox.Focus();
-                    CotizacionIdTextBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[ Fecha ]—————————————————————————————————
-                if (FechaDatePicker.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Fecha) está vacío.\n\nAsigne una Fecha al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                  //  FechaDatePicker.Clear();
-                    FechaDatePicker.Focus();
-                    return;
-                }
-                //—————————————————————————————————[ Cliente Id ]—————————————————————————————————
-               if (ClienteIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (ClienteId) está vacío.\n\nAsigne un Cliente al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ClienteIdComboBox.IsDropDownOpen = true;
-                    ClienteIdComboBox.Focus();
-                    return;
-                }
-               
-
-                //—————————————————————————————————[ Vehiculo Id ]—————————————————————————————————
-                if (VehiculoIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsigne un Vehiculo al camoi.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    VehiculoIdComboBox.Focus();
-                    ClienteIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-
-
-
-                //—————————————————————————————————[ Tipo Seguro Id ]—————————————————————————————————
-                if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nAsigne un Tipo de seguro al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    TipoSeguroIdComboBox.Focus();
-                    TipoSeguroIdComboBox.IsDropDownOpen = true;
-                    return;
-                }
-
-                
-
-                
-                //—————————————————————————————————[ Monto ]—————————————————————————————————
-                if (MontoTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Monto) está vacío.\n\nAsigne un Monto .", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    MontoTextBox.Focus();
-                    MontoTextBox.SelectAll();
-                    return;
-                }
-
-
-
-                //—————————————————————————————————[ Observaciones ]—————————————————————————————————
-                if (ObservacionesTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (Observaciones) está vacío.\n\n.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    ObservacionesTextBox.Focus();
-                    ObservacionesTextBox.SelectAll();
-                    return;
-                }
-                //—————————————————————————————————[CantidadCuotas ]—————————————————————————————————
-                if (CantidadCuotasTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nAsigne una Cantidad de cuotas al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    CantidadCuotasTextBox.Focus();
-                    CantidadCuotasTextBox.SelectAll();
-                    return;
-                }
-
-                
-                var paso = CotizacionesBLL.Guardar(cotizaciones);
-                if (paso)
-                {
-                    Limpiar();
-                    MessageBox.Show("Transacción Exitosa", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                    MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Limpiar();
+                MessageBox.Show("Transacción Exitosa", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+            else
+                MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
-       
+    }
 
 
 
-        //BOTON ELIMINAR *************************************************************************
-        private void EliminarButton_Click(object sender, RoutedEventArgs e)
+
+    //BOTON ELIMINAR *************************************************************************
+    private void EliminarButton_Click(object sender, RoutedEventArgs e)
+    {
         {
+            if (CotizacionesBLL.Eliminar(Utilidades.ToInt(CotizacionIdTextBox.Text)))
             {
-                if (CotizacionesBLL.Eliminar(Utilidades.ToInt(CotizacionIdTextBox.Text)))
-                {
-                    Limpiar();
-                    MessageBox.Show("Registro Eliminado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                    MessageBox.Show("No fue posible eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                Limpiar();
+                MessageBox.Show("Registro Eliminado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+            else
+                MessageBox.Show("No fue posible eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
         }
+    }
 
-        
-        //Boton de Agregar Fila
-        private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+
+    //Boton de Agregar Fila
+    private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+    {
+        Clientes clientes = (Clientes)ClienteIdComboBox.SelectedItem;
+        var filaDetalle = new CotizacionesDetalle
         {
-            Clientes clientes = (Clientes)ClienteIdComboBox.SelectedItem;
-            var filaDetalle = new CotizacionesDetalle
-            {
-                CotizacionId = this.cotizaciones.CotizacionId,
-                ClienteId = Convert.ToInt32(ClienteIdComboBox.SelectedValue.ToString()),
-                clientes = (Clientes)ClienteIdComboBox.SelectedItem,
-                NumeroCuota = Convert.ToInt32(NumeroCuotaTextBox.Text)
-            };
+            CotizacionId = this.cotizaciones.CotizacionId,
+            ClienteId = Convert.ToInt32(ClienteIdComboBox.SelectedValue.ToString()),
+            VehiculoId = Convert.ToInt32(VehiculoIdComboBox.SelectedValue.ToString()),
+            TipoSeguroId = Convert.ToInt32(TipoSeguroIdComboBox.SelectedValue.ToString()),                
+            NumeroCuota = Convert.ToInt32(NumeroCuotaTextBox.Text),
+            CantidadCuotas = Convert.ToInt32(CantidadCuotasTextBox.Text),
+            Monto = Convert.ToInt32(MontoTextBox.Text)
 
-           /* ordenes.Monto += producto.Costo * int.Parse(CantidadTextBox.Text);
-            this.ordenes.Detalle.Add(filaDetalle);*/
+        };
+
+        /* ordenes.Monto += producto.Costo * int.Parse(CantidadTextBox.Text);*/
+            this.cotizaciones.Detalle.Add(filaDetalle);
 
 
             Cargar();
 
-            TipoSeguroIdComboBox.SelectedIndex = -1;
-            NumeroCuotaTextBox.Clear();
-            NumeroCuotaTextBox.Focus();
+        
+
+
         }
 
-        
+
         //Boton de Eliminar Fila
         private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
         {
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
-                var detalle = (VentasDetalle)DetalleDataGrid.SelectedItem;
+                var detalle = (CotizacionesDetalle)DetalleDataGrid.SelectedItem;
 
-                /*ordenes.Monto = ordenes.Monto - (detalle.productos.Costo * (decimal)detalle.Cantidad);
-                ordenes.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);*/
-               Cargar();
+                /*ordenes.Monto = ordenes.Monto - (detalle.productos.Costo * (decimal)detalle.Cantidad);*/
+               cotizaciones.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
+                Cargar();
             }
         }
 
-        
+
     }
 }

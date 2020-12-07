@@ -16,8 +16,8 @@ namespace SegurosVehiculos.Migrations
                     Nombre = table.Column<string>(type: "TEXT", nullable: true),
                     Apellido = table.Column<string>(type: "TEXT", nullable: true),
                     Direccion = table.Column<string>(type: "TEXT", nullable: true),
-                    Telefono = table.Column<int>(type: "INTEGER", nullable: false),
-                    Celular = table.Column<int>(type: "INTEGER", nullable: false),
+                    Telefono = table.Column<double>(type: "REAL", nullable: false),
+                    Celular = table.Column<double>(type: "REAL", nullable: false),
                     Cedula = table.Column<string>(type: "TEXT", nullable: true),
                     CorreoElectronico = table.Column<string>(type: "TEXT", nullable: true),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false)
@@ -223,6 +223,31 @@ namespace SegurosVehiculos.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CotizacionesDetalle",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CotizacionId = table.Column<int>(type: "INTEGER", nullable: false),
+                    NumeroCuota = table.Column<int>(type: "INTEGER", nullable: false),
+                    CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false),
+                    ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Monto = table.Column<double>(type: "REAL", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CotizacionesDetalle", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CotizacionesDetalle_Cotizaciones_CotizacionId",
+                        column: x => x.CotizacionId,
+                        principalTable: "Cotizaciones",
+                        principalColumn: "CotizacionId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "VentasDetalle",
                 columns: table => new
                 {
@@ -387,6 +412,11 @@ namespace SegurosVehiculos.Migrations
                 values: new object[] { 1, "Lopez", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5", new DateTime(2020, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Raldy", "Admin" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_CotizacionesDetalle_CotizacionId",
+                table: "CotizacionesDetalle",
+                column: "CotizacionId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_VentasDetalle_ClienteId",
                 table: "VentasDetalle",
                 column: "ClienteId");
@@ -403,7 +433,7 @@ namespace SegurosVehiculos.Migrations
                 name: "Colores");
 
             migrationBuilder.DropTable(
-                name: "Cotizaciones");
+                name: "CotizacionesDetalle");
 
             migrationBuilder.DropTable(
                 name: "MarcaVehiculos");
@@ -434,6 +464,9 @@ namespace SegurosVehiculos.Migrations
 
             migrationBuilder.DropTable(
                 name: "VentasDetalle");
+
+            migrationBuilder.DropTable(
+                name: "Cotizaciones");
 
             migrationBuilder.DropTable(
                 name: "Clientes");

@@ -96,6 +96,16 @@ namespace SegurosVehiculos.UI.Consultas
             DatosDataGrid.ItemsSource = listado;
         }
 
-
+        private void DatosDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            
+            
+            
+            /*var color = ((ComboBox)sender).Items.CurrentItem as Colores;
+            if (color != null)
+            {
+                vehiculos.ColorId = color.ColorId;
+            }*/
+        }
     }
 }

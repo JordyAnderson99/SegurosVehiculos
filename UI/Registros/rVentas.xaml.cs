@@ -200,8 +200,8 @@ namespace SegurosVehiculos.UI.Registros
                 Monto = Convert.ToInt32(MontoTextBox.Text)
             };
 
-           /* ordenes.Monto += producto.Costo * int.Parse(CantidadTextBox.Text);
-            this.ordenes.Detalle.Add(filaDetalle);*/
+            /* ordenes.Monto += producto.Costo * int.Parse(CantidadTextBox.Text);*/
+            this.ventas.Detalle.Add(filaDetalle);
             Cargar();
 
             TipoSeguroIdComboBox.SelectedIndex = -1;
@@ -215,8 +215,8 @@ namespace SegurosVehiculos.UI.Registros
             {
                 var detalle = (VentasDetalle)DetalleDataGrid.SelectedItem;
 
-                /*ordenes.Monto = ordenes.Monto - (detalle.productos.Costo * (decimal)detalle.Cantidad);
-                ordenes.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);*/
+                /*ordenes.Monto = ordenes.Monto - (detalle.productos.Costo * (decimal)detalle.Cantidad);*/
+                ventas.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
         }

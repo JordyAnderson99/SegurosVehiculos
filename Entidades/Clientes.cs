@@ -16,9 +16,9 @@ namespace SegurosVehiculos.Entidades
 
         public string Direccion { get; set; }
 
-        public int Telefono { get; set; }
+        public double Telefono { get; set; }
 
-        public int Celular { get; set; }
+        public double Celular { get; set; }
 
         public string Cedula { get; set; }
 

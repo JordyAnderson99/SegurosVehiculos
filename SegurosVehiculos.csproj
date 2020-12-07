@@ -20,7 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <None Remove="Data\Seguros.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Seguros.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

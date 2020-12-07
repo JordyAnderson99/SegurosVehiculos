@@ -86,13 +86,13 @@
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="   CotizacionId   " Binding="{Binding CotizacionId}"/>
-                        <DataGridTextColumn Header="  Fecha  " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
+                        <DataGridTextColumn Header="   Fecha   " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
                         <DataGridTextColumn Header="  ClienteId  " Binding="{Binding ClienteId}"/>
                         <DataGridTextColumn Header="VehiculoId" Binding="{Binding VehiculoId}"/>
                         <DataGridTextColumn Header="TipoSeguroId" Binding="{Binding TipoSeguroId}"/>
-                        <DataGridTextColumn Header="Monto" Binding="{Binding Monto}"/>
+                        <DataGridTextColumn Header="  Monto  " Binding="{Binding Monto}"/>
                         <DataGridTextColumn Header="  Observaciones  " Binding="{Binding Observacione}"/>
-                        <DataGridTextColumn Header="  CantidadCuotas" Binding="{Binding CantidadCuotas}"/>
+                        <DataGridTextColumn Header="  CantidadCuotas " Binding="{Binding CantidadCuotas}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

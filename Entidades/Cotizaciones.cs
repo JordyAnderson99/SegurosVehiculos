@@ -26,7 +26,7 @@ namespace SegurosVehiculos.Entidades{
         public int CantidadCuotas { get; set; }
 
          [ForeignKey("CotizacionId")]
-        public virtual List<Cotizaciones> Detalle { get; set; } = new List<Cotizaciones>();
+        public virtual List<CotizacionesDetalle> Detalle { get; set; } = new List<CotizacionesDetalle>();
 
         
     }

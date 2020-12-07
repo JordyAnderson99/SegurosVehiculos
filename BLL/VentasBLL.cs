@@ -58,7 +58,7 @@ namespace SegurosVehiculos.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete From ProyectoDetalle Where ProyectoId={ventas.VentaId}");
+                contexto.Database.ExecuteSqlRaw($"Delete From VentasDetalle Where VentaId={ventas.VentaId}");
 
                 foreach (var item in ventas.Detalle)
                 {

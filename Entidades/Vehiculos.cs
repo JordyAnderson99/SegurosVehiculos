@@ -15,7 +15,7 @@ namespace SegurosVehiculos.Entidades
         public string Matricula { get; set; }
         public double ValorVehiculo { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
-        public DateTime FechaExpedicionMatricula { get; set; }
+        public DateTime FechaExpedicionMatricula { get; set; } = DateTime.Now;
         public int AñoFabricacion { get; set; }
         public string Motor { get; set; }
         public double FuerzaMotriz { get; set; }

@@ -70,14 +70,12 @@ namespace SegurosVehiculos.UI.Registros
         private bool Validar(){
             bool esValido = true;
 
-            if(MatriculaTextBox.Text.Length ==0){
+            if(VehiculoIdTextBox.Text.Length ==0){
                 esValido = false;
                 MessageBox.Show("Transaccion Fallida" , "Fallo", 
                 MessageBoxButton.OK, MessageBoxImage.Warning);
                                 
             }            
-            
-
 
             return esValido;
         }
@@ -88,9 +86,16 @@ namespace SegurosVehiculos.UI.Registros
             if(vehiculo!= null){
                     this.vehiculos = vehiculo;
                 Cargar();
-            }
+
+            }          
             else{
-                    this.vehiculos = new Vehiculos();
+
+                this.vehiculos = new Vehiculos();
+                this.DataContext = this.vehiculos;
+                MessageBox.Show($"Este Vehiculo no fue encontrado.\n\nAsegúrese que existe o cree uno nuevo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Limpiar();
+                VehiculoIdTextBox.SelectAll();
+                VehiculoIdTextBox.Focus();
             }
             this.DataContext = this.vehiculos;
         }
@@ -315,14 +320,6 @@ namespace SegurosVehiculos.UI.Registros
         }
 
 
-
-
-
-
-
-
-
-
         private void EliminarButton_Click(object sender, RoutedEventArgs e){
             if(VehiculosBLL.Eliminar(Utilidades.ToInt(VehiculoIdTextBox.Text))){
 
@@ -332,6 +329,76 @@ namespace SegurosVehiculos.UI.Registros
             else{
                 MessageBox.Show("No fue posible eliminar", "Fallo",MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void ColorIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var color = ((ComboBox)sender).Items.CurrentItem as Colores;
+            if (color != null)
+            {
+                vehiculos.ColorId = color.ColorId;
+            }
+
+        }
+
+        private void MarcaIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var Marca = ((ComboBox)sender).Items.CurrentItem as MarcaVehiculos;
+            if (Marca != null)
+            {
+
+                vehiculos.MarcaId = Marca.MarcaId;
+
+            }
+
+        }
+
+        private void ModeloIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var Modelo = ((ComboBox)sender).Items.CurrentItem as Modelos;
+            if (Modelo != null)
+            {
+
+                vehiculos.ModeloId = Modelo.ModeloId;
+
+            }
+
+        }
+
+        private void StatusVehiculoIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var StatusVehiculo = ((ComboBox)sender).Items.CurrentItem as StatusVehiculo;
+            if (StatusVehiculo != null)
+            {
+
+                vehiculos.StatusVehiculoId = StatusVehiculo.StatusVehiculoId;
+
+            }
+
+        }
+
+        private void TipoEmisionIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var TipoEmision = ((ComboBox)sender).Items.CurrentItem as TipoEmision;
+            if (TipoEmision != null)
+            {
+
+                vehiculos.TipoEmisionId = TipoEmision.TipoEmisionId;
+
+            }
+
+        }
+
+        private void TipoVehiculoIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var TipoVehiculo = ((ComboBox)sender).Items.CurrentItem as TipoVehiculo;
+            if (TipoVehiculo != null)
+            {
+
+                vehiculos.TipoVehiculoId = TipoVehiculo.TipoVehiculoId;
+
+            }
+
         }
     }
 }

@@ -28,8 +28,8 @@ namespace SegurosVehiculos.Migrations
                     b.Property<string>("Cedula")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Celular")
-                        .HasColumnType("INTEGER");
+                    b.Property<double>("Celular")
+                        .HasColumnType("REAL");
 
                     b.Property<string>("CorreoElectronico")
                         .HasColumnType("TEXT");
@@ -43,8 +43,8 @@ namespace SegurosVehiculos.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Telefono")
-                        .HasColumnType("INTEGER");
+                    b.Property<double>("Telefono")
+                        .HasColumnType("REAL");
 
                     b.HasKey("ClienteId");
 
@@ -122,6 +122,40 @@ namespace SegurosVehiculos.Migrations
                     b.HasKey("CotizacionId");
 
                     b.ToTable("Cotizaciones");
+                });
+
+            modelBuilder.Entity("SegurosVehiculos.Entidades.CotizacionesDetalle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CantidadCuotas")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CotizacionId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Monto")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroCuota")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TipoSeguroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VehiculoId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CotizacionId");
+
+                    b.ToTable("CotizacionesDetalle");
                 });
 
             modelBuilder.Entity("SegurosVehiculos.Entidades.MarcaVehiculos", b =>
@@ -521,7 +555,7 @@ namespace SegurosVehiculos.Migrations
                     b.ToTable("VentasDetalle");
                 });
 
-            modelBuilder.Entity("SegurosVehiculos.Entidades.Cotizaciones", b =>
+            modelBuilder.Entity("SegurosVehiculos.Entidades.CotizacionesDetalle", b =>
                 {
                     b.HasOne("SegurosVehiculos.Entidades.Cotizaciones", null)
                         .WithMany("Detalle")

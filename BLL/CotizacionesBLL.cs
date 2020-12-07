@@ -43,8 +43,9 @@ namespace SegurosVehiculos.BLL
 
             try
             {
-                    contexto.Cotizaciones.Add(cotizaciones);   
-                    guardado = (contexto.SaveChanges() > 0);
+                
+                contexto.Cotizaciones.Add(cotizaciones);
+                guardado = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -66,8 +67,15 @@ namespace SegurosVehiculos.BLL
 
             try
             {
+                contexto.Database.ExecuteSqlRaw($"Delete FROM CotizacionesDetalle Where CotizacionId={cotizaciones.CotizacionId}");
+                foreach (var item in cotizaciones.Detalle)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                }
                 contexto.Entry(cotizaciones).State = EntityState.Modified;
-                modificado = (contexto.SaveChanges() > 0);
+                modificado = contexto.SaveChanges() > 0;
+
+             
             }
             catch (Exception)
             {
@@ -84,7 +92,7 @@ namespace SegurosVehiculos.BLL
         //Funcion Guardar
         public static bool Guardar(Cotizaciones cotizaciones)
         {
-            if (!Existe(cotizaciones.ClienteId))
+            if (!Existe(cotizaciones.CotizacionId))
                 return Insertar(cotizaciones);
             else
                 return Modificar(cotizaciones);
@@ -127,7 +135,11 @@ namespace SegurosVehiculos.BLL
 
             try
             {
-                cotizaciones = contexto.Cotizaciones.Find(id);
+
+                cotizaciones = contexto.Cotizaciones
+                  .Where(d => d.CotizacionId == id)
+                  .Include(d => d.Detalle)                  
+                  .SingleOrDefault();
 
             }
             catch (Exception)
@@ -143,14 +155,14 @@ namespace SegurosVehiculos.BLL
         }
 
                //Funcion List
-        public static List<Cotizaciones> GetList(Expression<Func<Cotizaciones, bool>> cotizaciones)
+        public static List<Cotizaciones> GetList(Expression<Func<Cotizaciones, bool>> criterio)
         {
             Contexto contexto = new Contexto();
             List<Cotizaciones> Lista = new List<Cotizaciones>();
 
             try
             {
-                Lista = contexto.Cotizaciones.Where(cotizaciones).ToList();
+                Lista = contexto.Cotizaciones.Where(criterio).ToList();
 
             }
             catch (Exception)

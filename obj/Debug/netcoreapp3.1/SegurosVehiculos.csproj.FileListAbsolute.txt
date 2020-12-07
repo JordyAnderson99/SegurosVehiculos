@@ -189,7 +189,6 @@ C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehic
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Buscar.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Eliminar.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Guardar.jpg
-C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Llave.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Mas.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Menos.png
@@ -257,8 +256,6 @@ C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehic
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.AssemblyInfo.cs
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csproj.CopyComplete
-C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.genruntimeconfig.cache
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVentas.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rVentas.baml
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.g.cs
@@ -291,3 +288,17 @@ C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cCotiz
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Casita.png
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Agendar.png
 C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Lista.png
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Agendar.png
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Casita.png
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Home.jpeg
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Lista.png
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cPagos.g.cs
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.g.cs
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.g.cs
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rPagos.g.cs
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cPagos.baml
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cVentas.baml
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.baml
+C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rPagos.baml
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\login.png
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Data\Seguros.db

@@ -57,7 +57,7 @@
 
             <!--Fecha Expedicion Matricula-->
             <Label Content = "Fecha de Expedicion" FontSize="15px" Margin="260,-400,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="160" FontWeight="Bold"/>
-            <DatePicker x:Name = "FechaExpedicionDatePicker" SelectedDate ="{Binding FechaExpedicion}" Height="30" Width="190" Margin="670,-400,1,1" />
+            <DatePicker x:Name = "FechaExpedicionMatriculaDatePicker" SelectedDate ="{Binding FechaExpedicionMatricula}" Height="30" Width="190" Margin="670,-400,1,1" />
 
             <!--AnoFabricacion-->
             <Label Content = "Año de Fabricacion" FontSize="15px" Margin="250,-320,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"  Height="25" Width="150" FontWeight="Bold"/>
@@ -81,27 +81,27 @@
 
             <!--Color del vehiculo-->
             <Label Content = "Color" FontSize="15px" Margin="-720,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="50" FontWeight="Bold"/>
-            <ComboBox x:Name = "ColorIdComboBox" SelectedValue ="{Binding ColorId}" Height="30" Width="190" Margin="-180,-28,1,1" />
+            <ComboBox x:Name = "ColorIdComboBox" SelectedValue ="{Binding ColorId}" Height="30" Width="190" Margin="-180,-28,1,1" SelectionChanged="ColorIdComboBox_SelectionChanged"  DisplayMemberPath="Color"/>
 
             <!--Marca del vehiculo-->
-            <Label Content = "Marca" FontSize="15px" Margin="-720,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="50" FontWeight="Bold"/>
-            <ComboBox x:Name = "MarcaIdComboBox" SelectedValue ="{Binding MarcaId}" Height="30" Width="190" Margin="-180,-28,1,1" />
+            <Label Content = "Marca" FontSize="15px" Margin="-720,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="50" FontWeight="Bold" />
+            <ComboBox x:Name = "MarcaIdComboBox" SelectedValue ="{Binding MarcaId}" Height="30" Width="190" Margin="-180,-28,1,1" SelectionChanged="MarcaIdComboBox_SelectionChanged" DisplayMemberPath="Marca"/>
 
             <!--Modelo del vehiculo-->
             <Label Content = "Modelo" FontSize="15px" Margin="-710,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="60" FontWeight="Bold"/>
-            <ComboBox x:Name = "ModeloIdComboBox" SelectedValue ="{Binding ModeloId}" Height="30" Width="190" Margin="-180,-28,1,1" />
+            <ComboBox x:Name = "ModeloIdComboBox" SelectedValue ="{Binding ModeloId}" Height="30" Width="190" Margin="-180,-28,1,1" SelectionChanged="ModeloIdComboBox_SelectionChanged" DisplayMemberPath="Modelo"/>
 
             <!--Status del vehiculo-->
             <Label Content = "Status de Vehiculos" FontSize="15px" Margin="260,-190,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="160" FontWeight="Bold"/>
-            <ComboBox x:Name = "StatusVehiculoIdComboBox" SelectedValue ="{Binding StatusVehiculoId}" Height="30" Width="190" Margin="670,-190,1,1" />
+            <ComboBox x:Name = "StatusVehiculoIdComboBox" SelectedValue ="{Binding StatusVehiculoId}" Height="30" Width="190" Margin="670,-190,1,1" SelectionChanged="StatusVehiculoIdComboBox_SelectionChanged" DisplayMemberPath="Status"/>
 
             <!--Tipo de emision del vehiculo-->
             <Label Content = "Tipo de Emision" FontSize="15px" Margin="230,-100,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="130" FontWeight="Bold"/>
-            <ComboBox x:Name = "TipoEmisionIdComboBox" SelectedValue ="{Binding TipoEmisionId}" Height="30" Width="190" Margin="670,-110,1,1" />
+            <ComboBox x:Name = "TipoEmisionIdComboBox" SelectedValue ="{Binding TipoEmisionId}" Height="30" Width="190" Margin="670,-110,1,1" SelectionChanged="TipoEmisionIdComboBox_SelectionChanged" DisplayMemberPath="Emision"/>
 
             <!--Tipo de vehiculo-->
             <Label Content = "Tipo de Vehiculo" FontSize="15px" Margin="240,-30,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Height="25" Width="140" FontWeight="Bold"/>
-            <ComboBox x:Name = "TipoVehiculoIdComboBox" SelectedValue ="{Binding TipoVehiculoId}" Height="30" Width="190" Margin="670,-30,1,1"  />
+            <ComboBox x:Name = "TipoVehiculoIdComboBox" SelectedValue ="{Binding TipoVehiculoId}" Height="30" Width="190" Margin="670,-30,1,1" SelectionChanged="TipoVehiculoIdComboBox_SelectionChanged" DisplayMemberPath="Tipo"/>
 
 
             <!--Boton Buscar-->
