@@ -10,5 +10,6 @@ namespace SegurosVehiculos.Entidades
         [Key]
         public int TipoSeguroId { get; set; }
         public String Seguros { get; set; }
+        public double ValorSeguro { get; set; }
     }
 }

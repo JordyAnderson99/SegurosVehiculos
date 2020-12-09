@@ -301,7 +301,6 @@ C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rCotizaciones.baml
 C:\Users\DELL\source\repos\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rPagos.baml
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\login.png
-C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Data\Seguros.db
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de clientes.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de cotizaciones.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de pago.png
@@ -316,3 +315,6 @@ C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Reg
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de usuarios.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Vehiculos.png
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Ventas.png
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Proyecto1.jpg
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Proyecto2.jpg
+C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Data\Seguros.db

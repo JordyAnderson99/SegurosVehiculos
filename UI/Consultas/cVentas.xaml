@@ -64,10 +64,10 @@
 
 
                 <!--——————————————————————————————————————————————[ CONSULTAR ]——————————————————————————————————————————————-->
-                <Button x:Name="ConsultarButton" Height="30" Width="90" Click="ConsultarButton_Click" >
+                <Button x:Name="ConsultarButton" Height="35" Width="90" Click="ConsultarButton_Click" FontWeight="Bold" >
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/Imagenes/Buscar.png"/>
-                        <Label Content="Consultar"/>
+                        <Label Content="Consultar" Margin="-5,0,0,0"/>
                     </StackPanel>
                 </Button>
 

@@ -74,12 +74,16 @@ namespace SegurosVehiculos.Dal
             modelBuilder.Entity<TipoEmision>().HasData(new TipoEmision { TipoEmisionId = 2, Emision = "No es Exonerado" });
 
             //------------------Tipo de Vehiculos--------------------
-            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 1, Tipo = "Privado" });
-            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 2, Tipo = "Publico" });
-
+            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 1, Tipo = "Motocicleta" });
+            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 2, Tipo = "Carro"});
+            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 3, Tipo = "Jeepeta" });
+            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 4, Tipo = "Camioneta"});
+            modelBuilder.Entity<TipoVehiculo>().HasData(new TipoVehiculo { TipoVehiculoId = 5, Tipo = "Camión"});
+            
+            
             //------------------Tipo de Seguros--------------------
-            modelBuilder.Entity<TipoSeguros>().HasData(new TipoSeguros { TipoSeguroId = 1, Seguros = "FULL" });
-            modelBuilder.Entity<TipoSeguros>().HasData(new TipoSeguros { TipoSeguroId = 2, Seguros = "De Ley" });
+            modelBuilder.Entity<TipoSeguros>().HasData(new TipoSeguros { TipoSeguroId = 1, Seguros = "FULL"  });
+            modelBuilder.Entity<TipoSeguros>().HasData(new TipoSeguros { TipoSeguroId = 2, Seguros = "De Ley", ValorSeguro = 20000 });
 
         }
     }

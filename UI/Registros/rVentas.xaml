@@ -63,7 +63,7 @@
 
                         <!--NumeroCuotaId-->
                         <Label Content = "CuotaId" FontSize="15px" Margin="-610,10,1,1" FontFamily="SimSun-ExtB" Width="70" Height="25" FontStyle="Normal" FontWeight="Bold" />
-                        <ComboBox x:Name = "NumeroCuotaIdComboBox" SelectedValue ="{Binding NumeroCuotaId}" Width="120" Height="25" Margin="-400,-30,0,0"/>
+                        <ComboBox x:Name = "NumeroCuotaIdComboBox" SelectedValue ="{Binding NumeroCuota}" Width="120" Height="25" Margin="-400,-30,0,0"/>
 
 
                         <!--CantidadCuota-->

@@ -19,12 +19,12 @@ namespace SegurosVehiculos.UI.Consultas
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
-                switch (FiltroComboBox.SelectedIndex)
+               switch (FiltroComboBox.SelectedIndex)
                 {
                     
                     case 1:
-                        try
-                        {
+                       try
+                       {
                             listado = CotizacionesBLL.GetList(u => u.CotizacionId == Utilidades.ToInt(CriterioTextBox.Text));
                         }
                         catch (FormatException)
@@ -37,16 +37,16 @@ namespace SegurosVehiculos.UI.Consultas
                 
 
 
-                         case 2:
-                        try
-                        {
+                     case 2:
+                         try
+                         {
                             listado = CotizacionesBLL.GetList(u => u.ClienteId == Utilidades.ToInt(CriterioTextBox.Text));
-                        }
-                        catch (FormatException)
-                        {
+                         }
+                         catch (FormatException)
+                         {
                             MessageBox.Show("Debes ingresar un Critero valido para aplicar este filtro.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        }
-                        break;
+                         }
+                         break;
 
                    
 

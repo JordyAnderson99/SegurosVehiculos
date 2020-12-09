@@ -134,19 +134,8 @@ namespace SegurosVehiculos.UI.Registros
                 CedulaTextBox.SelectAll();
                 esValido = false;
             }
-
-                                   
-            //—————————————————————————————————[ Correo Electronico ]—————————————————————————————————
-            if (CorreoElectronicoTextBox.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("El Campo (Cedula) está vacío.\n\nAsigne una Correo Electronico al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-
-                CorreoElectronicoTextBox.Focus();
-                CorreoElectronicoTextBox.SelectAll();
-                esValido = false;
-            }
-
-
+                                             
+            
             return esValido;
         }
         //BOTON BUSCAR *************************************************************************

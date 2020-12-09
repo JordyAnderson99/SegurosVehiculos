@@ -27,56 +27,55 @@
             <TextBox x:Name = "CotizacionIdTextBox" Text ="{Binding CotizacionId}" Width="60" Height="25" Margin="-440,-25,0,0"/>
 
             <!--Boton Buscar-->
-            <Button x:Name ="BuscarButton" Margin="240,-30,0,0" Width = "120" Height = "45" Content="     Buscar" FontWeight="Bold" Click ="BuscarButton_Click" FontSize="14" />
+            <Button x:Name ="BuscarButton" Margin="240,-40,0,0" Width = "100" Height = "40" Content="     Buscar" FontWeight="Bold" Click ="BuscarButton_Click" FontSize="14" />
             <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="170,-40,0,0"/>
 
             <!--Fecha-->
-            <Label Content = "Fecha" FontSize="13.5px" Margin="-715,-10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="52" Height="24" FontWeight="Bold" />
+            <Label Content = "Fecha" FontSize="13.5px" Margin="-715,10,0,0" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="52" Height="24" FontWeight="Bold" />
             <DatePicker x:Name = "FechaDatePicker" SelectedDate ="{Binding Fecha}" Width="160" Height="25" Margin="-340,-20,0,0"/>
 
             <!--Observaciones-->
             <Label Content = "Observaciones" FontSize="15px" Margin="-650,10,1,1" FontFamily="SimSun-ExtB" Width="120" Height="25" FontStyle="Normal" FontWeight="Bold" />
             <TextBox x:Name = "ObservacionesTextBox" Text ="{Binding Observaciones}" Width="160" Height="50" Margin="-340,-25,0,0"/>
 
+            <!--ClienteId-->
+            <Label Content = "ClienteId" FontSize="15px" Margin="40,-150,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90" Height="25" FontWeight="Bold"/>
+            <ComboBox x:Name = "ClienteIdComboBox" SelectedValue ="{Binding ClienteId}" Width="120" Height="25" Margin="260,-150,0,0"/>
+
+
+            <!--VehiculoId-->
+            <Label Content = "VehiculoId"  FontSize="15px" Margin="50,-70,1,1" Width="96" Height="25" FontFamily="SimSun-ExtB" FontStyle="Normal" FontWeight="Bold" />
+            <ComboBox x:Name = "VehiculoIdComboBox" SelectedValue ="{Binding VehiculoId}" Width="120" Height="26" Margin="260,-70,0,0"/>
+
 
             <StackPanel Orientation="Vertical" >
                 <GroupBox Header="Detalle de Cotizaciones"  Margin="0,5,0,0" Width="774" FontWeight="Bold" >
                     <StackPanel Height="246">
 
-                        <!--ClienteId-->
-                        <Label Content = "ClienteId" FontSize="15px" Margin="-660,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="90" FontWeight="Bold"/>
-                        <ComboBox x:Name = "ClienteIdComboBox" SelectedValue ="{Binding ClienteId}" Width="120" Height="25" Margin="-350,-25,0,0"/>
-
-
-                        <!--VehiculoId-->
-                        <Label Content = "VehiculoId"  FontSize="15px" Margin="-110,-25,1,1" Width="110" Height="25" FontFamily="SimSun-ExtB" FontStyle="Normal" FontWeight="Bold" />
-                        <ComboBox x:Name = "VehiculoIdComboBox" SelectedValue ="{Binding VehiculoId}" Width="120" Height="26" Margin="230,-30,0,0"/>
-
+                        
                         <!--TipoSeguroId-->
-                        <Label Content = "SeguroId" FontSize="15px" Margin="455,-26,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="85" FontWeight="Bold" />
-                        <ComboBox x:Name = "TipoSeguroIdComboBox" SelectedValue ="{Binding TipoSeguroId}" Width="100" Height="26" Margin="640,-30,0,0"/>
+                        <Label Content = "SeguroId" FontSize="15px" Margin="-655,26,1,-35" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="85" FontWeight="Bold" />
+                        <ComboBox x:Name = "TipoSeguroIdComboBox" SelectedValue ="{Binding TipoSeguroId}" Width="100" Height="26" Margin="-470,-30,0,-75"/>
 
 
                         <!--CantidadCuotas-->
-                        <Label Content = "Cantidad de Cuotas" FontSize="15px" Margin="-70,10,1,1" FontFamily="SimSun-ExtB" Width="150" Height="25" FontStyle="Normal" FontWeight="Bold" />
-                        <TextBox x:Name = "CantidadCuotasTextBox" Text ="{Binding CantidadCuotas}" Width="120" Height="25" Margin="230,-30,0,0"/>
+                        <Label Content = "Cantidad de Cuotas" FontSize="15px" Margin="-130,10,1,1" FontFamily="SimSun-ExtB" Width="150" Height="25" FontStyle="Normal" FontWeight="Bold" />
+                        <TextBox x:Name = "CantidadCuotasTextBox" Text ="{Binding CantidadCuotas}" Width="120" Height="30" Margin="180,-30,0,0"/>
 
 
-                        <!--NumeroCuotas-->
-                        <Label Content = "Numero de Cuotas" FontSize="15px" Margin="-610,-30,1,1" FontFamily="SimSun-ExtB" Width="140" Height="25" FontStyle="Normal" FontWeight="Bold"/>
-                        <TextBox x:Name = "NumeroCuotaTextBox" Text ="{Binding NumeroCuota}" Width="120" Height="25" Margin="-350,-30,0,0"/>
-
+                        
                         <!--Monto-->
-                        <Label Content = "Monto" FontSize="15px" Margin="420,-25,1,1" FontFamily="SimSun-ExtB" Width="50" Height="25" FontStyle="Normal" FontWeight="Bold" />
-                        <TextBox x:Name = "MontoTextBox" Text ="{Binding Monto}" Width="100" Height="25" Margin="640,-25,0,0"/>
+                        <Label Content = "Monto" FontSize="15px" Margin="420,-27,1,1" FontFamily="SimSun-ExtB" Width="50" Height="25" FontStyle="Normal" FontWeight="Bold" />
+                        <TextBox x:Name = "MontoTextBox" Text ="{Binding Monto}" Width="100" Height="30" Margin="640,-30,0,0"/>
 
 
+                        <CheckBox Name="ModificarMontoCheckBox" Content="Modificar Monto" Margin="-610,10,0,0" Width="126"/>
 
                         <!--Agregar Fila-->
                         <Button x:Name="AgregarFilaButton" Height="35" Width="200" Margin="-550,10,0,0"  Click ="AgregarFilaButton_Click" >
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Imagenes/Mas.png" Height="25"/>
-                                <Label Content="Agregar fila" FontWeight="Bold"/>
+                                <Image Source="/Imagenes/Calculadora.png" Height="25"/>
+                                <Label Content="Calcular Cuota" FontWeight="Bold"/>
                             </StackPanel>
                         </Button>
 
@@ -93,12 +92,11 @@
 
                         <DataGrid x:Name="DetalleDataGrid"  IsReadOnly="true" Height="110" Width="750" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Margin="0,10,0,0">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="        ClienteId       " Binding="{Binding ClienteId}"/>
-                                <DataGridTextColumn Header="      VehiculoId     " Binding="{Binding VehiculoId}"/>
+                                
                                 <DataGridTextColumn Header="       SeguroId       " Binding="{Binding TipoSeguroId}"/>
-                                <DataGridTextColumn Header="      Numero de cuotas    " Binding="{Binding NumeroCuota}"/>
-                                <DataGridTextColumn Header="       Cantidad de cuotas      " Binding="{Binding CantidadCuotas}"/>
-                                <DataGridTextColumn Header="          Monto          " Binding="{Binding Monto}"/>
+                                <DataGridTextColumn Header="             Numero de cuota          " Binding="{Binding NumeroCuota}"/>
+                                <DataGridTextColumn Header="           Cantidad de cuotas           " Binding="{Binding CantidadCuotas}"/>
+                                <DataGridTextColumn Header="               Monto                " Binding="{Binding Monto}"/>
 
 
                             </DataGrid.Columns>

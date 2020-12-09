@@ -9,8 +9,8 @@ using SegurosVehiculos.Dal;
 namespace SegurosVehiculos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20201207193548_Inicial")]
-    partial class Inicial
+    [Migration("20201209045312_Migration_Inicial")]
+    partial class Migration_Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -133,9 +133,6 @@ namespace SegurosVehiculos.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("CantidadCuotas")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("CotizacionId")
@@ -329,6 +326,9 @@ namespace SegurosVehiculos.Migrations
                     b.Property<string>("Seguros")
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("ValorSeguro")
+                        .HasColumnType("REAL");
+
                     b.HasKey("TipoSeguroId");
 
                     b.ToTable("TipoSeguros");
@@ -337,12 +337,14 @@ namespace SegurosVehiculos.Migrations
                         new
                         {
                             TipoSeguroId = 1,
-                            Seguros = "FULL"
+                            Seguros = "FULL",
+                            ValorSeguro = 0.0
                         },
                         new
                         {
                             TipoSeguroId = 2,
-                            Seguros = "De Ley"
+                            Seguros = "De Ley",
+                            ValorSeguro = 20000.0
                         });
                 });
 
@@ -363,12 +365,27 @@ namespace SegurosVehiculos.Migrations
                         new
                         {
                             TipoVehiculoId = 1,
-                            Tipo = "Privado"
+                            Tipo = "Motocicleta"
                         },
                         new
                         {
                             TipoVehiculoId = 2,
-                            Tipo = "Publico"
+                            Tipo = "Carro"
+                        },
+                        new
+                        {
+                            TipoVehiculoId = 3,
+                            Tipo = "Jeepeta"
+                        },
+                        new
+                        {
+                            TipoVehiculoId = 4,
+                            Tipo = "Camioneta"
+                        },
+                        new
+                        {
+                            TipoVehiculoId = 5,
+                            Tipo = "Camión"
                         });
                 });
 
@@ -421,8 +438,8 @@ namespace SegurosVehiculos.Migrations
                     b.Property<int>("CantidadPasajeros")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CapacidadCarga")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("CapacidadCarga")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Chasis")
                         .HasColumnType("TEXT");

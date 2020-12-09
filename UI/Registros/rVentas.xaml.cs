@@ -20,10 +20,12 @@ namespace SegurosVehiculos.UI.Registros
     public partial class rVentas : Window
     {
         private Ventas ventas = new Ventas();
+        private Cotizaciones cotizaciones = new Cotizaciones();
         public rVentas()
         {
             InitializeComponent();
             this.DataContext = ventas;
+            this.DataContext = cotizaciones;
 
             //ComboBox del ClienteId
             ClienteIdComboBox.ItemsSource = ClientesBLL.GetList(s => true);
@@ -41,8 +43,8 @@ namespace SegurosVehiculos.UI.Registros
             TipoSeguroIdComboBox.DisplayMemberPath = "Seguros";
 
             // ComboBox del NumeroCuotaId
-            NumeroCuotaIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
-            NumeroCuotaIdComboBox.SelectedValuePath = "NumeroCuotaId";
+            NumeroCuotaIdComboBox.ItemsSource = CotizacionesBLL.GetList(p => true);
+            NumeroCuotaIdComboBox.SelectedValuePath = "NumeroCuota";
             NumeroCuotaIdComboBox.DisplayMemberPath = "NumeroCuota";
         }
         // Funcion Cagar
@@ -111,17 +113,7 @@ namespace SegurosVehiculos.UI.Registros
                 esValidado = false;
             }
 
-
-            /* //—————————————————————————————————[ NumeroCuotas ]—————————————————————————————————
-             if (NumeroCuotaIdComboBox.Text.Trim() == string.Empty)
-             {
-                 MessageBox.Show("El Campo (NumeroCuotas) está vacío.\n\nAsigne un Numero de Cuotas al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                 NumeroCuotaIdComboBox.Focus();
-                 NumeroCuotaIdComboBox.IsDropDownOpen = true;
-                 return;
-             }
-            */
-
+                       
 
 
             //—————————————————————————————————[ Monto ]—————————————————————————————————

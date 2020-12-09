@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SegurosVehiculos.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Migration_Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,9 +48,9 @@ namespace SegurosVehiculos.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Monto = table.Column<double>(type: "REAL", nullable: false),
                     VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
                     TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Monto = table.Column<double>(type: "REAL", nullable: false),
                     Observaciones = table.Column<string>(type: "TEXT", nullable: true),
                     CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -134,7 +134,8 @@ namespace SegurosVehiculos.Migrations
                 {
                     TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Seguros = table.Column<string>(type: "TEXT", nullable: true)
+                    Seguros = table.Column<string>(type: "TEXT", nullable: true),
+                    ValorSeguro = table.Column<double>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -188,7 +189,7 @@ namespace SegurosVehiculos.Migrations
                     AñoFabricacion = table.Column<int>(type: "INTEGER", nullable: false),
                     Motor = table.Column<string>(type: "TEXT", nullable: true),
                     FuerzaMotriz = table.Column<double>(type: "REAL", nullable: false),
-                    CapacidadCarga = table.Column<int>(type: "INTEGER", nullable: false),
+                    CapacidadCarga = table.Column<string>(type: "TEXT", nullable: true),
                     TotalPuertas = table.Column<int>(type: "INTEGER", nullable: false),
                     ColorId = table.Column<int>(type: "INTEGER", nullable: false),
                     MarcaId = table.Column<int>(type: "INTEGER", nullable: false),
@@ -231,7 +232,6 @@ namespace SegurosVehiculos.Migrations
                     CotizacionId = table.Column<int>(type: "INTEGER", nullable: false),
                     NumeroCuota = table.Column<int>(type: "INTEGER", nullable: false),
                     CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false),
-                    ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
                     TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
                     Monto = table.Column<double>(type: "REAL", nullable: false)
@@ -331,12 +331,12 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "Modelos",
                 columns: new[] { "ModeloId", "ModeloVehiculo" },
-                values: new object[] { 4, "R5" });
+                values: new object[] { 3, "I8" });
 
             migrationBuilder.InsertData(
                 table: "Modelos",
                 columns: new[] { "ModeloId", "ModeloVehiculo" },
-                values: new object[] { 2, "Urus" });
+                values: new object[] { 4, "R5" });
 
             migrationBuilder.InsertData(
                 table: "Modelos",
@@ -346,7 +346,7 @@ namespace SegurosVehiculos.Migrations
             migrationBuilder.InsertData(
                 table: "Modelos",
                 columns: new[] { "ModeloId", "ModeloVehiculo" },
-                values: new object[] { 3, "I8" });
+                values: new object[] { 2, "Urus" });
 
             migrationBuilder.InsertData(
                 table: "StatusVehiculo",
@@ -370,23 +370,38 @@ namespace SegurosVehiculos.Migrations
 
             migrationBuilder.InsertData(
                 table: "TipoSeguros",
-                columns: new[] { "TipoSeguroId", "Seguros" },
-                values: new object[] { 1, "FULL" });
+                columns: new[] { "TipoSeguroId", "Seguros", "ValorSeguro" },
+                values: new object[] { 1, "FULL", 0.0 });
 
             migrationBuilder.InsertData(
                 table: "TipoSeguros",
-                columns: new[] { "TipoSeguroId", "Seguros" },
-                values: new object[] { 2, "De Ley" });
+                columns: new[] { "TipoSeguroId", "Seguros", "ValorSeguro" },
+                values: new object[] { 2, "De Ley", 20000.0 });
 
             migrationBuilder.InsertData(
                 table: "TipoVehiculo",
                 columns: new[] { "TipoVehiculoId", "Tipo" },
-                values: new object[] { 2, "Publico" });
+                values: new object[] { 5, "Camión" });
 
             migrationBuilder.InsertData(
                 table: "TipoVehiculo",
                 columns: new[] { "TipoVehiculoId", "Tipo" },
-                values: new object[] { 1, "Privado" });
+                values: new object[] { 1, "Motocicleta" });
+
+            migrationBuilder.InsertData(
+                table: "TipoVehiculo",
+                columns: new[] { "TipoVehiculoId", "Tipo" },
+                values: new object[] { 2, "Carro" });
+
+            migrationBuilder.InsertData(
+                table: "TipoVehiculo",
+                columns: new[] { "TipoVehiculoId", "Tipo" },
+                values: new object[] { 3, "Jeepeta" });
+
+            migrationBuilder.InsertData(
+                table: "TipoVehiculo",
+                columns: new[] { "TipoVehiculoId", "Tipo" },
+                values: new object[] { 4, "Camioneta" });
 
             migrationBuilder.InsertData(
                 table: "Usuarios",

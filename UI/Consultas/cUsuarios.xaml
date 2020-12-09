@@ -62,10 +62,10 @@
 
 
                 <!--——————————————————————————————————————————————[ CONSULTAR ]——————————————————————————————————————————————-->
-                <Button x:Name="ConsultarButton" Height="30" Width="90" Click="ConsultarButton_Click" >
+                <Button x:Name="ConsultarButton" Height="35" Width="90" Click="ConsultarButton_Click" FontWeight="Bold" >
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/Imagenes/Buscar.png"/>
-                        <Label Content="Consultar"/>
+                        <Label Content="Consultar" Margin="-7,0,0,0"/>
                     </StackPanel>
                 </Button>
 
@@ -84,11 +84,11 @@
                     </DataGrid.Background>
 
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="      Usuario Id    " Binding="{Binding UsuarioId}"/>
-                        <DataGridTextColumn Header="       Nombres      " Binding="{Binding Nombre}"/>
-                        <DataGridTextColumn Header="     Apellidos      " Binding="{Binding Apellido}"/>
-                        <DataGridTextColumn Header="     Fecha Creacion      " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
-                        <DataGridTextColumn Header="             Nombre Usuario" Binding="{Binding NombreUsuario}"/>
+                        <DataGridTextColumn Header="      UsuarioId    " Binding="{Binding UsuarioId}"/>
+                        <DataGridTextColumn Header="          Nombre        " Binding="{Binding Nombre}"/>
+                        <DataGridTextColumn Header="      Apellido       " Binding="{Binding Apellido}"/>
+                        <DataGridTextColumn Header="         Fecha Creacion        " Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
+                        <DataGridTextColumn Header="          Nombre Usuario         " Binding="{Binding NombreUsuario}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

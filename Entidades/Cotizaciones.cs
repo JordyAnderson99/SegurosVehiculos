@@ -15,11 +15,10 @@ namespace SegurosVehiculos.Entidades{
 
         public int ClienteId { get; set; }
 
-        public int VehiculoId { get; set; }
-
-        public int TipoSeguroId { get; set; }
-
         public double Monto { get; set; }
+
+        public int VehiculoId { get; set; }
+        public int TipoSeguroId { get; set; }
 
         public string Observaciones { get; set; }
 
