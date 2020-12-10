@@ -34,10 +34,10 @@ namespace SegurosVehiculos.UI.Registros
             VentaIdComboBox.SelectedValuePath = "VentaId";
             VentaIdComboBox.DisplayMemberPath = "VentaId";
         
-            // ComboBox del NumeroCuotaId
-            NumeroCuotaIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
-            NumeroCuotaIdComboBox.SelectedValuePath = "NumeroCuotaId";
-            NumeroCuotaIdComboBox.DisplayMemberPath = "NumeroCuota";
+            //// ComboBox del NumeroCuotaId
+            //NumeroCuotaIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
+            //NumeroCuotaIdComboBox.SelectedValuePath = "NumeroCuotaId";
+            //NumeroCuotaIdComboBox.DisplayMemberPath = "NumeroCuota";
         }
         //LIMPIAR
         private void Limpiar()
@@ -174,5 +174,26 @@ namespace SegurosVehiculos.UI.Registros
                     MessageBox.Show("No fue posible eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void VentaIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(VentaIdComboBox.SelectedIndex == -1) { return; }
+            var ventas = (Ventas)VentaIdComboBox.SelectedItem;
+            NumeroCuotaIdComboBox.ItemsSource = PagosBLL.GetCuotas(ventas.VentaId);
+        }
+
+        private void NumeroCuotaIdComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (NumeroCuotaIdComboBox.SelectedIndex == -1) { return; }
+            var ventas = VentasBLL.Buscar(int.Parse(VentaIdComboBox.SelectedValue.ToString()));
+           
+           TotalTextBox.Text = ventas.Detalle[1].Monto.ToString();
+           pagos.Total = ventas.Detalle[1].Monto;
+
+        }
+
+
+   
+
     }
 }

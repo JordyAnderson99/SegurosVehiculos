@@ -73,7 +73,6 @@ C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro2.
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cUsuarios.baml
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\Login.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\Login.baml
-C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csprojAssemblyReference.cache
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rClientes.g.cs
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Registros\rClientes.baml
 C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\UI\Consultas\cClientes.g.cs
@@ -318,3 +317,23 @@ C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Reg
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Proyecto1.jpg
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Proyecto2.jpg
 C:\Users\DELL\source\repos\SegurosVehiculos\bin\Debug\netcoreapp3.1\Data\Seguros.db
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Calculadora.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de clientes.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de cotizaciones.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de pago.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de Usuarios.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de Vehiculos.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Consultas de Ventas.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\foto_Login.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\login.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Menu.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Proyecto1.jpg
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Proyecto2.jpg
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Clientes.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Cotizaciones.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Pagos.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de usuarios.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Vehiculos.png
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Imagenes\Registro de Ventas.png
+C:\Users\pc\Desktop\SegurosVehiculos\obj\Debug\netcoreapp3.1\SegurosVehiculos.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\SegurosVehiculos\bin\Debug\netcoreapp3.1\Data\Seguros.db

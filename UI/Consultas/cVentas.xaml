@@ -91,9 +91,9 @@
                         <DataGridTextColumn Header="  Vence  " Binding="{Binding Vence, StringFormat='dd/MM/yyyy'}"/>
                         <DataGridTextColumn Header="  VehiculoId  " Binding="{Binding VehiculoId}"/>
                         <DataGridTextColumn Header="TipoSeguroId" Binding="{Binding TipoSeguroId}"/>
-                        <DataGridTextColumn Header="NumeroCuotaId" Binding="{Binding NumeroCuotaId}"/>
+                        <DataGridTextColumn Header="Numero de Cuota" Binding="{Binding NumeroCuotaId}"/>
                         <DataGridTextColumn Header="Monto" Binding="{Binding Monto}"/>
-                        <DataGridTextColumn Header="  Observacion  " Binding="{Binding Observacion}"/>
+                        <DataGridTextColumn Header="  Observaciones  " Binding="{Binding Observaciones}"/>
                         <DataGridTextColumn Header="  CantidadCuotas" Binding="{Binding CantidadCuotas}"/>
                     </DataGrid.Columns>
                 </DataGrid>

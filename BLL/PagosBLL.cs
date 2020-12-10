@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using SegurosVehiculos.Entidades;
 using SegurosVehiculos.Dal;
+using System.Collections;
+using System.Windows;
 
 namespace SegurosVehiculos.BLL
 {
@@ -16,9 +18,15 @@ namespace SegurosVehiculos.BLL
         public static bool Guardar(Pagos pagos)
         {
             if (!Existe(pagos.PagoId))
+            {
+                ModificarBalance(pagos);
                 return Insertar(pagos);
+            }
             else
+            {
                 return Modificar(pagos);
+            }
+              
         }
 
         //Funcion Existe 
@@ -102,6 +110,7 @@ namespace SegurosVehiculos.BLL
 
                 if (pago != null)
                 {
+                    ModificarBalance(id);
                     contexto.Pagos.Remove(pago);
                     eliminado = (contexto.SaveChanges() > 0);
                 }
@@ -162,6 +171,46 @@ namespace SegurosVehiculos.BLL
             }
 
             return Lista;
+        }
+
+
+
+
+
+        private static void ModificarBalance(Pagos pagos)
+        {
+            Ventas ventas = VentasBLL.Buscar(pagos.VentaId);
+            ventas.Balance -= pagos.Total;
+
+            
+
+            VentasBLL.Guardar(ventas);
+        }
+
+        private static void ModificarBalance(int id)
+        {
+            Pagos pagos = PagosBLL.Buscar(id);
+            Ventas ventas = VentasBLL.Buscar(pagos.VentaId);
+            ventas.Balance += pagos.Total;
+
+
+
+            VentasBLL.Guardar(ventas);
+        }
+
+        public static ArrayList GetCuotas(int id)
+        {
+            Contexto contexto = new Contexto();
+            ArrayList cuotas = new ArrayList();
+            Ventas venta = VentasBLL.Buscar(id);
+
+            foreach (var item in venta.Detalle)
+            {
+                cuotas.Add(item.NumeroCuotaId);
+            }
+
+            return cuotas;
+
         }
 
     }

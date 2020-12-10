@@ -498,7 +498,13 @@ namespace SegurosVehiculos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("Balance")
+                        .HasColumnType("REAL");
+
                     b.Property<int>("CantidadCuotas")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
@@ -506,9 +512,6 @@ namespace SegurosVehiculos.Migrations
 
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
-
-                    b.Property<int>("NumeroCuotaId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Observacion")
                         .HasColumnType("TEXT");
@@ -533,13 +536,7 @@ namespace SegurosVehiculos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("Balance")
-                        .HasColumnType("REAL");
-
                     b.Property<int>("CantidadCuotas")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
@@ -547,6 +544,9 @@ namespace SegurosVehiculos.Migrations
 
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroCuotaId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("TipoSeguroId")
                         .HasColumnType("INTEGER");

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SegurosVehiculos.Migrations
 {
-    public partial class Migration_Inicial : Migration
+    public partial class migration_inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -209,12 +209,13 @@ namespace SegurosVehiculos.Migrations
                 {
                     VentaId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Vence = table.Column<DateTime>(type: "TEXT", nullable: false),
                     VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
                     TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
-                    NumeroCuotaId = table.Column<int>(type: "INTEGER", nullable: false),
                     Monto = table.Column<double>(type: "REAL", nullable: false),
+                    Balance = table.Column<double>(type: "REAL", nullable: false),
                     Observacion = table.Column<string>(type: "TEXT", nullable: true),
                     CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -254,10 +255,9 @@ namespace SegurosVehiculos.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     VentaId = table.Column<int>(type: "INTEGER", nullable: false),
-                    ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Monto = table.Column<double>(type: "REAL", nullable: false),
-                    Balance = table.Column<double>(type: "REAL", nullable: false),
+                    NumeroCuotaId = table.Column<int>(type: "INTEGER", nullable: false),
                     VehiculoId = table.Column<int>(type: "INTEGER", nullable: false),
                     TipoSeguroId = table.Column<int>(type: "INTEGER", nullable: false),
                     CantidadCuotas = table.Column<int>(type: "INTEGER", nullable: false)

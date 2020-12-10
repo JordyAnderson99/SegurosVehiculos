@@ -10,12 +10,14 @@ namespace SegurosVehiculos.Entidades
     {
         [Key]
         public int VentaId { get; set; }
+        public int ClienteId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
         public DateTime Vence { get; set; } = DateTime.Now;
         public int VehiculoId { get; set; }
         public int TipoSeguroId { get; set; }
-        public int NumeroCuotaId { get; set; }
+        
         public Double Monto { get; set; }
+        public double Balance { get; set; }
         public String Observacion { get; set; }
         public int CantidadCuotas { get; set; }
 

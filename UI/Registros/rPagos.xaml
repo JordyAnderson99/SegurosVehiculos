@@ -40,11 +40,11 @@
 
             <!--VentaId-->
             <Label Content = "VentaId" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
-            <ComboBox x:Name = "VentaIdComboBox" SelectedValue ="{Binding VentaId}" Width="190" Height="25" Margin="150,-30,0,0"/>
+            <ComboBox x:Name = "VentaIdComboBox" SelectedValue ="{Binding VentaId}" Width="190" Height="25" Margin="150,-30,0,0" SelectionChanged="VentaIdComboBox_SelectionChanged"/>
 
              <!--NumeroCuotaId-->
-            <Label Content = "CuotaId" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>
-            <ComboBox x:Name = "NumeroCuotaIdComboBox" SelectedValue ="{Binding NumeroCuotaId}" Width="190" Height="25" Margin="150,-30,0,0"/>
+            <Label Content = "Numero Cuota" FontSize="15px" Margin="-245,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="130" FontWeight="Bold"/>
+            <ComboBox x:Name = "NumeroCuotaIdComboBox" SelectedValue ="{Binding NumeroCuotaId}" Width="190" Height="25" Margin="150,-30,0,0" SelectionChanged="NumeroCuotaIdComboBox_SelectionChanged"/>
 
             <!--Total-->
             <Label Content = "Total" FontSize="15px" Margin="-295,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="83" FontWeight="Bold"/>

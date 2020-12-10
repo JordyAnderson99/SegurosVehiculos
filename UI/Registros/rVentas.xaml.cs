@@ -9,137 +9,151 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using SegurosVehiculos.Entidades;
 using SegurosVehiculos.BLL;
+using SegurosVehiculos.Entidades;
+using System.Threading.Tasks;
 
 namespace SegurosVehiculos.UI.Registros
 {
-    /// <summary>
-    /// Interaction logic for rVentas.xaml
-    /// </summary>
     public partial class rVentas : Window
     {
         private Ventas ventas = new Ventas();
-        private Cotizaciones cotizaciones = new Cotizaciones();
+
         public rVentas()
         {
             InitializeComponent();
             this.DataContext = ventas;
-            this.DataContext = cotizaciones;
 
-            //ComboBox del ClienteId
-            ClienteIdComboBox.ItemsSource = ClientesBLL.GetList(s => true);
+
+
+            //--------------------ClienteId ComboBox--------------------------
+            ClienteIdComboBox.ItemsSource = ClientesBLL.GetList(p => true);
             ClienteIdComboBox.SelectedValuePath = "ClienteId";
             ClienteIdComboBox.DisplayMemberPath = "Nombre";
 
-            // ComboBox del VehiculoId
+            //--------------------VehiculoId ComboBox--------------------------
             VehiculoIdComboBox.ItemsSource = VehiculosBLL.GetList(p => true);
             VehiculoIdComboBox.SelectedValuePath = "VehiculoId";
             VehiculoIdComboBox.DisplayMemberPath = "VehiculoId";
 
-            // ComboBox del SeguroId
+            //--------------------TipoSeguroId ComboBox--------------------------
             TipoSeguroIdComboBox.ItemsSource = TipoSegurosBLL.GetList(p => true);
             TipoSeguroIdComboBox.SelectedValuePath = "TipoSeguroId";
             TipoSeguroIdComboBox.DisplayMemberPath = "Seguros";
 
-            // ComboBox del NumeroCuotaId
-            NumeroCuotaIdComboBox.ItemsSource = CotizacionesBLL.GetList(p => true);
-            NumeroCuotaIdComboBox.SelectedValuePath = "NumeroCuota";
-            NumeroCuotaIdComboBox.DisplayMemberPath = "NumeroCuota";
         }
-        // Funcion Cagar
-        private void Cargar()
-        {
-            this.DataContext = null;
-            this.DataContext = ventas;
-        }
-        //Funcion Limpiar
+
+
+        //LIMPIAR *************************************************************************
         private void Limpiar()
         {
             this.ventas = new Ventas();
             this.DataContext = ventas;
         }
-        //Funcion Validar
+
+
+        //VALIDAR *************************************************************************
         private bool Validar()
         {
-            bool esValidado = true;
+            bool esValido = true;
             if (VentaIdTextBox.Text.Length == 0)
             {
-                esValidado = false;
-                MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                esValido = false;
+                MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-
-            if (!int.TryParse(VentaIdTextBox.Text, out int VentaId))
+            if (!int.TryParse(VentaIdTextBox.Text, out int CotizacionId))
             {
-                esValidado = false;
-                MessageBox.Show("Este Id de Puertas no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                esValido = false;
+                MessageBox.Show("Este Id no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
             if (!int.TryParse(CantidadCuotasTextBox.Text, out int CantidadCuotas))
             {
-                esValidado = false;
-                MessageBox.Show("Esta Cantidad de Cuotas no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                esValido = false;
+                MessageBox.Show("Esta Cantidad Cuota no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
             if (!int.TryParse(MontoTextBox.Text, out int Monto))
             {
-                esValidado = false;
+                esValido = false;
                 MessageBox.Show("Este Monto no es valido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            //—————————————————————————————————[ VentaId  ]—————————————————————————————————
+            //———————————————————————————————————[ VALIDAR TEXTBOX ]———————————————————————————————————————————————————————
+
+
+
+            //—————————————————————————————————[ Venta Id ]—————————————————————————————————
             if (VentaIdTextBox.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("El Campo (VentaId) está vacío.\n\nAsigne una VentaId al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo (Venta Id) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 VentaIdTextBox.Text = "0";
                 VentaIdTextBox.Focus();
                 VentaIdTextBox.SelectAll();
-                esValidado = false;
-            }
-            //—————————————————————————————————[ VehiculoId ]—————————————————————————————————
-            if (VehiculoIdComboBox.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nEscriba el VehiculoId en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                VehiculoIdComboBox.IsDropDownOpen = true;
-                VehiculoIdComboBox.Focus();
-                esValidado = false;
-            }
-            //—————————————————————————————————[ TipoSeguroId ]—————————————————————————————————
-            if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nEscriba el Tipo de Seguro en el campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                TipoSeguroIdComboBox.IsDropDownOpen = true;
-                TipoSeguroIdComboBox.Focus();
-                esValidado = false;
+                esValido = false;
             }
 
-                       
+            //—————————————————————————————————[ Cliente Id ]—————————————————————————————————
+            if (ClienteIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (ClienteId) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ClienteIdComboBox.Focus();
+                ClienteIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+
+
+            //—————————————————————————————————[ Vehiculo Id ]—————————————————————————————————
+            if (VehiculoIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (VehiculoId) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                VehiculoIdComboBox.Focus();
+                VehiculoIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
+            //—————————————————————————————————[ Tipo Seguro Id ]—————————————————————————————————
+            if (TipoSeguroIdComboBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El Campo (TipoSeguroId) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                TipoSeguroIdComboBox.Focus();
+                TipoSeguroIdComboBox.IsDropDownOpen = true;
+                esValido = false;
+            }
 
 
             //—————————————————————————————————[ Monto ]—————————————————————————————————
             if (MontoTextBox.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("El Campo (Monto) está vacío.\n\nAsigne un Monto al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo (Monto) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 MontoTextBox.Focus();
                 MontoTextBox.SelectAll();
-                esValidado = false;
+                esValido = false;
             }
 
-
-
-
-            //—————————————————————————————————[ CantidadCuotas ]—————————————————————————————————
+            //—————————————————————————————————[CantidadCuotas ]—————————————————————————————————
             if (CantidadCuotasTextBox.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nAsigne una Cantidad de Cuotas al campo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo (CantidadCuotas) está vacío.\n\nAsegurese de que este lleno.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 CantidadCuotasTextBox.Focus();
                 CantidadCuotasTextBox.SelectAll();
-                esValidado = false;
+                esValido = false;
             }
 
-            return esValidado;
+            return esValido;
+
+
         }
-        //Boton Buscar
+
+
+        // Funcion Cagar
+        private void Cargar()
+        {
+
+            this.DataContext = null;
+            this.DataContext = ventas;
+        }
+
+
+
+        //BOTON BUSCAR *************************************************************************
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             Ventas encontrado = VentasBLL.Buscar(ventas.VentaId);
@@ -151,71 +165,100 @@ namespace SegurosVehiculos.UI.Registros
             }
             else
             {
-                MessageBox.Show($"Esta venata no fue encontrada.\n\nAsegurese que exista o cree uno nuevo.", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Esta Venta no fue encontrada.\n\nAsegurese que exista o cree uno nuevo.", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
                 Limpiar();
                 VentaIdTextBox.Clear();
                 VentaIdTextBox.Focus();
             }
         }
 
-        //Boton Nuevo
+        //BOTON NUEVO *************************************************************************
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
         }
-        //Boton Guardar
+
+        //BOTO GUARDAR **************************************************************************
+
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             {
                 if (!Validar())
                     return;
 
+
+
+
+
                 var paso = VentasBLL.Guardar(this.ventas);
                 if (paso)
                 {
                     Limpiar();
-                    MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Transacción Exitosa", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
-                    MessageBox.Show("Transaccion Errada", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        //Boton Eliminar
+
+
+
+
+        //BOTON ELIMINAR *************************************************************************
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
             {
                 if (VentasBLL.Eliminar(Utilidades.ToInt(VentaIdTextBox.Text)))
                 {
                     Limpiar();
-                    MessageBox.Show("Registro Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Registro Eliminado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
-                    MessageBox.Show("No se pudo eliminar", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("No fue posible Eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        //Boton de Agregar Fila
-        private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+
+
+
+        //Boton de Calcular Cuota
+        private void CalcularCuotaButton_Click(object sender, RoutedEventArgs e)
         {
             Clientes clientes = (Clientes)ClienteIdComboBox.SelectedItem;
+            ventas.Detalle = new List<VentasDetalle>();
+            double cuota = Calcular(Monto());
+            ventas.Balance = Monto();
+            VentasDetalle aux;
+
             var filaDetalle = new VentasDetalle
             {
-                VentaId = this.ventas.VentaId,
-                ClienteId = Convert.ToInt32(ClienteIdComboBox.SelectedValue.ToString()),
-           
+
                 VehiculoId = Convert.ToInt32(VehiculoIdComboBox.SelectedValue.ToString()),
                 TipoSeguroId = Convert.ToInt32(TipoSeguroIdComboBox.SelectedValue.ToString()),
-                
                 CantidadCuotas = Convert.ToInt32(CantidadCuotasTextBox.Text),
-                Monto = Convert.ToInt32(MontoTextBox.Text)
+                Monto = cuota
+
             };
 
-         
-            this.ventas.Detalle.Add(filaDetalle);
+            for (int i = 1; i <= int.Parse(CantidadCuotasTextBox.Text); i++)
+            {
+                filaDetalle.NumeroCuotaId = i;
+                ventas.Detalle.Add(filaDetalle);
+                aux = filaDetalle;
+                filaDetalle = new VentasDetalle();
+                filaDetalle.VehiculoId = aux.VehiculoId;
+                filaDetalle.TipoSeguroId = aux.TipoSeguroId;
+                filaDetalle.CantidadCuotas = aux.CantidadCuotas;
+                filaDetalle.Monto = aux.Monto;
+
+            }
+
             Cargar();
 
-            
+
         }
+
+
         //Boton de Eliminar Fila
         private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
         {
@@ -223,10 +266,51 @@ namespace SegurosVehiculos.UI.Registros
             {
                 var detalle = (VentasDetalle)DetalleDataGrid.SelectedItem;
 
-           
+                /*ordenes.Monto = ordenes.Monto - (detalle.productos.Costo * (decimal)detalle.Cantidad);*/
                 ventas.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
         }
+
+        private double Calcular(double monto)
+        {
+            double cuota = 0;
+
+            cuota = monto / int.Parse(CantidadCuotasTextBox.Text);
+
+
+            return Math.Round(cuota, 2);
+        }
+
+        public double Monto()
+        {
+            var seguro = (TipoSeguros)TipoSeguroIdComboBox.SelectedItem;
+            var vehiculo = (Vehiculos)VehiculoIdComboBox.SelectedItem;
+            double monto = seguro.ValorSeguro + vehiculo.ValorVehiculo;
+
+            if (ModificarMontoCheckBox.IsChecked == true)
+            {
+                return ventas.Monto;
+            }
+            else
+            {
+                if (vehiculo.AñoFabricacion >= 2008)
+                {
+                    monto = vehiculo.ValorVehiculo + 100000;
+                    ventas.Monto = monto;
+                    return monto;
+                }
+                else
+                {
+                    seguro = (TipoSeguros)TipoSeguroIdComboBox.SelectedItem;
+                    vehiculo = (Vehiculos)VehiculoIdComboBox.SelectedItem;
+                    monto = seguro.ValorSeguro + vehiculo.ValorVehiculo;
+
+                    ventas.Monto = monto;
+                    return monto;
+                }
+            }
+        }
+
     }
 }

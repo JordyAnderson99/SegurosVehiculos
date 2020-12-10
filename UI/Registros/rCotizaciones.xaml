@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Cotizaciones" Height="580" Width="810"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Cotizaciones" Height="580" Width="810"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"  Icon="/Imagenes/Agendar.png">
 
     <Grid  >
         <Grid.OpacityMask>
@@ -71,8 +71,8 @@
 
                         <CheckBox Name="ModificarMontoCheckBox" Content="Modificar Monto" Margin="-610,10,0,0" Width="126"/>
 
-                        <!--Agregar Fila-->
-                        <Button x:Name="AgregarFilaButton" Height="35" Width="200" Margin="-550,10,0,0"  Click ="AgregarFilaButton_Click" >
+                        <!--Calcular Cuota-->
+                        <Button x:Name="CalcularCuotaButton" Height="35" Width="200" Margin="-550,10,0,0"  Click ="AgregarFilaButton_Click" >
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Imagenes/Calculadora.png" Height="25"/>
                                 <Label Content="Calcular Cuota" FontWeight="Bold"/>
@@ -80,13 +80,6 @@
                         </Button>
 
 
-                        <!--Eliminar Fila-->
-                        <Button x:Name="EliminarFilaButton" Height="35" Width="190" Margin="550,-40,0,0" Click ="EliminarFilaButton_Click" >
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="/Imagenes/Menos.png" Height="25"/>
-                                <Label Content="Eliminar fila" FontWeight="Bold"/>
-                            </StackPanel>
-                        </Button>
 
 
 

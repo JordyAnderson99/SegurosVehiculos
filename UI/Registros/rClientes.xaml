@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SegurosVehiculos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Clientes" Height="450" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Agendar.png">
+        Title="Registro de Clientes" Height="470" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Imagenes/Agendar.png">
     <Grid>
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

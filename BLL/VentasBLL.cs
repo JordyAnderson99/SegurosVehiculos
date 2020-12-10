@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Security.Cryptography;
 using SegurosVehiculos.Entidades;
 using SegurosVehiculos.Dal;
+using System.Collections;
 
 namespace SegurosVehiculos.BLL
 {
@@ -177,5 +178,7 @@ namespace SegurosVehiculos.BLL
             }
             return lista;
         }
+
+
     }
 }

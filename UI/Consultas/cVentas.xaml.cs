@@ -54,18 +54,9 @@ namespace SegurosVehiculos.UI.Consultas
                             MessageBox.Show("Debes ingresar un Critero valido para aplicar este filtro.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                         break;
-                     case 3:
-                        try
-                        {
-                            listado = VentasBLL.GetList(u => u.NumeroCuotaId == Utilidades.ToInt(CriterioTextBox.Text));
-                        }
-                        catch (FormatException)
-                        {
-                            MessageBox.Show("Debes ingresar un Critero valido para aplicar este filtro.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        }
-                        break;
+                    
 
-                    case 4:
+                    case 3:
                         try
                         {
                             listado = VentasBLL.GetList(u => u.Monto == Utilidades.ToInt(CriterioTextBox.Text));
@@ -76,7 +67,7 @@ namespace SegurosVehiculos.UI.Consultas
                         }
                         break;
 
-                    case 5:
+                    case 4:
                         try
                         {
                             listado = VentasBLL.GetList(u => u.Observacion.Contains(CriterioTextBox.Text));
@@ -87,7 +78,7 @@ namespace SegurosVehiculos.UI.Consultas
                         }
                         break;  
 
-                    case 6:
+                    case 5:
                         try
                         {
                             listado = VentasBLL.GetList(u => u.CantidadCuotas == Utilidades.ToInt(CriterioTextBox.Text));

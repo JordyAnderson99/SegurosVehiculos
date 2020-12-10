@@ -9,8 +9,8 @@ using SegurosVehiculos.Dal;
 namespace SegurosVehiculos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20201209045312_Migration_Inicial")]
-    partial class Migration_Inicial
+    [Migration("20201210033055_migration_inicial")]
+    partial class migration_inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -500,7 +500,13 @@ namespace SegurosVehiculos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("Balance")
+                        .HasColumnType("REAL");
+
                     b.Property<int>("CantidadCuotas")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
@@ -508,9 +514,6 @@ namespace SegurosVehiculos.Migrations
 
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
-
-                    b.Property<int>("NumeroCuotaId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Observacion")
                         .HasColumnType("TEXT");
@@ -535,13 +538,7 @@ namespace SegurosVehiculos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("Balance")
-                        .HasColumnType("REAL");
-
                     b.Property<int>("CantidadCuotas")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
@@ -549,6 +546,9 @@ namespace SegurosVehiculos.Migrations
 
                     b.Property<double>("Monto")
                         .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroCuotaId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("TipoSeguroId")
                         .HasColumnType("INTEGER");
